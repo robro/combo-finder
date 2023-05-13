@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/combo-finder/static/css/main.073c9b0a.css",
+    "main.js": "/combo-finder/static/js/main.fc70a2d0.js",
+    "static/js/787.4d7ec2bd.chunk.js": "/combo-finder/static/js/787.4d7ec2bd.chunk.js",
+    "static/media/logo.svg": "/combo-finder/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/combo-finder/index.html",
+    "main.073c9b0a.css.map": "/combo-finder/static/css/main.073c9b0a.css.map",
+    "main.fc70a2d0.js.map": "/combo-finder/static/js/main.fc70a2d0.js.map",
+    "787.4d7ec2bd.chunk.js.map": "/combo-finder/static/js/787.4d7ec2bd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.fc70a2d0.js"
+  ]
+}
