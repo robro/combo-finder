@@ -3,21 +3,45 @@
   bottom: 20%;
 }
 
-.prop-name {
+.prop-header {
   text-transform: capitalize;
   font-weight: bold;
-  padding-bottom: 10px;
+  padding: 10px 10px;
   cursor: pointer;
+}
+
+.prop-header[data-sort='ascend']::after {
+  content: '🞁';
+  padding-right: 10px;
+  float: right;
+}
+
+.prop-header[data-sort='descend']::after {
+  content: '🞃';
+  padding-right: 10px;
+  float: right;
+}
+
+.sorted {
+  background-color: rgb(43, 43, 43);
 }
 
 .prop-value {
   text-transform: capitalize;
-  padding-bottom: 10px;
+  padding: 0 10px 10px;
+}
+
+.prop-value[data-status='+']::before {
+  content: '+';
+}
+
+.carry::after {
+  content: '%';
 }
 
 .combo-data {
   background-color: black;
   color: lightgray;
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }

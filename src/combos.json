@@ -5,6 +5,7 @@
     "startup",
     "drive",
     "super",
+    "carry",
     "damage",
     "advantage",
     "position"
@@ -16,6 +17,7 @@
       "startup": 8,
       "drive": 0.0,
       "super": 0,
+      "carry": 10,
       "damage": 1500,
       "advantage": -1,
       "position": "any"
@@ -25,6 +27,7 @@
       "startup": 7,
       "drive": 2.0,
       "super": 0,
+      "carry": 12,
       "damage": 2000,
       "advantage": 5,
       "position": "any"
