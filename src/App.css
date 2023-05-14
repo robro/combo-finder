@@ -5,21 +5,26 @@
 
 .prop-header {
   text-transform: capitalize;
-  font-weight: bold;
   padding: 10px 10px;
   cursor: pointer;
+  text-align: left;
+}
+
+.prop-header::after {
+  content: '🞁';
+  color: black;
 }
 
 .prop-header[data-sort='ascend']::after {
   content: '🞁';
-  padding-right: 10px;
   float: right;
+  color: lightgray;
 }
 
 .prop-header[data-sort='descend']::after {
   content: '🞃';
-  padding-right: 10px;
   float: right;
+  color: lightgray;
 }
 
 .sorted {
@@ -28,7 +33,7 @@
 
 .prop-value {
   text-transform: capitalize;
-  padding: 0 10px 10px;
+  padding: 5px 10px;
 }
 
 .prop-value[data-status='+']::before {
@@ -39,9 +44,9 @@
   content: '%';
 }
 
-.combo-data {
+.combo-table {
   background-color: black;
   color: lightgray;
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  min-width: 100%;
+  border-collapse: collapse;
 }

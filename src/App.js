@@ -23,26 +23,28 @@ class App extends Component {
     this.state.combo_data.sort((a, b) => (
       compare(a[this.state.sort_prop], b[this.state.sort_prop], this.state.reverse_sort)
     ))
-    const props_list = combos.props.map(prop => (
-      <div className={'prop-header '+(this.sort_status(prop)? 'sorted':'')}
+    const combo_props = combos.props.map(prop => (
+      <th className={'prop-header '+(this.sort_status(prop)? 'sorted':'')}
           data-sort={this.sort_status(prop)} onClick={(e) => this.sort_by(e.target.textContent)}>
         {prop}
-      </div>
+      </th>
     ))
-    const combo_list = this.state.combo_data.map(combo => (
-      combos.props.map(prop => (
-        <div className={'prop-value '+(this.sort_status(prop)? 'sorted':'')}
-            data-status={(combo[prop] >= 0 && prop === 'advantage')?'+':''}>
-          {combo[prop]}
-        </div>
-      ))
+    const combo_data = this.state.combo_data.map(combo => (
+      <tr> {
+        combos.props.map(prop => (
+          <td className={'prop-value '+(this.sort_status(prop)? 'sorted':'')}
+              data-status={(combo[prop] >= 0 && prop === 'advantage')?'+':''}>
+            {combo[prop]}
+          </td>
+        ))
+      } </tr>
     ))
     return (
       <div className='app'>
-        <div className='combo-data'>
-          {props_list}
-          {combo_list}
-        </div>
+        <table className='combo-table'>
+          <tr>{combo_props}</tr>
+          {combo_data}
+        </table>
       </div> 
     )
   }
