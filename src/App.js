@@ -30,20 +30,20 @@ class App extends Component {
       </th>
     ))
     const combo_data = this.state.combo_data.map(combo => (
-      <tr> {
+      <tr>{
         combos.props.map(prop => (
           <td className={`prop-value ${prop} ${this.sort_status(prop)}`}
               data-status={(combo[prop] >= 0)?'plus':''}>
             {combo[prop]}
           </td>
         ))
-      } </tr>
+      }</tr>
     ))
     return (
       <div className='app'>
         <table className='combo-table'>
-          <tr>{combo_props}</tr>
-          {combo_data}
+          <thead><tr>{combo_props}</tr></thead>
+          <tbody>{combo_data}</tbody>
         </table>
       </div> 
     )
