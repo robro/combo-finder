@@ -1,0 +1,33 @@
+{
+  "props": [
+    "character",
+    "notation",
+    "startup",
+    "drive",
+    "super",
+    "damage",
+    "advantage",
+    "position"
+  ],
+  "data": [
+    {
+      "character": "ryu",
+      "notation": "2MK > 236HP",
+      "startup": 8,
+      "drive": 0.0,
+      "super": 0,
+      "damage": 1500,
+      "advantage": -1,
+      "position": "any"
+    },{
+      "character": "luke",
+      "notation": "5LP~MP~HP > 236PP",
+      "startup": 7,
+      "drive": 2.0,
+      "super": 0,
+      "damage": 2000,
+      "advantage": 5,
+      "position": "any"
+    }
+  ]
+}
