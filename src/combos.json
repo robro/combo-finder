@@ -31,6 +31,16 @@
       "damage": 2000,
       "advantage": 5,
       "position": "any"
+    },{
+      "character": "blanka",
+      "notation": "5LP~MP~HP > 236PP",
+      "startup": 4,
+      "drive": 5.0,
+      "super": 1,
+      "carry": 5,
+      "damage": 3400,
+      "advantage": 15,
+      "position": "corner"
     }
   ]
 }

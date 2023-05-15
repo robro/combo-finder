@@ -85,6 +85,8 @@
 
 .prop-value {
   padding: 10px;
+  border-top: 1px solid;
+  border-color: var(--dark-accent-color);
 }
 
 .advantage.plus::before {
