@@ -24,15 +24,15 @@ class App extends Component {
       compare(a[this.state.sort_prop], b[this.state.sort_prop], this.state.reverse_sort)
     ))
     const combo_props = combos.props.map(prop => (
-      <th className={`prop-header ${this.sort_status(prop)}`}
+      <th className={`prop-header noselect ${this.sort_status(prop)}`}
           data-sort={this.sort_status(prop)} onClick={(e) => this.sort_by(e.target.textContent)}>
         {prop}
       </th>
     ))
     const combo_data = this.state.combo_data.map(combo => (
-      <tr>{
+      <tr className='combo-row'>{
         combos.props.map(prop => (
-          <td className={`prop-value ${prop} ${this.sort_status(prop)}`}
+          <td className={`prop-value ${prop}`}
               data-status={(combo[prop] >= 0)?'plus':''}>
             {combo[prop]}
           </td>
@@ -41,10 +41,22 @@ class App extends Component {
     ))
     return (
       <div className='app'>
+        <h1>Combo Finder 🔎</h1>
+        <button className='btn btn-main'>Filters</button>
         <table className='combo-table'>
           <thead><tr>{combo_props}</tr></thead>
           <tbody>{combo_data}</tbody>
         </table>
+        <div className='page-select'>
+          <button className='btn btn-left' type='button'>&lt;</button>
+          <button className='btn btn-right shift'>&gt;</button>
+          <input class='page-input' type='number' min={1} max={10}/>
+          <button className='btn btn-right'>Go</button>
+        </div>
+        <hr className='solid'/>
+        <div className='footer'>
+          Displaying 20 of 4,579 total combos
+        </div>
       </div> 
     )
   }
