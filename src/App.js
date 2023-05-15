@@ -4,6 +4,7 @@ import { Component } from 'react'
 
 const combos = require('./combos.json')
 const chars = new Set(combos.data.map(combo => combo['character']))
+const total_combos = combos.data.length
 
 class App extends Component {
   state = {
@@ -61,26 +62,30 @@ class App extends Component {
     ))
     return (
       <div className='app'>
-        <h1>🔎 Combo Finder</h1>
-        <select className='drop' name='character' onChange={this.update_filters}>
-          <option value=''>Any Character</option>{char_options}
-        </select>
-        <button className='btn btn-main' type='button'>All Filters</button>
-        <div className='combo-div'>
-          <table className='combo-table'>
-            <thead><tr>{combo_props}</tr></thead>
-            <tbody>{combo_rows}</tbody>
-          </table>
+        <div className='title-bar'>
+          <div className='title'><h1>🔎 Combo Finder</h1></div>
         </div>
-        <div className='page-select'>
-          <button className='btn btn-left' type='button'>🞀</button>
-          <button className='btn btn-right shift' type='button'>🞂</button>
-          <input className='page-input' type='number' min={1} max={10} defaultValue={page_num}/>
-          <button className='btn btn-right shift' type='button'>Go</button>
-        </div>
-        <hr className='solid'/>
-        <div className='footer'>
-          1 - 20 of 4,579 combos
+        <div className='body'>
+          <div className='filter-bar'>
+            <select className='drop' name='character' onChange={this.update_filters}>
+              <option value=''>Any Character</option>{char_options}
+            </select>
+            <button className='btn btn-main' type='button'>All Filters</button>
+            <span className='info'>Showing all {total_combos} combos</span>
+          </div>
+          <div className='combo-div'>
+            <table className='combo-table'>
+              <thead><tr>{combo_props}</tr></thead>
+              <tbody>{combo_rows}</tbody>
+            </table>
+          </div>
+          <div className='page-select'>
+            <button className='btn btn-left' type='button'>🞀</button>
+            <button className='btn btn-right shift' type='button'>🞂</button>
+            <input className='page-input' type='number' min={1} max={10} defaultValue={page_num}/>
+            <button className='btn btn-right shift' type='button'>Go</button>
+          </div>
+          <hr className='solid'/>
         </div>
       </div> 
     )
