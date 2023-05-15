@@ -1,9 +1,9 @@
 const evaluate = {
-    'eq': function(a, b) { return a === b },
-    'gt': function(a, b) { return a > b },
-    'lt': function(a, b) { return a < b },
-    'in': function(a, b) { return a.includes(b) },
-    'ni': function(a, b) { return !a.includes(b) },
+    'is': function(a, b) { return a === b },
+    'is greater than': function(a, b) { return a > b },
+    'is less than': function(a, b) { return a < b },
+    'contains': function(a, b) { return a.includes(b) },
+    'doesn\'t contain': function(a, b) { return !a.includes(b) },
 }
 
 export default evaluate
