@@ -3,8 +3,8 @@ import compare from './compare'
 import evaluate from './evaluate'
 import { useState } from 'react'
 
-const combo_data = [...new Set(require('./combos.json'))]
-const combo_props = [...new Set(require('./props.json'))]
+const combo_data = [...require('./combos.json')]
+const combo_props = [...require('./props.json')]
 const chars = [...new Set(combo_data.map(combo => combo['character']))].sort(compare)
 
 function App() {

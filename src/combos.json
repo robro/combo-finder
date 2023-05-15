@@ -28,4 +28,84 @@
   "damage": 3400,
   "advantage": 15,
   "position": "corner"
+},{
+  "character": "luke",
+  "notation": "5LP~MP~HP > 236PP",
+  "startup": 7,
+  "drive": 2.0,
+  "super": 0,
+  "carry": 12,
+  "damage": 2000,
+  "advantage": 5,
+  "position": "any"
+},{
+  "character": "luke",
+  "notation": "5LP~MP~HP > 236PP",
+  "startup": 7,
+  "drive": 2.0,
+  "super": 0,
+  "carry": 12,
+  "damage": 2000,
+  "advantage": 5,
+  "position": "any"
+},{
+  "character": "luke",
+  "notation": "5LP~MP~HP > 236PP",
+  "startup": 7,
+  "drive": 2.0,
+  "super": 0,
+  "carry": 12,
+  "damage": 2000,
+  "advantage": 5,
+  "position": "any"
+},{
+  "character": "luke",
+  "notation": "5LP~MP~HP > 236PP",
+  "startup": 7,
+  "drive": 2.0,
+  "super": 0,
+  "carry": 12,
+  "damage": 2000,
+  "advantage": 5,
+  "position": "any"
+},{
+  "character": "luke",
+  "notation": "5LP~MP~HP > 236PP",
+  "startup": 7,
+  "drive": 2.0,
+  "super": 0,
+  "carry": 12,
+  "damage": 2000,
+  "advantage": 5,
+  "position": "any"
+},{
+  "character": "luke",
+  "notation": "5LP~MP~HP > 236PP",
+  "startup": 7,
+  "drive": 2.0,
+  "super": 0,
+  "carry": 12,
+  "damage": 2000,
+  "advantage": 5,
+  "position": "any"
+},{
+  "character": "luke",
+  "notation": "5LP~MP~HP > 236PP",
+  "startup": 7,
+  "drive": 2.0,
+  "super": 0,
+  "carry": 12,
+  "damage": 2000,
+  "advantage": 5,
+  "position": "any"
+},{
+  "character": "luke",
+  "notation": "5LP~MP~HP > 236PP",
+  "startup": 7,
+  "drive": 2.0,
+  "super": 0,
+  "carry": 12,
+  "damage": 2000,
+  "advantage": 5,
+  "position": "any"
 }]
