@@ -3,6 +3,7 @@ import compare from './compare'
 import { Component } from 'react'
 
 const combos = require('./combos.json')
+const chars = new Set(combos.data.map(combo => combo['character']))
 
 class App extends Component {
   state = {
@@ -41,6 +42,9 @@ class App extends Component {
     combo_data.sort((a, b) => (
       compare(a[this.state.sort_prop], b[this.state.sort_prop], this.state.reverse_sort)
     ))
+    const char_options = [...chars].map(char => (
+      <option value={char}>{char}</option>
+    ))
     const combo_props = combos.props.map(prop => (
       <th className={`prop-header noselect ${this.sort_status(prop)}`} onClick={this.set_sort}>
         {prop}
@@ -59,9 +63,7 @@ class App extends Component {
       <div className='app'>
         <h1>🔎 Combo Finder</h1>
         <select className='drop' name='character' onChange={this.update_filters}>
-          <option className='drop-option' value=''>Any Character</option>
-          <option className='drop-option' value='ryu'>Ryu</option>
-          <option className='drop-option' value='luke'>Luke</option>
+          <option value=''>Any Character</option>{char_options}
         </select>
         <button className='btn btn-main' type='button'>All Filters</button>
         <div className='combo-div'>
@@ -73,7 +75,7 @@ class App extends Component {
         <div className='page-select'>
           <button className='btn btn-left' type='button'>🞀</button>
           <button className='btn btn-right shift' type='button'>🞂</button>
-          <input className='page-input' type='number' min={1} max={10} value={page_num}/>
+          <input className='page-input' type='number' min={1} max={10} defaultValue={page_num}/>
           <button className='btn btn-right shift' type='button'>Go</button>
         </div>
         <hr className='solid'/>

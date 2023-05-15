@@ -111,6 +111,7 @@
 
 .drop {
   background-color: var(--dark-accent-color);
+  text-transform: capitalize;
   color: inherit;
   padding: 10px;
   font-size: 11pt;
