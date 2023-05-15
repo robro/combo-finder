@@ -1,46 +1,31 @@
-{
-  "props": [
-    "character",
-    "notation",
-    "startup",
-    "drive",
-    "super",
-    "carry",
-    "damage",
-    "advantage",
-    "position"
-  ],
-  "data": [
-    {
-      "character": "ryu",
-      "notation": "2MK > 236HP",
-      "startup": 8,
-      "drive": 0.0,
-      "super": 0,
-      "carry": 10,
-      "damage": 1500,
-      "advantage": -1,
-      "position": "any"
-    },{
-      "character": "luke",
-      "notation": "5LP~MP~HP > 236PP",
-      "startup": 7,
-      "drive": 2.0,
-      "super": 0,
-      "carry": 12,
-      "damage": 2000,
-      "advantage": 5,
-      "position": "any"
-    },{
-      "character": "blanka",
-      "notation": "5LP~MP~HP > 236PP",
-      "startup": 4,
-      "drive": 5.0,
-      "super": 1,
-      "carry": 5,
-      "damage": 3400,
-      "advantage": 15,
-      "position": "corner"
-    }
-  ]
-}
+[{
+  "character": "ryu",
+  "notation": "2MK > 236HP",
+  "startup": 8,
+  "drive": 0.0,
+  "super": 0,
+  "carry": 10,
+  "damage": 1500,
+  "advantage": -1,
+  "position": "any"
+},{
+  "character": "luke",
+  "notation": "5LP~MP~HP > 236PP",
+  "startup": 7,
+  "drive": 2.0,
+  "super": 0,
+  "carry": 12,
+  "damage": 2000,
+  "advantage": 5,
+  "position": "any"
+},{
+  "character": "blanka",
+  "notation": "5LP~MP~HP > 236PP",
+  "startup": 4,
+  "drive": 5.0,
+  "super": 1,
+  "carry": 5,
+  "damage": 3400,
+  "advantage": 15,
+  "position": "corner"
+}]

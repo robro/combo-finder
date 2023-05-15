@@ -3,11 +3,11 @@ import compare from './compare'
 import evaluate from './evaluate'
 import { useState } from 'react'
 
-const combos = require('./combos.json')
-const chars = [...new Set(combos.data.map(combo => combo['character']))].sort(compare)
+const combo_data = [...new Set(require('./combos.json'))]
+const combo_props = [...new Set(require('./props.json'))]
+const chars = [...new Set(combo_data.map(combo => combo['character']))].sort(compare)
 
 function App() {
-  const [combo_data, setComboData] = useState([...combos.data])
   const [sort_prop, setSortProp] = useState('character')
   const [reverse_sort, setReverseSort] = useState(false)
   const [filters, setFilters] = useState({})
@@ -46,19 +46,19 @@ function App() {
   const char_options = chars.map(char => (
     <option value={char}>{char}</option>
   ))
-  const combo_props = combos.props.map(prop => (
+  const combo_headers = combo_props.map(prop => (
     <th className={`prop-header noselect ${sortStatus(prop)}`} onClick={setSorting}>
       {prop}
     </th>
   ))
   const combo_rows = filtered_data.map(combo => (
-    <tr className='combo-row'>{
-      combos.props.map(prop => (
+    <tr className='combo-row'>
+      {combo_props.map(prop => (
         <td className={`prop-value ${prop} ${(combo[prop] >= 0)?'plus':''}`}>
           {combo[prop]}
         </td>
-      ))
-    }</tr>
+      ))}
+    </tr>
   ))
   return (
     <div className='app'>
@@ -75,7 +75,7 @@ function App() {
         </div>
         <div className='combo-div'>
           <table className='combo-table'>
-            <thead><tr>{combo_props}</tr></thead>
+            <thead><tr>{combo_headers}</tr></thead>
             <tbody>{combo_rows}</tbody>
           </table>
         </div>
