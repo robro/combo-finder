@@ -76,6 +76,9 @@ function App() {
     if (!value) delete new_filters[key]
     setFilters(new_filters)
   }
+  const submitFilters = (e) => {
+    console.log(e.target.getElementsByClassName('filter'))
+  }
   const resetFilters = () => {
     let dropdowns = [...document.getElementsByClassName('drop')]
     dropdowns.map(drop => drop.value = drop.options[0].value)
@@ -114,7 +117,8 @@ function App() {
   }
   const combo_headers = combo_props.map(prop => (
     <th className={`prop-header ${prop} ${sortStatus(prop)} noselect`} onClick={setSorting}>
-      {prop}<span className='sorting'>
+      {prop}
+      <span className='sorting'>
         <div className={`sorting up-arrow ${sortStatus(prop)}`}/>
         <div className={`sorting down-arrow ${sortStatus(prop)}`}/>
       </span>
@@ -134,25 +138,46 @@ function App() {
   const reset_filters_btn = (Object.keys(filters).length > 0)?
     <span className='reset' onClick={resetFilters}>Reset filters</span>: ''
 
-  const createFilter = (prop) => {
-    if (combo_filters[prop].compare.length > 1) return (
-      <>
-      <select className='drop' id={`${prop}-ops`}>
+  const createFilter = (prop, label=true, on_change=null) => { return (
+    <tr className='filter'>
+      {(label)? <td><label className='float-right capitalize'>{prop}</label></td>: null}
+      {(combo_filters[prop].compare.length > 1)? <>
+      <td><select className='drop' id={`${prop}-ops`}>
         {combo_filters[prop].compare.map(op => (
           <option value={op}>{op}</option>
         ))}
-      </select>
-      <input className='input' id={`${prop}-input`}/>
-      </>
-    ); else return (
-      <select className='drop' name='is' id={prop} onChange={updateFilters}>
+      </select></td><td>
+      <input className='filter-input' id={`${prop}-input`}/></td></>:
+      <td><select className='drop' name='is' id={prop} onChange={on_change}>
         <option value=''>{combo_filters[prop].options[0]}</option>
         {combo_filters[prop].options.slice(1).map(op => (
           <option value={op}>{op}</option>
         ))}
-      </select>
-    )
-  }
+      </select></td>}
+    </tr>
+  )}
+  //   if (combo_filters[prop].compare.length > 1) return (
+  //     <div className='filter capitalize'>
+  //       <span>{(label)? <span></span>: ''}</span>
+  //       <select className='drop' id={`${prop}-ops`}>
+  //         {combo_filters[prop].compare.map(op => (
+  //           <option value={op}>{op}</option>
+  //         ))}
+  //       </select>
+  //       <input className='input' id={`${prop}-input`}/>
+  //     </div>
+  //   ); else return (
+  //     <div className='filter capitalize'>
+  //       <span>{prop}</span>
+        // <select className='drop' name='is' id={prop} onChange={updateFilters}>
+        //   <option value=''>{combo_filters[prop].options[0]}</option>
+        //   {combo_filters[prop].options.slice(1).map(op => (
+        //     <option value={op}>{op}</option>
+        //   ))}
+        // </select>
+  //     </div>
+  //   )
+  // }
   return (
     <div className='app'>
       <div className='title-bar'>
@@ -160,9 +185,11 @@ function App() {
       </div>
       <div className='body'>
         <div className='filter-bar'>
-          {createFilter('character')}
-          <button className='btn btn-main' type='button'>All Filters</button>
+          <button className='btn btn-main' type='button' onClick={submitFilters}>All Filters</button>
         </div>
+        <table className='filter-table'>
+          <tbody>{combo_props.slice(1).map(prop => createFilter(prop))}</tbody>
+        </table>
         <div className='info'>{getInfoString()}{reset_filters_btn}</div>
         <div className='combo-div'>
           <table className='combo-table'>
@@ -175,7 +202,7 @@ function App() {
             disabled={getDownStatus()}>❮</button>
           <button className={'btn btn-right shift'} type='button' onClick={pageUp}
             disabled={getUpStatus()} >❯</button>
-          <input className='input page-input' id='page-input' type='number' onKeyDown={goToPage}
+          <input className='page-input' id='page-input' type='number' onKeyDown={goToPage}
             min='1' max={total_pages} defaultValue={cur_page} disabled={getGoStatus()}/>
           <button className='btn btn-right' type='button' onClick={goToPage}
             disabled={getGoStatus()}>Go</button>

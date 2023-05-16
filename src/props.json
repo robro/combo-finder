@@ -28,27 +28,27 @@
     "options": []
   },
   "startup": {
-    "compare": ["Is Equal To", "Is Greater Than", "Is Less Than"],
+    "compare": ["Equal To", "Greater Than", "Less Than"],
     "options": []
   },
   "drive": {
-    "compare": ["Is Equal To", "Is Greater Than", "Is Less Than"],
+    "compare": ["Equal To", "Greater Than", "Less Than"],
     "options": []
   },
   "super": {
-    "compare": ["Is Equal To", "Is Greater Than", "Is Less Than"],
+    "compare": ["Equal To", "Greater Than", "Less Than"],
     "options": []
   },
   "carry": {
-    "compare": ["Is Equal To", "Is Greater Than", "Is Less Than"],
+    "compare": ["Equal To", "Greater Than", "Less Than"],
     "options": []
   },
   "damage": {
-    "compare": ["Is Equal To", "Is Greater Than", "Is Less Than"],
+    "compare": ["Equal To", "Greater Than", "Less Than"],
     "options": []
   },
   "advantage": {
-    "compare": ["Is Equal To", "Is Greater Than", "Is Less Than"],
+    "compare": ["Equal To", "Greater Than", "Less Than"],
     "options": []
   },
   "position": {
