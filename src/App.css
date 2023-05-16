@@ -24,11 +24,22 @@
 .body {
   margin: auto;
   max-width: 1200px;
-  padding: 0 10px;
+  padding: 0 20px;
 }
 
 .filter-bar {
   margin: 30px 0;
+  display: flex;
+}
+
+.reset {
+  cursor: pointer;
+  color: var(--main-accent-color);
+  margin-left: 10px;
+}
+
+.reset:hover {
+  text-decoration: underline;
 }
 
 .info {
@@ -39,7 +50,7 @@
 }
 
 .combo-div {
-  min-height: 400px;
+  min-height: 250px;
 }
 
 .combo-table {
@@ -140,7 +151,7 @@
   color: inherit;
   padding: 10px;
   font-size: 11pt;
-  height: 36px;
+  height: 35px;
   border-width: 1px;
   border-style: none;
   border-color: var(--dark-accent-color);

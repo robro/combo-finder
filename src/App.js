@@ -3,8 +3,8 @@ import compare from './compare'
 import evaluate from './evaluate'
 import { useState } from 'react'
 
-const combo_data = [...require('./combos.json')]
 const combo_props = [...require('./props.json')]
+const combo_data = [...require('./combos.json')]
 const chars = [...new Set(combo_data.map(combo => combo['character']))].sort(compare)
 
 function App() {
@@ -13,7 +13,9 @@ function App() {
   const [filters, setFilters] = useState({
     // 'startup': {'op': 'is', 'value': 7}
   })
-  
+  const [page_size, setPageSize] = useState(20)
+  const [cur_page, setCurPage] = useState(1)
+
   const setSorting = (event) => {
     const new_prop = event.target.textContent
     const new_sort = (new_prop === sort_prop)? !reverse_sort: false
@@ -33,6 +35,11 @@ function App() {
     if (!value) delete new_filters[key]
     setFilters(new_filters)
   }
+  const resetFilters = (event) => {
+    let dropdown = document.getElementById('is')
+    dropdown.value = ''
+    setFilters({})
+  }
   const filterCombo = (combo) => {
     for (let prop in filters) {
       if (filters[prop].value) {
@@ -45,18 +52,17 @@ function App() {
     compare(a[sort_prop], b[sort_prop], reverse_sort)
   ))
   const getInfoString = () => {
-    let combos_str = ''
-    let filter_str = ''
+    let filter_info = ''
+    let combo_nums = ''
     const plural = (filtered_data.length === 1)? '': 's'
-    if (Object.keys(filters).length === 0) {
-      combos_str = `all ${combo_data.length}`
-    } else {
-      combos_str = `${filtered_data.length}`
-      filter_str = `where ${Object.keys(filters).map(f => 
-        `${f} ${filters[f].op} "${filters[f].value}"`
-      ).join(' and ')}`
+    if (page_size < filtered_data.length) {
+      combo_nums = `${start_index+1} - ${end_index} of`
     }
-    return `Showing ${combos_str} combo${plural} ${filter_str}`
+    if (Object.keys(filters).length > 0) {
+      filter_info = ` where ${Object.keys(filters).map(f =>
+        `${f} ${filters[f].op} "${filters[f].value}"`).join(' and ')}`
+    }
+    return `Showing ${combo_nums} ${filtered_data.length} combo${plural}${filter_info}.`
   }
   const char_options = chars.map(char => (
     <option value={char}>{char}</option>
@@ -66,7 +72,9 @@ function App() {
       {prop}
     </th>
   ))
-  const combo_rows = filtered_data.map(combo => (
+  const start_index = (cur_page * page_size) - page_size
+  const end_index = Math.min(start_index + page_size, filtered_data.length)
+  const combo_rows = filtered_data.slice(start_index, end_index).map(combo => (
     <tr className='combo-row'>
       {combo_props.map(prop => (
         <td className={`prop-value ${prop} ${(combo[prop] >= 0)?'plus':''}`}>
@@ -75,6 +83,8 @@ function App() {
       ))}
     </tr>
   ))
+  const reset_filters = (Object.keys(filters).length > 0)? 
+    <span className='reset' onClick={resetFilters}>Reset filters</span>: ''
   return (
     <div className='app'>
       <div className='title-bar'>
@@ -83,11 +93,12 @@ function App() {
       <div className='body'>
         <div className='filter-bar'>
           <select className='drop' name='character' id='is' onChange={updateFilters}>
-            <option value=''>Any Character</option>{char_options}
+            <option value=''>Any Character</option>
+            {char_options}
           </select>
           <button className='btn btn-main' type='button'>All Filters</button>
         </div>
-        <div className='info'>{getInfoString()}</div>
+        <div className='info'>{getInfoString()}{reset_filters}</div>
         <div className='combo-div'>
           <table className='combo-table'>
             <thead><tr>{combo_headers}</tr></thead>
