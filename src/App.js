@@ -11,7 +11,7 @@ function App() {
   const [sort_prop, setSortProp] = useState('character')
   const [reverse_sort, setReverseSort] = useState(false)
   const [filters, setFilters] = useState({
-    // 'startup': {'op': 'is', 'value': 7}
+    'startup': {'op': 'is', 'value': 7}
   })
   const [page_size, setPageSize] = useState(10)
   const [cur_page, setCurPage] = useState(1)
@@ -58,7 +58,7 @@ function App() {
     return ''
   }
   const setSorting = (e) => {
-    const new_prop = e.target.textContent
+    const new_prop = e.currentTarget.textContent
     const new_sort = (new_prop === sort_prop)? !reverse_sort: false
     setSortProp(new_prop)
     setReverseSort(new_sort)
@@ -113,8 +113,11 @@ function App() {
     return `Showing ${combo_nums} ${filtered_data.length} combo${plural}${filter_info}.`
   }
   const combo_headers = combo_props.map(prop => (
-    <th className={`prop-header noselect ${sortStatus(prop)}`} onClick={setSorting}>
-      {prop}
+    <th className={`prop-header ${prop} ${sortStatus(prop)} noselect`} onClick={setSorting}>
+      {prop}<span className='sorting'>
+        <div className={`sorting up-arrow ${sortStatus(prop)}`}/>
+        <div className={`sorting down-arrow ${sortStatus(prop)}`}/>
+      </span>
     </th>
   ))
   const start_index = (cur_page * page_size) - page_size
@@ -128,7 +131,7 @@ function App() {
       ))}
     </tr>
   ))
-  const reset_filters = (Object.keys(filters).length > 0)?
+  const reset_filters_btn = (Object.keys(filters).length > 0)?
     <span className='reset' onClick={resetFilters}>Reset filters</span>: ''
 
   const createFilter = (prop) => {
@@ -142,7 +145,7 @@ function App() {
       <input className='input' id={`${prop}-input`}/>
       </>
     ); else return (
-      <select className='drop' name='is' id={prop} onClick={updateFilters}>
+      <select className='drop' name='is' id={prop} onChange={updateFilters}>
         <option value=''>{combo_filters[prop].options[0]}</option>
         {combo_filters[prop].options.slice(1).map(op => (
           <option value={op}>{op}</option>
@@ -160,7 +163,7 @@ function App() {
           {createFilter('character')}
           <button className='btn btn-main' type='button'>All Filters</button>
         </div>
-        <div className='info'>{getInfoString()}{reset_filters}</div>
+        <div className='info'>{getInfoString()}{reset_filters_btn}</div>
         <div className='combo-div'>
           <table className='combo-table'>
             <thead><tr>{combo_headers}</tr></thead>
@@ -169,9 +172,9 @@ function App() {
         </div>
         <div className='page-select'>
           <button className={'btn btn-left'} type='button' onClick={pageDown}
-            disabled={getDownStatus()}>🞀</button>
+            disabled={getDownStatus()}>❮</button>
           <button className={'btn btn-right shift'} type='button' onClick={pageUp}
-            disabled={getUpStatus()} >🞂</button>
+            disabled={getUpStatus()} >❯</button>
           <input className='input page-input' id='page-input' type='number' onKeyDown={goToPage}
             min='1' max={total_pages} defaultValue={cur_page} disabled={getGoStatus()}/>
           <button className='btn btn-right' type='button' onClick={goToPage}

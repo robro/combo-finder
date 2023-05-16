@@ -75,19 +75,15 @@ input[type=number] {
 }
 
 .prop-header {
-  padding: 10px 0 10px 10px;
+  padding: 10px 20px 10px 10px;
   cursor: pointer;
   text-align: left;
   border-bottom: 1px solid;
   border-color: var(--dark-accent-color);
-  /* transition-duration: 0.1s; */
-  text-overflow: clip;
 }
 
-.prop-header::after {
-  content: '🞁';
-  color: var(--main-bg-color);
-  padding-left: 10px;
+.prop-header.notation {
+  width: 25%;
 }
 
 .ascend {
@@ -98,16 +94,31 @@ input[type=number] {
   border-color: var(--main-accent-color);
 }
 
-.ascend::after {
-  content: '🞁';
-  color: var(--main-text-color);
-  padding-left: 10px;
+.sorting {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  margin-left: 2px;
+  position: absolute;
 }
 
-.descend::after {
-  content: '🞃';
-  color: var(--main-text-color);
-  padding-left: 10px;
+.sorting.up-arrow {
+  border-bottom: 5px solid var(--dark-accent-color);
+  margin-top: 7px;
+}
+
+.sorting.up-arrow.ascend {
+  border-bottom: 5px solid var(--main-text-color);
+}
+
+.sorting.down-arrow {
+  border-top: 5px solid var(--dark-accent-color);
+  margin-top: 13px;
+}
+
+.sorting.down-arrow.descend {
+  border-top: 5px solid var(--main-text-color);
 }
 
 .prop-value {
@@ -120,7 +131,7 @@ input[type=number] {
   content: '+';
 }
 
-.carry::after {
+.prop-value.carry::after {
   content: '%';
 }
 
