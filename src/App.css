@@ -50,7 +50,7 @@
 }
 
 .combo-div {
-  min-height: 250px;
+  min-height: 300px;
 }
 
 .combo-table {
@@ -65,7 +65,7 @@
   text-align: left;
   border-bottom: 1px solid;
   border-color: var(--dark-accent-color);
-  transition-duration: 0.2s;
+  transition-duration: 0.1s;
   text-overflow: clip;
 }
 
@@ -161,16 +161,23 @@
 
 .btn {
   background-color: var(--dark-accent-color);
-  padding: 0 10px;
   color: var(--main-text-color);
   font-size: 11pt;
   min-width: 35px;
   height: 35px;
   border: none;
-  transition-duration: 0.2s;
+  cursor: pointer;
+  padding: 0 10px;
+  transition-duration: 0.1s;
 }
 
-.btn:hover {
+.btn:disabled {
+  background-color: var(--darker-accent-color);
+  color: gray;
+  cursor: default;
+}
+
+.btn:enabled:hover {
   background-color: var(--main-accent-color);
 }
 
