@@ -1,11 +1,58 @@
-[
-  "character",
-  "notation",
-  "startup",
-  "drive",
-  "super",
-  "carry",
-  "damage",
-  "advantage",
-  "position"
-]
+{
+  "character": {
+    "compare": ["Is"],
+    "options": [
+      "Any Character",
+      "Blanka",
+      "Cammy",
+      "Chun-Li",
+      "Dee Jay",
+      "Dhalsim",
+      "E.Honda",
+      "Guile",
+      "Jamie",
+      "JP",
+      "Juri",
+      "Ken",
+      "Kimberly",
+      "Lily",
+      "Luke",
+      "Marisa",
+      "Manon",
+      "Ryu",
+      "Zangeif"
+    ]
+  },
+  "notation": {
+    "compare": ["Contains", "Doesn't Contain"],
+    "options": []
+  },
+  "startup": {
+    "compare": ["Is Equal To", "Is Greater Than", "Is Less Than"],
+    "options": []
+  },
+  "drive": {
+    "compare": ["Is Equal To", "Is Greater Than", "Is Less Than"],
+    "options": []
+  },
+  "super": {
+    "compare": ["Is Equal To", "Is Greater Than", "Is Less Than"],
+    "options": []
+  },
+  "carry": {
+    "compare": ["Is Equal To", "Is Greater Than", "Is Less Than"],
+    "options": []
+  },
+  "damage": {
+    "compare": ["Is Equal To", "Is Greater Than", "Is Less Than"],
+    "options": []
+  },
+  "advantage": {
+    "compare": ["Is Equal To", "Is Greater Than", "Is Less Than"],
+    "options": []
+  },
+  "position": {
+    "compare": ["Is"],
+    "options": ["Any", "Midscreen", "Fullscreen", "Corner"]
+  }
+}

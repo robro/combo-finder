@@ -3,9 +3,9 @@ import compare from './compare'
 import evaluate from './evaluate'
 import { useState } from 'react'
 
-const combo_props = [...require('./props.json')]
+const combo_filters = require('./props.json')
+const combo_props = Object.keys(combo_filters)
 const combo_data = [...require('./combos.json')]
-const chars = [...new Set(combo_data.map(combo => combo['character']))].sort(compare)
 
 function App() {
   const [sort_prop, setSortProp] = useState('character')
@@ -69,16 +69,16 @@ function App() {
     return 'ascend'
   }
   const updateFilters = (e) => {
-    const key = e.target.name
-    const op = e.target.id
+    const key = e.target.id
+    const op = e.target.name
     const value = e.target.value
     const new_filters = {...filters, [key]: {'op': op, 'value': value}}
     if (!value) delete new_filters[key]
     setFilters(new_filters)
   }
   const resetFilters = () => {
-    let dropdown = document.getElementById('is')
-    dropdown.value = ''
+    let dropdowns = [...document.getElementsByClassName('drop')]
+    dropdowns.map(drop => drop.value = drop.options[0].value)
     setFilters({})
   }
   const filterCombo = (combo) => {
@@ -112,9 +112,6 @@ function App() {
     }
     return `Showing ${combo_nums} ${filtered_data.length} combo${plural}${filter_info}.`
   }
-  const char_options = chars.map(char => (
-    <option value={char}>{char}</option>
-  ))
   const combo_headers = combo_props.map(prop => (
     <th className={`prop-header noselect ${sortStatus(prop)}`} onClick={setSorting}>
       {prop}
@@ -134,6 +131,25 @@ function App() {
   const reset_filters = (Object.keys(filters).length > 0)?
     <span className='reset' onClick={resetFilters}>Reset filters</span>: ''
 
+  const createFilter = (prop) => {
+    if (combo_filters[prop].compare.length > 1) return (
+      <>
+      <select className='drop' id={`${prop}-ops`}>
+        {combo_filters[prop].compare.map(op => (
+          <option value={op}>{op}</option>
+        ))}
+      </select>
+      <input className='input' id={`${prop}-input`}/>
+      </>
+    ); else return (
+      <select className='drop' name='is' id={prop} onClick={updateFilters}>
+        <option value=''>{combo_filters[prop].options[0]}</option>
+        {combo_filters[prop].options.slice(1).map(op => (
+          <option value={op}>{op}</option>
+        ))}
+      </select>
+    )
+  }
   return (
     <div className='app'>
       <div className='title-bar'>
@@ -141,10 +157,7 @@ function App() {
       </div>
       <div className='body'>
         <div className='filter-bar'>
-          <select className='drop' name='character' id='is' onChange={updateFilters}>
-            <option value=''>Any Character</option>
-            {char_options}
-          </select>
+          {createFilter('character')}
           <button className='btn btn-main' type='button'>All Filters</button>
         </div>
         <div className='info'>{getInfoString()}{reset_filters}</div>
@@ -159,7 +172,7 @@ function App() {
             disabled={getDownStatus()}>🞀</button>
           <button className={'btn btn-right shift'} type='button' onClick={pageUp}
             disabled={getUpStatus()} >🞂</button>
-          <input className='page-input' id='page-input' type='number' onKeyDown={goToPage}
+          <input className='input page-input' id='page-input' type='number' onKeyDown={goToPage}
             min='1' max={total_pages} defaultValue={cur_page} disabled={getGoStatus()}/>
           <button className='btn btn-right' type='button' onClick={goToPage}
             disabled={getGoStatus()}>Go</button>
