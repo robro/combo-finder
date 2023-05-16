@@ -1,5 +1,5 @@
 [{
-  "character": "ryu",
+  "character": "Ryu",
   "notation": "2MK > 236HP",
   "startup": 8,
   "drive": 0.0,
@@ -9,7 +9,7 @@
   "advantage": -1,
   "position": "any"
 },{
-  "character": "luke",
+  "character": "Luke",
   "notation": "5LP~MP~HP > 236PP",
   "startup": 7,
   "drive": 2.0,
@@ -19,7 +19,7 @@
   "advantage": 5,
   "position": "any"
 },{
-  "character": "blanka",
+  "character": "Blanka",
   "notation": "5LP~MP~HP > 236PP",
   "startup": 4,
   "drive": 5.0,
@@ -29,7 +29,7 @@
   "advantage": 15,
   "position": "corner"
 },{
-  "character": "luke",
+  "character": "Luke",
   "notation": "5LP~MP~HP > 236PP",
   "startup": 7,
   "drive": 2.0,
@@ -39,7 +39,7 @@
   "advantage": 5,
   "position": "any"
 },{
-  "character": "luke",
+  "character": "Luke",
   "notation": "5LP~MP~HP > 236PP",
   "startup": 7,
   "drive": 2.0,
@@ -49,7 +49,7 @@
   "advantage": 5,
   "position": "any"
 },{
-  "character": "luke",
+  "character": "Luke",
   "notation": "5LP~MP~HP > 236PP",
   "startup": 7,
   "drive": 2.0,
@@ -59,7 +59,7 @@
   "advantage": 5,
   "position": "any"
 },{
-  "character": "luke",
+  "character": "Luke",
   "notation": "5LP~MP~HP > 236PP",
   "startup": 7,
   "drive": 2.0,
@@ -69,7 +69,7 @@
   "advantage": 5,
   "position": "any"
 },{
-  "character": "luke",
+  "character": "Luke",
   "notation": "5LP~MP~HP > 236PP",
   "startup": 7,
   "drive": 2.0,
@@ -79,7 +79,7 @@
   "advantage": 5,
   "position": "any"
 },{
-  "character": "luke",
+  "character": "Luke",
   "notation": "5LP~MP~HP > 236PP",
   "startup": 7,
   "drive": 2.0,
@@ -89,7 +89,7 @@
   "advantage": 5,
   "position": "any"
 },{
-  "character": "luke",
+  "character": "Luke",
   "notation": "5LP~MP~HP > 236PP",
   "startup": 7,
   "drive": 2.0,
@@ -99,7 +99,7 @@
   "advantage": 5,
   "position": "any"
 },{
-  "character": "luke",
+  "character": "Luke",
   "notation": "5LP~MP~HP > 236PP",
   "startup": 7,
   "drive": 2.0,
@@ -109,7 +109,7 @@
   "advantage": 5,
   "position": "any"
 },{
-  "character": "ryu",
+  "character": "Ryu",
   "notation": "2MK > 236HP",
   "startup": 8,
   "drive": 0.0,
@@ -119,7 +119,7 @@
   "advantage": -1,
   "position": "any"
 },{
-  "character": "ryu",
+  "character": "Ryu",
   "notation": "2MK > 236HP",
   "startup": 8,
   "drive": 0.0,
@@ -129,7 +129,7 @@
   "advantage": -1,
   "position": "any"
 },{
-  "character": "ryu",
+  "character": "Ryu",
   "notation": "2MK > 236HP",
   "startup": 8,
   "drive": 0.0,
@@ -139,7 +139,7 @@
   "advantage": -1,
   "position": "any"
 },{
-  "character": "ryu",
+  "character": "Ryu",
   "notation": "2MK > 236HP",
   "startup": 8,
   "drive": 0.0,
@@ -149,7 +149,7 @@
   "advantage": -1,
   "position": "any"
 },{
-  "character": "ryu",
+  "character": "Ryu",
   "notation": "2MK > 236HP",
   "startup": 8,
   "drive": 0.0,
@@ -159,7 +159,7 @@
   "advantage": -1,
   "position": "any"
 },{
-  "character": "ryu",
+  "character": "Ryu",
   "notation": "2MK > 236HP",
   "startup": 8,
   "drive": 0.0,
@@ -169,7 +169,7 @@
   "advantage": -1,
   "position": "any"
 },{
-  "character": "ryu",
+  "character": "Ryu",
   "notation": "2MK > 236HP",
   "startup": 8,
   "drive": 0.0,
@@ -179,7 +179,7 @@
   "advantage": -1,
   "position": "any"
 },{
-  "character": "blanka",
+  "character": "Blanka",
   "notation": "5LP~MP~HP > 236PP",
   "startup": 4,
   "drive": 5.0,
@@ -189,7 +189,7 @@
   "advantage": 15,
   "position": "corner"
 },{
-  "character": "blanka",
+  "character": "Blanka",
   "notation": "5LP~MP~HP > 236PP",
   "startup": 4,
   "drive": 5.0,
@@ -199,7 +199,7 @@
   "advantage": 15,
   "position": "corner"
 },{
-  "character": "blanka",
+  "character": "Blanka",
   "notation": "5LP~MP~HP > 236PP",
   "startup": 4,
   "drive": 5.0,
@@ -209,7 +209,7 @@
   "advantage": 15,
   "position": "corner"
 },{
-  "character": "blanka",
+  "character": "Blanka",
   "notation": "5LP~MP~HP > 236PP",
   "startup": 4,
   "drive": 5.0,
@@ -219,7 +219,7 @@
   "advantage": 15,
   "position": "corner"
 },{
-  "character": "blanka",
+  "character": "Blanka",
   "notation": "5LP~MP~HP > 236PP",
   "startup": 4,
   "drive": 5.0,
@@ -229,7 +229,7 @@
   "advantage": 15,
   "position": "corner"
 },{
-  "character": "blanka",
+  "character": "Blanka",
   "notation": "5LP~MP~HP > 236PP",
   "startup": 4,
   "drive": 5.0,
@@ -239,7 +239,7 @@
   "advantage": 15,
   "position": "corner"
 },{
-  "character": "guile",
+  "character": "Guile",
   "notation": "5LP~MP~HP > 236PP",
   "startup": 4,
   "drive": 5.0,

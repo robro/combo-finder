@@ -4,6 +4,19 @@
   --main-accent-color: #840ad6;
   --dark-accent-color: #2b2b2b;
   --darker-accent-color: #1a1a1a;
+
+  --max-width: 1200px
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  appearance: none;
+  -moz-appearance: textfield;
 }
 
 .app {
@@ -13,17 +26,19 @@
 
 .title-bar {
   background-color: #590491;
-  padding: 1px 0 1px 10px;
+  /* margin-top: -20px; */
+  padding: 1px;
+  height: 60px;
 }
 
 .title {
-  margin: auto;
-  max-width: 1200px;
+  margin: -15px auto;
+  max-width: var(--max-width);
 }
 
 .body {
   margin: auto;
-  max-width: 1200px;
+  max-width: var(--max-width);
   padding: 0 20px;
 }
 
@@ -65,7 +80,7 @@
   text-align: left;
   border-bottom: 1px solid;
   border-color: var(--dark-accent-color);
-  transition-duration: 0.1s;
+  /* transition-duration: 0.1s; */
   text-overflow: clip;
 }
 
@@ -135,13 +150,14 @@
   background-color: inherit;
   color: inherit;
   font-size: 11pt;
-  padding-left: 10px;
+  padding: 0 10px;
   border-style: solid;
   border-width: 1px 0 1px 1px;
   border-color: var(--dark-accent-color);
   border-radius: 5px 0 0 5px;
-  width: 40px;
-  height: 31px;
+  outline-style: none;
+  width: 32px;
+  height: 36px;
   margin-left: 15px;
 }
 
@@ -151,10 +167,11 @@
   color: inherit;
   padding: 10px;
   font-size: 11pt;
-  height: 35px;
+  height: 38px;
   border-width: 1px;
   border-style: none;
   border-color: var(--dark-accent-color);
+  outline-style: none;
   margin-right: 10px;
   border-radius: 5px;
 }
@@ -163,12 +180,12 @@
   background-color: var(--dark-accent-color);
   color: var(--main-text-color);
   font-size: 11pt;
-  min-width: 35px;
-  height: 35px;
+  min-width: 38px;
+  height: 38px;
   border: none;
   cursor: pointer;
   padding: 0 10px;
-  transition-duration: 0.1s;
+  /* transition-duration: 0.1s; */
 }
 
 .btn:disabled {

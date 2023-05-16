@@ -13,7 +13,7 @@ function App() {
   const [filters, setFilters] = useState({
     // 'startup': {'op': 'is', 'value': 7}
   })
-  const [page_size, setPageSize] = useState(20)
+  const [page_size, setPageSize] = useState(10)
   const [cur_page, setCurPage] = useState(1)
 
   const pageUp = () => {
@@ -28,16 +28,20 @@ function App() {
     page_input.value = cur_page-1
     setCurPage(cur_page-1)
   }
-  const goToPage = () => {
+  const goToPage = (e) => {
+    if (e.key && e.key !== 'Enter') return
     let page_input = document.getElementById('page-input')
     if (page_input.value === '') {
       page_input.value = cur_page
       return
     }
-    let page_input_num = Number(page_input.value)
-    if (page_input_num === cur_page) return
+    let page_input_num = parseInt(page_input.value)
     if (page_input_num < 1) page_input_num = 1
     if (page_input_num > total_pages) page_input_num = total_pages
+    if (page_input_num === cur_page) {
+      page_input.value = cur_page
+      return 
+    }
     page_input.value = page_input_num
     setCurPage(page_input_num)
   }
@@ -151,11 +155,14 @@ function App() {
           </table>
         </div>
         <div className='page-select'>
-          <button className={'btn btn-left'} type='button' onClick={pageDown} disabled={getDownStatus()}>🞀</button>
-          <button className={'btn btn-right shift'} type='button' onClick={pageUp} disabled={getUpStatus()} >🞂</button>
-          <input className='page-input' id='page-input' type='number' required
+          <button className={'btn btn-left'} type='button' onClick={pageDown}
+            disabled={getDownStatus()}>🞀</button>
+          <button className={'btn btn-right shift'} type='button' onClick={pageUp}
+            disabled={getUpStatus()} >🞂</button>
+          <input className='page-input' id='page-input' type='number' onKeyDown={goToPage}
             min='1' max={total_pages} defaultValue={cur_page} disabled={getGoStatus()}/>
-          <button className='btn btn-right shift' type='button' onClick={goToPage} disabled={getGoStatus()}>Go</button>
+          <button className='btn btn-right' type='button' onClick={goToPage}
+            disabled={getGoStatus()}>Go</button>
         </div>
         <hr className='solid'/>
       </div>
