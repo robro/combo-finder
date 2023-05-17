@@ -14,19 +14,19 @@ function App() {
   const [page_size, setPageSize] = useState(10)
   const [cur_page, setCurPage] = useState(1)
 
-  const pageUp = () => {
+  function pageUp() {
     if (cur_page >= total_pages) return
     let page_input = document.getElementById('page-input')
     page_input.value = cur_page+1
-    setCurPage(cur_page+1)
+    setCurPage(cur_page + 1)
   }
-  const pageDown = () => {
+  function pageDown() {
     if (cur_page <= 1) return
     let page_input = document.getElementById('page-input')
     page_input.value = cur_page-1
-    setCurPage(cur_page-1)
+    setCurPage(cur_page - 1)
   }
-  const goToPage = (e) => {
+  function goToPage(e) {
     if (e.key && e.key !== 'Enter') return
     let page_input = document.getElementById('page-input')
     if (page_input.value === '') {
@@ -43,30 +43,30 @@ function App() {
     page_input.value = page_input_num
     setCurPage(page_input_num)
   }
-  const getDownStatus = () => {
+  function getDownStatus() {
     if (cur_page === 1) return 'disabled'
     return ''
   }
-  const getUpStatus = () => {
+  function getUpStatus() {
     if (cur_page === total_pages) return 'disabled'
     return ''
   }
-  const getGoStatus = () => {
+  function getGoStatus() {
     if (total_pages === 1) return 'disabled'
     return ''
   }
-  const setSorting = (e) => {
+  function setSorting(e) {
     const new_prop = e.currentTarget.textContent
     const new_sort = (new_prop === sort_prop)? !reverse_sort: false
     setSortProp(new_prop)
     setReverseSort(new_sort)
   }
-  const sortStatus = (prop) => {
+  function sortStatus(prop) {
     if (prop !== sort_prop) return ''
     if (reverse_sort) return 'descend'
     return 'ascend'
   }
-  const submitFilters = () => {
+  function submitFilters() {
     let new_filters = {}
     for (const prop of combo_props) {
       let condition = document.getElementById(prop+'-condition')
@@ -77,14 +77,14 @@ function App() {
     }
     setFilters(new_filters)
   }
-  const resetFilters = () => {
+  function resetFilters() {
     let condition_elems = [...document.getElementsByClassName('condition')]
     let value_elems = [...document.getElementsByClassName('value')]
     condition_elems.map(elem => elem.value = elem.options[0].value)
     value_elems.map(elem => elem.value = '')
     setFilters({})
   }
-  const filterCombo = (combo) => {
+  function filterCombo(combo) {
     let combo_value
     let filter_value
     let condition
@@ -93,24 +93,32 @@ function App() {
         combo_value = combo[prop]
         filter_value = filters[prop].value
         condition = filters[prop].condition.toLowerCase()
-        if (typeof(combo_value) === 'string') combo_value = combo_value.toLowerCase()
-        if (typeof(filter_value) === 'string') filter_value = filter_value.toLowerCase()
+        try {combo_value = combo_value.toLowerCase()} catch {}
+        try {filter_value = filter_value.toLowerCase()} catch {}
         if (!evaluate[condition](combo_value, filter_value))
           return false
       }}
     return true
   }
-  const filtered_data = combo_data.filter(filterCombo).sort((a, b) => (
-    compare(a[sort_prop], b[sort_prop], reverse_sort)
-  ))
-  const total_pages = Math.max(1, Math.ceil(filtered_data.length / page_size))
-  if (cur_page > total_pages) {
-    let page_input = document.getElementById('page-input')
-    page_input.value = total_pages
-    setCurPage(total_pages)
-  }
-
-  const getInfoString = () => {
+  function createFilter(prop, label=true, on_change=null) { return (
+    <tr className='filter-row'>
+      {(label)? <td><label className='capitalize'>{prop}</label></td>: null}
+      {(combo_filters[prop].compare.length > 1)? <>
+      <td><select className='drop condition' id={prop+'-condition'}>
+        {combo_filters[prop].compare.map(option => (
+          <option value={option}>{option}</option>
+        ))}
+      </select></td><td>
+      <input className='filter-input value' id={prop+'-value'} maxLength={100}/></td></>:
+      <td colSpan={2}><select className='drop value' id={prop+'-value'} onChange={on_change}>
+        <option value=''>{combo_filters[prop].options[0]}</option>
+        {combo_filters[prop].options.slice(1).map(option => (
+          <option value={option}>{option}</option>
+        ))}
+      </select></td>}
+    </tr>
+  )}
+  function getInfoString() {
     let filter_info = ''
     let combo_nums = ''
     const plural = (filtered_data.length === 1)? '': 's'
@@ -123,6 +131,16 @@ function App() {
         "${filters[f].value}"`).join(' and ')}`
     }
     return `Showing ${combo_nums} ${filtered_data.length} combo${plural}${filter_info}.`
+  }
+  
+  const filtered_data = combo_data.filter(filterCombo).sort((a, b) => (
+    compare(a[sort_prop], b[sort_prop], reverse_sort)
+  ))
+  const total_pages = Math.max(1, Math.ceil(filtered_data.length / page_size))
+  if (cur_page > total_pages) {
+    let page_input = document.getElementById('page-input')
+    page_input.value = total_pages
+    setCurPage(total_pages)
   }
   const combo_headers = combo_props.map(prop => (
     <th className={`prop-header ${prop} ${sortStatus(prop)} noselect`} onClick={setSorting}>
@@ -147,24 +165,6 @@ function App() {
   const reset_filters_btn = (Object.keys(filters).length > 0)?
     <span className='reset' onClick={resetFilters}>Reset filters</span>: ''
 
-  const createFilter = (prop, label=true, on_change=null) => { return (
-    <tr className='filter-row'>
-      {(label)? <td><label className='capitalize'>{prop}</label></td>: null}
-      {(combo_filters[prop].compare.length > 1)? <>
-      <td><select className='drop condition' id={prop+'-condition'}>
-        {combo_filters[prop].compare.map(option => (
-          <option value={option}>{option}</option>
-        ))}
-      </select></td><td>
-      <input className='filter-input value' id={prop+'-value'}/></td></>:
-      <td colSpan={2}><select className='drop value' id={prop+'-value'} onChange={on_change}>
-        <option value=''>{combo_filters[prop].options[0]}</option>
-        {combo_filters[prop].options.slice(1).map(option => (
-          <option value={option}>{option}</option>
-        ))}
-      </select></td>}
-    </tr>
-  )}
   return (
     <div className='app'>
       <div className='title-bar'>
