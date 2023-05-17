@@ -48,6 +48,7 @@ input[type=number] {
 .app {
   background-color: var(--main-bg-color);
   color: var(--main-text-color);
+  min-width: min-content;
 }
 
 .title-bar {
