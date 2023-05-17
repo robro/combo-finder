@@ -3,6 +3,7 @@ import compare from './compare'
 import evaluate from './evaluate'
 import { useState } from 'react'
 import PageSelector from './PageSelector'
+import ComboTableBody from './ComboTableBody'
 
 const combo_filters = require('./props.json')
 const combo_props = Object.keys(combo_filters)
@@ -14,44 +15,9 @@ export default function App() {
   const [filters, setFilters] = useState({})
   const [page_size, setPageSize] = useState(10)
   const [cur_page, setCurPage] = useState(1)
-  const [page_input, setPageInput] = useState(cur_page)
 
-  function pageUp() {
-    if (cur_page >= total_pages) return
-    let new_page = cur_page + 1
-    setCurPage(new_page)
-    setPageInput(new_page)
-  }
-  function pageDown() {
-    if (cur_page <= 1) return
-    let new_page = cur_page - 1
-    setCurPage(new_page)
-    setPageInput(new_page)
-  }
-  function goToPage() {
-    if (page_input === '') {
-      setPageInput(cur_page)
-      return
-    }
-    let new_page = parseInt(page_input)
-    if (new_page < 1) new_page = 1
-    if (new_page > total_pages) new_page = total_pages
-    if (new_page === cur_page) {
-      setPageInput(cur_page)
-      return
-    }
-    setCurPage(new_page)
-    setPageInput(new_page)
-  }
-  function getDownStatus() {
-    return (cur_page === 1) ? 'disabled' : ''
-  }
-  function getUpStatus() {
-    return (cur_page === total_pages) ? 'disabled' : ''
-  }
-  function getGoStatus() {
-    return (total_pages === 1) ? 'disabled' : ''
-  }
+  // console.log('App()')
+
   function setSorting(e) {
     const new_prop = e.currentTarget.textContent
     const new_sort = (new_prop === sort_prop) ? !reverse_sort : false
@@ -135,7 +101,6 @@ export default function App() {
   const total_pages = Math.max(1, Math.ceil(filtered_data.length / page_size))
   if (cur_page > total_pages) {
     setCurPage(total_pages)
-    setPageInput(total_pages)
   }
   const combo_headers = combo_props.map(prop => (
     <th className={`prop-header ${prop} ${sortStatus(prop)} noselect`} onClick={setSorting}>
@@ -146,17 +111,10 @@ export default function App() {
       </span>
     </th>
   ))
+
   const start_index = (cur_page * page_size) - page_size
   const end_index = Math.min(start_index + page_size, filtered_data.length)
-  const combo_rows = filtered_data.slice(start_index, end_index).map(combo => (
-    <tr className='combo-row'>
-      {combo_props.map(prop => (
-        <td className={`prop-value ${prop} ${(combo[prop] >= 0) ? 'plus' : ''}`}>
-          {combo[prop]}
-        </td>
-      ))}
-    </tr>
-  ))
+
   const reset_filters_btn = (Object.keys(filters).length > 0) ?
     <span className='reset' onClick={resetFilters}>Reset filters</span> : ''
 
@@ -174,17 +132,16 @@ export default function App() {
           <tbody>{combo_props.slice(1).map(prop => createFilter(prop))}</tbody>
         </table>
         <div className='info'>{getInfoString()}{reset_filters_btn}</div>
-        <div className='combo-div'>
-          <table className='combo-table'>
-            <thead><tr>{combo_headers}</tr></thead>
-            <tbody>{combo_rows}</tbody>
-          </table>
-        </div>
+        <table className='combo-table'>
+          <thead><tr>{combo_headers}</tr></thead>
+          <ComboTableBody 
+            comboData={filtered_data.slice(start_index, end_index)}
+            comboProps={combo_props} />
+        </table>
         <PageSelector
           currentPage={cur_page}
           totalPages={total_pages}
-          onCurrentPageChange={setCurPage}
-        />
+          onCurrentPageChange={setCurPage} />
         <hr className='solid'/>
       </div>
     </div>
@@ -206,9 +163,4 @@ function ComboTable() {
 
 function ComboHeaders() {
   // Props: combo_props, sort_prop, reverse_sort
-}
-
-function ComboData() {
-  // Props: combo_data, sort_prop, reverse_sort
-  // State: page_size, cur_page
 }

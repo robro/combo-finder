@@ -91,11 +91,12 @@ input[type=number] {
 }
 
 .combo-div {
-  min-height: 300px;
+  /* min-height: 300px; */
 }
 
 .combo-table {
   text-transform: capitalize;
+  min-height: 300px;
   min-width: 100%;
   border-collapse: collapse;
 }

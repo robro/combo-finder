@@ -1,4 +1,4 @@
-import { useState } from "react"
+// import { useState } from "react"
 
 export default function PageSelector({ 
   currentPage,
@@ -6,35 +6,24 @@ export default function PageSelector({
   onCurrentPageChange, 
   maxLength = 4
 }) {
-  const [pageInput, setPageInput] = useState(currentPage)
+  // console.log('PageSelector()')
 
   function pageUp() {
     if (currentPage >= totalPages) return
-    let new_page = currentPage + 1
-    setPageInput(new_page)
-    onCurrentPageChange(new_page)
+    onCurrentPageChange(currentPage + 1)
   }
 
   function pageDown() {
     if (currentPage <= 1) return
-    let new_page = currentPage - 1
-    setPageInput(new_page)
-    onCurrentPageChange(new_page)
+    onCurrentPageChange(currentPage - 1)
   }
 
   function goToPage() {
-    if (pageInput === '') {
-      setPageInput(currentPage)
-      return
-    }
-    let new_page = parseInt(pageInput)
+    let page_input = document.getElementById('page-input').value
+    if (!page_input) return
+    let new_page = parseInt(page_input)
     if (new_page < 1) new_page = 1
     if (new_page > totalPages) new_page = totalPages
-    if (new_page === currentPage) {
-      setPageInput(currentPage)
-      return
-    }
-    setPageInput(new_page)
     onCurrentPageChange(new_page)
   }
 
@@ -47,16 +36,16 @@ export default function PageSelector({
     return e.key === 'Enter' && goToPage()
   }
 
-  function getDownStatus() {
-    return (currentPage === 1) ? 'disabled' : ''
+  function disableDown() {
+    return currentPage === 1 && 'disabled'
   }
 
-  function getUpStatus() {
-    return (currentPage === totalPages) ? 'disabled' : ''
+  function disableUp() {
+    return currentPage === totalPages && 'disabled'
   }
 
-  function getGoStatus() {
-    return (totalPages === 1) ? 'disabled' : ''
+  function disableInput() {
+    return totalPages === 1 && 'disabled'
   }
 
   return (
@@ -64,32 +53,32 @@ export default function PageSelector({
       <button
         className={'btn-left'}
         onClick={pageDown}
-        disabled={getDownStatus()}>
+        disabled={disableDown()}>
         ❮
       </button>
       <button
         className={'btn-right shift'}
         onClick={pageUp}
-        disabled={getUpStatus()}>
+        disabled={disableUp()}>
         ❯
       </button>
       <input
         className='page-input'
+        id='page-input'
         type='number'
         min={1}
         max={totalPages}
         maxLength={maxLength}
-        value={pageInput}
+        defaultValue={currentPage}
         onInput={capInput}
-        onChange={e => setPageInput(e.target.value)}
         onKeyDown={handleKeyDown}
-        disabled={getGoStatus()} />
+        disabled={disableInput()} />
       <button
         className='btn-right'
         onClick={goToPage}
-        disabled={getGoStatus()}>
+        disabled={disableInput()}>
         Go
       </button>
     </div>
-  );
+  )
 }
