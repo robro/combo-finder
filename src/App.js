@@ -3,7 +3,8 @@ import compare from './compare'
 import evaluate from './evaluate'
 import { useState } from 'react'
 import PageSelector from './PageSelector'
-import ComboTableBody from './ComboTableBody'
+import ComboRows from './ComboRows'
+import ComboHeader from './ComboHeader'
 
 const combo_filters = require('./props.json')
 const combo_props = Object.keys(combo_filters)
@@ -13,22 +14,12 @@ export default function App() {
   const [sort_prop, setSortProp] = useState('character')
   const [reverse_sort, setReverseSort] = useState(false)
   const [filters, setFilters] = useState({})
-  const [page_size, setPageSize] = useState(10)
   const [cur_page, setCurPage] = useState(1)
+
+  const page_size = 10
 
   // console.log('App()')
 
-  function setSorting(e) {
-    const new_prop = e.currentTarget.textContent
-    const new_sort = (new_prop === sort_prop) ? !reverse_sort : false
-    setSortProp(new_prop)
-    setReverseSort(new_sort)
-  }
-  function sortStatus(prop) {
-    if (prop !== sort_prop) return ''
-    if (reverse_sort) return 'descend'
-    return 'ascend'
-  }
   function submitFilters() {
     let new_filters = {}
     for (const prop of combo_props) {
@@ -102,15 +93,6 @@ export default function App() {
   if (cur_page > total_pages) {
     setCurPage(total_pages)
   }
-  const combo_headers = combo_props.map(prop => (
-    <th className={`prop-header ${prop} ${sortStatus(prop)} noselect`} onClick={setSorting}>
-      {prop}
-      <span className='sorting'>
-        <div className={`sorting up-arrow ${sortStatus(prop)}`}/>
-        <div className={`sorting down-arrow ${sortStatus(prop)}`}/>
-      </span>
-    </th>
-  ))
 
   const start_index = (cur_page * page_size) - page_size
   const end_index = Math.min(start_index + page_size, filtered_data.length)
@@ -131,13 +113,20 @@ export default function App() {
         <table className='filter-table'>
           <tbody>{combo_props.slice(1).map(prop => createFilter(prop))}</tbody>
         </table>
-        <div className='info'>{getInfoString()}{reset_filters_btn}</div>
-        <table className='combo-table'>
-          <thead><tr>{combo_headers}</tr></thead>
-          <ComboTableBody 
-            comboData={filtered_data.slice(start_index, end_index)}
-            comboProps={combo_props} />
-        </table>
+        <div className='combo-display'>
+          <div className='info'>{getInfoString()}{reset_filters_btn}</div>
+          <table className='combo-table'>
+            <ComboHeader
+              comboProps={combo_props}
+              sortProp={sort_prop}
+              sortReversed={reverse_sort}
+              onSortPropChange={setSortProp}
+              onSortReversedChange={setReverseSort} />
+            <ComboRows 
+              comboData={filtered_data.slice(start_index, end_index)}
+              comboProps={combo_props} />
+          </table>
+        </div>
         <PageSelector
           currentPage={cur_page}
           totalPages={total_pages}
@@ -159,8 +148,4 @@ function ComboFilters() {
 function ComboTable() {
 // Props: user_filters
 // State: combo_data, sort_prop, reverse_sort
-}
-
-function ComboHeaders() {
-  // Props: combo_props, sort_prop, reverse_sort
 }

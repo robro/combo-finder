@@ -1,6 +1,6 @@
 // import { useState } from "react"
 
-export default function ComboTableBody({
+export default function ComboRows({
     comboData,
     comboProps,
   }) {  
