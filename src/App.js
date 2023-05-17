@@ -38,7 +38,7 @@ function App() {
     if (page_input_num > total_pages) page_input_num = total_pages
     if (page_input_num === cur_page) {
       page_input.value = cur_page
-      return 
+      return
     }
     page_input.value = page_input_num
     setCurPage(page_input_num)
@@ -132,7 +132,7 @@ function App() {
     }
     return `Showing ${combo_nums} ${filtered_data.length} combo${plural}${filter_info}.`
   }
-  
+
   const filtered_data = combo_data.filter(filterCombo).sort((a, b) => (
     compare(a[sort_prop], b[sort_prop], reverse_sort)
   ))
@@ -191,7 +191,7 @@ function App() {
           <button className={'btn btn-right shift'} type='button' onClick={pageUp}
             disabled={getUpStatus()} >❯</button>
           <input className='page-input' id='page-input' type='number' onKeyDown={goToPage}
-            min='1' max={total_pages} defaultValue={cur_page} disabled={getGoStatus()}/>
+            min='1' max={total_pages} maxLength={10} defaultValue={cur_page} disabled={getGoStatus()}/>
           <button className='btn btn-right' type='button' onClick={goToPage}
             disabled={getGoStatus()}>Go</button>
         </div>
