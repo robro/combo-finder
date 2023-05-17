@@ -2,7 +2,7 @@
 
 export default function ComboRows({
     comboData,
-    comboProps,
+    comboProps
   }) {  
     function getComboRows() {  
       return comboData.map(combo => (

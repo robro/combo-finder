@@ -1,22 +1,14 @@
 import './App.css'
-import compare from './compare'
 import evaluate from './evaluate'
 import { useState } from 'react'
-import PageSelector from './PageSelector'
-import ComboRows from './ComboRows'
-import ComboHeader from './ComboHeader'
+import ComboDisplay from './ComboDisplay'
 
 const combo_filters = require('./props.json')
 const combo_props = Object.keys(combo_filters)
 const combo_data = [...require('./combos.json')]
 
 export default function App() {
-  const [sort_prop, setSortProp] = useState('character')
-  const [reverse_sort, setReverseSort] = useState(false)
   const [filters, setFilters] = useState({})
-  const [cur_page, setCurPage] = useState(1)
-
-  const page_size = 10
 
   // console.log('App()')
 
@@ -71,34 +63,8 @@ export default function App() {
       </select></td>}
     </tr>
   )}
-  function getInfoString() {
-    let filter_info = ''
-    let combo_nums = ''
-    const plural = (filtered_data.length === 1)? '': 's'
-    if (page_size < filtered_data.length) {
-      combo_nums = `${start_index+1} - ${end_index} of`
-    }
-    if (Object.keys(filters).length > 0) {
-      filter_info = ` where ${Object.keys(filters).map(f =>
-        `${f} ${(filters[f].condition === 'Equal To') ? 'is' : filters[f].condition.toLowerCase()}
-        "${filters[f].value}"`).join(' and ')}`
-    }
-    return `Showing ${combo_nums} ${filtered_data.length} combo${plural}${filter_info}.`
-  }
 
-  const filtered_data = combo_data.filter(filterCombo).sort((a, b) => (
-    compare(a[sort_prop], b[sort_prop], reverse_sort)
-  ))
-  const total_pages = Math.max(1, Math.ceil(filtered_data.length / page_size))
-  if (cur_page > total_pages) {
-    setCurPage(total_pages)
-  }
-
-  const start_index = (cur_page * page_size) - page_size
-  const end_index = Math.min(start_index + page_size, filtered_data.length)
-
-  const reset_filters_btn = (Object.keys(filters).length > 0) ?
-    <span className='reset' onClick={resetFilters}>Reset filters</span> : ''
+  const filtered_data = combo_data.filter(filterCombo)
 
   return (
     <div className='app'>
@@ -113,25 +79,11 @@ export default function App() {
         <table className='filter-table'>
           <tbody>{combo_props.slice(1).map(prop => createFilter(prop))}</tbody>
         </table>
-        <div className='combo-display'>
-          <div className='info'>{getInfoString()}{reset_filters_btn}</div>
-          <table className='combo-table'>
-            <ComboHeader
-              comboProps={combo_props}
-              sortProp={sort_prop}
-              sortReversed={reverse_sort}
-              onSortPropChange={setSortProp}
-              onSortReversedChange={setReverseSort} />
-            <ComboRows 
-              comboData={filtered_data.slice(start_index, end_index)}
-              comboProps={combo_props} />
-          </table>
-        </div>
-        <PageSelector
-          currentPage={cur_page}
-          totalPages={total_pages}
-          onCurrentPageChange={setCurPage} />
-        <hr className='solid'/>
+        <ComboDisplay
+          comboData={filtered_data}
+          comboProps={combo_props}
+          filters={filters}
+          onFiltersChange={setFilters} />
       </div>
     </div>
   )
@@ -143,9 +95,4 @@ function ComboFinder() {
 
 function ComboFilters() {
   // Props: user_filters
-}
-
-function ComboTable() {
-// Props: user_filters
-// State: combo_data, sort_prop, reverse_sort
 }
