@@ -70,7 +70,7 @@ function App() {
     let new_filters = {}
     for (const prop of combo_props) {
       let condition = document.getElementById(prop+'-condition')
-      condition = (condition)? condition.value: 'equal to'
+      condition = (condition)? condition.value: 'Equal To'
       let value = document.getElementById(prop+'-value').value
       if (!value) continue
       new_filters[prop] = {'condition': condition, 'value': value}
@@ -119,7 +119,8 @@ function App() {
     }
     if (Object.keys(filters).length > 0) {
       filter_info = ` where ${Object.keys(filters).map(f =>
-        `${f} ${filters[f].condition.toLowerCase()} "${filters[f].value}"`).join(' and ')}`
+        `${f} ${(filters[f].condition === 'Equal To')? 'is': filters[f].condition.toLowerCase()}
+        "${filters[f].value}"`).join(' and ')}`
     }
     return `Showing ${combo_nums} ${filtered_data.length} combo${plural}${filter_info}.`
   }
