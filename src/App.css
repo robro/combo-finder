@@ -90,10 +90,6 @@ input[type=number] {
   margin-bottom: 20px;
 }
 
-.combo-div {
-  /* min-height: 300px; */
-}
-
 .combo-table {
   text-transform: capitalize;
   min-height: 300px;
