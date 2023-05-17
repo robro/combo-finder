@@ -196,6 +196,10 @@ input {
   height: calc(var(--clickable-height) - 2px);
 }
 
+input:focus {
+  border-color: var(--main-accent-color);
+}
+
 .page-input {
   border-width: 1px 0 1px 1px;
   border-radius: 5px 0 0 5px;
