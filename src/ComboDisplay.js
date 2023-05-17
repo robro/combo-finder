@@ -19,16 +19,17 @@ export default function ComboDisplay({
   const [currentPage, setCurrentPage] = useState(1)
 
   const sortedData = [...comboData].sort((a, b) => (compare(a[sortProp], b[sortProp], sortReversed)))
-  const totalPages = Math.max(1, Math.ceil(comboData.length / pageSize))
+  const totalCombos = comboData.length
+  const totalPages = Math.max(1, Math.ceil(totalCombos / pageSize))
   const startIndex = (currentPage * pageSize) - pageSize
-  const endIndex = Math.min(startIndex + pageSize, comboData.length)
+  const endIndex = Math.min(startIndex + pageSize, totalCombos)
 
   if (currentPage > totalPages) setCurrentPage(totalPages)
 
   return (
     <div className='combo-display'>
       <ComboDisplayInfo 
-        comboData={comboData}
+        totalCombos={totalCombos}
         pageSize={pageSize}
         startIndex={startIndex}
         endIndex={endIndex}

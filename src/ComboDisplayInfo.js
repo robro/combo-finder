@@ -1,6 +1,6 @@
 export default function ComboDisplayInfo({
+  totalCombos,
   pageSize,
-  comboData,
   startIndex,
   endIndex,
   filters,
@@ -14,9 +14,9 @@ export default function ComboDisplayInfo({
   function getInfoString() {
     let combo_nums = ''
     let filter_info = ''
-    let plural = comboData.length !== 1 && 's'
+    let plural = totalCombos !== 1 && 's'
     
-    if (pageSize < comboData.length) {
+    if (pageSize < totalCombos) {
       combo_nums = `${startIndex + 1} - ${endIndex} of`
     }
     if (Object.keys(filters).length > 0) {
@@ -24,7 +24,7 @@ export default function ComboDisplayInfo({
         `${f} ${(filters[f].condition !== 'Equal To') ? filters[f].condition.toLowerCase() : 'is'}
         "${filters[f].value}"`).join(' and ')}`
     }
-    return `Showing ${combo_nums} ${comboData.length} combo${plural}${filter_info}.`
+    return `Showing ${combo_nums} ${totalCombos} combo${plural}${filter_info}.`
   }
 
   return (
