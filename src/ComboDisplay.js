@@ -1,6 +1,7 @@
 import PageSelector from './PageSelector'
 import ComboRows from './ComboRows'
 import ComboHeader from './ComboHeader'
+import ComboDisplayInfo from './ComboDisplayInfo'
 import compare from './compare'
 import { useState } from "react"
 
@@ -21,23 +22,18 @@ export default function ComboDisplay({
   const totalPages = Math.max(1, Math.ceil(comboData.length / pageSize))
   const startIndex = (currentPage * pageSize) - pageSize
   const endIndex = Math.min(startIndex + pageSize, comboData.length)
-  const resetFilters = (Object.keys(filters).length > 0) &&
-    <span className='reset' onClick={() => onFiltersChange({})}>Reset filters</span>
 
   if (currentPage > totalPages) setCurrentPage(totalPages)
 
-  function getInfoString() {
-    const combo_nums = (pageSize < comboData.length) ? `${startIndex + 1} - ${endIndex} of` : ''
-    const filter_info = Object.keys(filters).length > 0 ? ` where ${Object.keys(filters).map(f =>
-      `${f} ${(filters[f].condition === 'Equal To') ? 'is' : filters[f].condition.toLowerCase()}
-      "${filters[f].value}"`).join(' and ')}` : ''
-    const plural = comboData.length !== 1 && 's'
-    return `Showing ${combo_nums} ${comboData.length} combo${plural}${filter_info}.`
-  }
-
   return (
     <div className='combo-display'>
-      <div className='info'>{getInfoString()}{resetFilters}</div>
+      <ComboDisplayInfo 
+        comboData={comboData}
+        pageSize={pageSize}
+        startIndex={startIndex}
+        endIndex={endIndex}
+        filters={filters}
+        onFiltersChange={onFiltersChange} />
       <div className='min-height'>
         <table className='combo-table'>
           <ComboHeader
