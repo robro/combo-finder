@@ -13,51 +13,47 @@ function App() {
   const [filters, setFilters] = useState({})
   const [page_size, setPageSize] = useState(10)
   const [cur_page, setCurPage] = useState(1)
+  const [page_input, setPageInput] = useState(cur_page)
 
   function pageUp() {
     if (cur_page >= total_pages) return
-    let page_input = document.getElementById('page-input')
-    page_input.value = cur_page+1
-    setCurPage(cur_page + 1)
+    let new_page = cur_page + 1
+    setCurPage(new_page)
+    setPageInput(new_page)
   }
   function pageDown() {
     if (cur_page <= 1) return
-    let page_input = document.getElementById('page-input')
-    page_input.value = cur_page-1
-    setCurPage(cur_page - 1)
+    let new_page = cur_page - 1
+    setCurPage(new_page)
+    setPageInput(new_page)
   }
-  function goToPage(e) {
-    if (e.key && e.key !== 'Enter') return
-    let page_input = document.getElementById('page-input')
-    if (page_input.value === '') {
-      page_input.value = cur_page
+  function goToPage() {
+    if (page_input === '') {
+      setPageInput(cur_page)
       return
     }
-    let page_input_num = parseInt(page_input.value)
-    if (page_input_num < 1) page_input_num = 1
-    if (page_input_num > total_pages) page_input_num = total_pages
-    if (page_input_num === cur_page) {
-      page_input.value = cur_page
+    let new_page = parseInt(page_input)
+    if (new_page < 1) new_page = 1
+    if (new_page > total_pages) new_page = total_pages
+    if (new_page === cur_page) {
+      setPageInput(cur_page)
       return
     }
-    page_input.value = page_input_num
-    setCurPage(page_input_num)
+    setCurPage(new_page)
+    setPageInput(new_page)
   }
   function getDownStatus() {
-    if (cur_page === 1) return 'disabled'
-    return ''
+    return (cur_page === 1) ? 'disabled' : ''
   }
   function getUpStatus() {
-    if (cur_page === total_pages) return 'disabled'
-    return ''
+    return (cur_page === total_pages) ? 'disabled' : ''
   }
   function getGoStatus() {
-    if (total_pages === 1) return 'disabled'
-    return ''
+    return (total_pages === 1) ? 'disabled' : ''
   }
   function setSorting(e) {
     const new_prop = e.currentTarget.textContent
-    const new_sort = (new_prop === sort_prop)? !reverse_sort: false
+    const new_sort = (new_prop === sort_prop) ? !reverse_sort : false
     setSortProp(new_prop)
     setReverseSort(new_sort)
   }
@@ -70,7 +66,7 @@ function App() {
     let new_filters = {}
     for (const prop of combo_props) {
       let condition = document.getElementById(prop+'-condition')
-      condition = (condition)? condition.value: 'Equal To'
+      condition = (condition) ? condition.value : 'Equal To'
       let value = document.getElementById(prop+'-value').value
       if (!value) continue
       new_filters[prop] = {'condition': condition, 'value': value}
@@ -95,21 +91,20 @@ function App() {
         condition = filters[prop].condition.toLowerCase()
         try {combo_value = combo_value.toLowerCase()} catch {}
         try {filter_value = filter_value.toLowerCase()} catch {}
-        if (!evaluate[condition](combo_value, filter_value))
-          return false
+        if (!evaluate[condition](combo_value, filter_value)) return false
       }}
     return true
   }
   function createFilter(prop, label=true, on_change=null) { return (
     <tr className='filter-row'>
-      {(label)? <td><label className='capitalize'>{prop}</label></td>: null}
-      {(combo_filters[prop].compare.length > 1)? <>
+      {(label) ? <td><label className='capitalize'>{prop}</label></td> : null}
+      {(combo_filters[prop].compare.length > 1) ? <>
       <td><select className='drop condition' id={prop+'-condition'}>
         {combo_filters[prop].compare.map(option => (
           <option value={option}>{option}</option>
         ))}
       </select></td><td>
-      <input className='filter-input value' id={prop+'-value'} maxLength={100}/></td></>:
+      <input className='filter-input value' id={prop+'-value'} maxLength={100}/></td></> :
       <td colSpan={2}><select className='drop value' id={prop+'-value'} onChange={on_change}>
         <option value=''>{combo_filters[prop].options[0]}</option>
         {combo_filters[prop].options.slice(1).map(option => (
@@ -127,7 +122,7 @@ function App() {
     }
     if (Object.keys(filters).length > 0) {
       filter_info = ` where ${Object.keys(filters).map(f =>
-        `${f} ${(filters[f].condition === 'Equal To')? 'is': filters[f].condition.toLowerCase()}
+        `${f} ${(filters[f].condition === 'Equal To') ? 'is' : filters[f].condition.toLowerCase()}
         "${filters[f].value}"`).join(' and ')}`
     }
     return `Showing ${combo_nums} ${filtered_data.length} combo${plural}${filter_info}.`
@@ -138,9 +133,8 @@ function App() {
   ))
   const total_pages = Math.max(1, Math.ceil(filtered_data.length / page_size))
   if (cur_page > total_pages) {
-    let page_input = document.getElementById('page-input')
-    page_input.value = total_pages
     setCurPage(total_pages)
+    setPageInput(total_pages)
   }
   const combo_headers = combo_props.map(prop => (
     <th className={`prop-header ${prop} ${sortStatus(prop)} noselect`} onClick={setSorting}>
@@ -156,14 +150,14 @@ function App() {
   const combo_rows = filtered_data.slice(start_index, end_index).map(combo => (
     <tr className='combo-row'>
       {combo_props.map(prop => (
-        <td className={`prop-value ${prop} ${(combo[prop] >= 0)?'plus':''}`}>
+        <td className={`prop-value ${prop} ${(combo[prop] >= 0) ? 'plus' : ''}`}>
           {combo[prop]}
         </td>
       ))}
     </tr>
   ))
-  const reset_filters_btn = (Object.keys(filters).length > 0)?
-    <span className='reset' onClick={resetFilters}>Reset filters</span>: ''
+  const reset_filters_btn = (Object.keys(filters).length > 0) ?
+    <span className='reset' onClick={resetFilters}>Reset filters</span> : ''
 
   return (
     <div className='app'>
@@ -190,8 +184,9 @@ function App() {
             disabled={getDownStatus()}>❮</button>
           <button className={'btn btn-right shift'} type='button' onClick={pageUp}
             disabled={getUpStatus()} >❯</button>
-          <input className='page-input' id='page-input' type='number' onKeyDown={goToPage}
-            min='1' max={total_pages} maxLength={10} defaultValue={cur_page} disabled={getGoStatus()}/>
+          <input className='page-input' type='number' min='1' max={total_pages} maxLength={10}
+            value={page_input} onChange={e => setPageInput(e.target.value)} disabled={getGoStatus()}
+            onKeyDown={e => (e.key === 'Enter') ? goToPage() : null} />
           <button className='btn btn-right' type='button' onClick={goToPage}
             disabled={getGoStatus()}>Go</button>
         </div>
