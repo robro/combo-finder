@@ -9,7 +9,7 @@ export default function ComboDisplay({
   comboData,
   comboProps,
   filters,
-  onFiltersChange,
+  onFiltersReset,
   pageSize = 10,
   defaultSort = 'character',
   defaultReversed = false
@@ -34,7 +34,7 @@ export default function ComboDisplay({
         startIndex={startIndex}
         endIndex={endIndex}
         filters={filters}
-        onFiltersChange={onFiltersChange} />
+        onFiltersReset={onFiltersReset} />
       <div className='min-height'>
         <table className='combo-table'>
           <ComboHeader

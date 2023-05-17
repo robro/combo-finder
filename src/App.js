@@ -83,7 +83,7 @@ export default function App() {
           comboData={filtered_data}
           comboProps={combo_props}
           filters={filters}
-          onFiltersChange={setFilters} />
+          onFiltersReset={resetFilters} />
       </div>
     </div>
   )
