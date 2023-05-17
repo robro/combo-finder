@@ -2,12 +2,13 @@ import './App.css'
 import compare from './compare'
 import evaluate from './evaluate'
 import { useState } from 'react'
+import PageSelector from './PageSelector'
 
 const combo_filters = require('./props.json')
 const combo_props = Object.keys(combo_filters)
 const combo_data = [...require('./combos.json')]
 
-function App() {
+export default function App() {
   const [sort_prop, setSortProp] = useState('character')
   const [reverse_sort, setReverseSort] = useState(false)
   const [filters, setFilters] = useState({})
@@ -179,21 +180,35 @@ function App() {
             <tbody>{combo_rows}</tbody>
           </table>
         </div>
-        <div className='page-select'>
-          <button className={'btn btn-left'} type='button' onClick={pageDown}
-            disabled={getDownStatus()}>❮</button>
-          <button className={'btn btn-right shift'} type='button' onClick={pageUp}
-            disabled={getUpStatus()} >❯</button>
-          <input className='page-input' type='number' min='1' max={total_pages} maxLength={10}
-            value={page_input} onChange={e => setPageInput(e.target.value)} disabled={getGoStatus()}
-            onKeyDown={e => (e.key === 'Enter') ? goToPage() : null} />
-          <button className='btn btn-right' type='button' onClick={goToPage}
-            disabled={getGoStatus()}>Go</button>
-        </div>
+        <PageSelector
+          currentPage={cur_page}
+          totalPages={total_pages}
+          onCurrentPageChange={setCurPage}
+        />
         <hr className='solid'/>
       </div>
     </div>
   )
 }
 
-export default App
+function ComboFinder() {
+  // State: user_filters
+}
+
+function ComboFilters() {
+  // Props: user_filters
+}
+
+function ComboTable() {
+// Props: user_filters
+// State: combo_data, sort_prop, reverse_sort
+}
+
+function ComboHeaders() {
+  // Props: combo_props, sort_prop, reverse_sort
+}
+
+function ComboData() {
+  // Props: combo_data, sort_prop, reverse_sort
+  // State: page_size, cur_page
+}

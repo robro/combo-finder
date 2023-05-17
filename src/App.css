@@ -224,7 +224,7 @@ input:focus {
   padding: 0 5px;
 }
 
-.btn {
+button {
   background-color: var(--dark-accent-color);
   color: var(--main-text-color);
   font-size: 11pt;
@@ -237,13 +237,13 @@ input:focus {
   /* transition-duration: 0.1s; */
 }
 
-.btn:disabled {
+button:disabled {
   background-color: var(--darker-accent-color);
   color: gray;
   cursor: default;
 }
 
-.btn:enabled:hover {
+button:enabled:hover {
   background-color: var(--main-accent-color);
 }
 
