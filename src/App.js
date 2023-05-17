@@ -10,9 +10,7 @@ const combo_data = [...require('./combos.json')]
 function App() {
   const [sort_prop, setSortProp] = useState('character')
   const [reverse_sort, setReverseSort] = useState(false)
-  const [filters, setFilters] = useState({
-    'startup': {'op': 'is', 'value': 7}
-  })
+  const [filters, setFilters] = useState({})
   const [page_size, setPageSize] = useState(10)
   const [cur_page, setCurPage] = useState(1)
 
@@ -68,28 +66,38 @@ function App() {
     if (reverse_sort) return 'descend'
     return 'ascend'
   }
-  const updateFilters = (e) => {
-    const key = e.target.id
-    const op = e.target.name
-    const value = e.target.value
-    const new_filters = {...filters, [key]: {'op': op, 'value': value}}
-    if (!value) delete new_filters[key]
+  const submitFilters = () => {
+    let new_filters = {}
+    for (const prop of combo_props) {
+      let condition = document.getElementById(prop+'-condition')
+      condition = (condition)? condition.value: 'equal to'
+      let value = document.getElementById(prop+'-value').value
+      if (!value) continue
+      new_filters[prop] = {'condition': condition, 'value': value}
+    }
     setFilters(new_filters)
   }
-  const submitFilters = (e) => {
-    console.log(e.target.getElementsByClassName('filter'))
-  }
   const resetFilters = () => {
-    let dropdowns = [...document.getElementsByClassName('drop')]
-    dropdowns.map(drop => drop.value = drop.options[0].value)
+    let condition_elems = [...document.getElementsByClassName('condition')]
+    let value_elems = [...document.getElementsByClassName('value')]
+    condition_elems.map(elem => elem.value = elem.options[0].value)
+    value_elems.map(elem => elem.value = '')
     setFilters({})
   }
   const filterCombo = (combo) => {
+    let combo_value
+    let filter_value
+    let condition
     for (let prop in filters) {
       if (filters[prop].value) {
-        if (!evaluate[filters[prop].op](combo[prop], filters[prop].value)) {
+        combo_value = combo[prop]
+        filter_value = filters[prop].value
+        condition = filters[prop].condition.toLowerCase()
+        if (typeof(combo_value) === 'string') combo_value = combo_value.toLowerCase()
+        if (typeof(filter_value) === 'string') filter_value = filter_value.toLowerCase()
+        if (!evaluate[condition](combo_value, filter_value))
           return false
-        }}}
+      }}
     return true
   }
   const filtered_data = combo_data.filter(filterCombo).sort((a, b) => (
@@ -111,7 +119,7 @@ function App() {
     }
     if (Object.keys(filters).length > 0) {
       filter_info = ` where ${Object.keys(filters).map(f =>
-        `${f} ${filters[f].op} "${filters[f].value}"`).join(' and ')}`
+        `${f} ${filters[f].condition.toLowerCase()} "${filters[f].value}"`).join(' and ')}`
     }
     return `Showing ${combo_nums} ${filtered_data.length} combo${plural}${filter_info}.`
   }
@@ -139,45 +147,23 @@ function App() {
     <span className='reset' onClick={resetFilters}>Reset filters</span>: ''
 
   const createFilter = (prop, label=true, on_change=null) => { return (
-    <tr className='filter'>
-      {(label)? <td><label className='float-right capitalize'>{prop}</label></td>: null}
+    <tr className='filter-row'>
+      {(label)? <td><label className='capitalize'>{prop}</label></td>: null}
       {(combo_filters[prop].compare.length > 1)? <>
-      <td><select className='drop' id={`${prop}-ops`}>
-        {combo_filters[prop].compare.map(op => (
-          <option value={op}>{op}</option>
+      <td><select className='drop condition' id={prop+'-condition'}>
+        {combo_filters[prop].compare.map(option => (
+          <option value={option}>{option}</option>
         ))}
       </select></td><td>
-      <input className='filter-input' id={`${prop}-input`}/></td></>:
-      <td><select className='drop' name='is' id={prop} onChange={on_change}>
+      <input className='filter-input value' id={prop+'-value'}/></td></>:
+      <td colSpan={2}><select className='drop value' id={prop+'-value'} onChange={on_change}>
         <option value=''>{combo_filters[prop].options[0]}</option>
-        {combo_filters[prop].options.slice(1).map(op => (
-          <option value={op}>{op}</option>
+        {combo_filters[prop].options.slice(1).map(option => (
+          <option value={option}>{option}</option>
         ))}
       </select></td>}
     </tr>
   )}
-  //   if (combo_filters[prop].compare.length > 1) return (
-  //     <div className='filter capitalize'>
-  //       <span>{(label)? <span></span>: ''}</span>
-  //       <select className='drop' id={`${prop}-ops`}>
-  //         {combo_filters[prop].compare.map(op => (
-  //           <option value={op}>{op}</option>
-  //         ))}
-  //       </select>
-  //       <input className='input' id={`${prop}-input`}/>
-  //     </div>
-  //   ); else return (
-  //     <div className='filter capitalize'>
-  //       <span>{prop}</span>
-        // <select className='drop' name='is' id={prop} onChange={updateFilters}>
-        //   <option value=''>{combo_filters[prop].options[0]}</option>
-        //   {combo_filters[prop].options.slice(1).map(op => (
-        //     <option value={op}>{op}</option>
-        //   ))}
-        // </select>
-  //     </div>
-  //   )
-  // }
   return (
     <div className='app'>
       <div className='title-bar'>
@@ -185,6 +171,7 @@ function App() {
       </div>
       <div className='body'>
         <div className='filter-bar'>
+          {createFilter('character', false, submitFilters)}
           <button className='btn btn-main' type='button' onClick={submitFilters}>All Filters</button>
         </div>
         <table className='filter-table'>

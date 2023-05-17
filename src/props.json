@@ -1,6 +1,6 @@
 {
   "character": {
-    "compare": ["Is"],
+    "compare": ["Equal To"],
     "options": [
       "Any Character",
       "Blanka",
@@ -52,7 +52,7 @@
     "options": []
   },
   "position": {
-    "compare": ["Is"],
+    "compare": ["Equal To"],
     "options": ["Any", "Midscreen", "Fullscreen", "Corner"]
   }
 }

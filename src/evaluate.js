@@ -1,7 +1,7 @@
 const evaluate = {
-    'is': function(a, b) { return a === b },
-    'is greater than': function(a, b) { return a > b },
-    'is less than': function(a, b) { return a < b },
+    'equal to': function(a, b) { return a == b },
+    'greater than': function(a, b) { return a > b },
+    'less than': function(a, b) { return a < b },
     'contains': function(a, b) { return a.includes(b) },
     'doesn\'t contain': function(a, b) { return !a.includes(b) },
 }

@@ -5,7 +5,8 @@
   --dark-accent-color: #2b2b2b;
   --darker-accent-color: #1a1a1a;
 
-  --max-width: 1200px
+  --max-width: 1200px;
+  --clickable-height: 36px;
 }
 
 input::-webkit-outer-spin-button,
@@ -14,22 +15,25 @@ input::-webkit-inner-spin-button {
   margin: 0;
 }
 
+td {
+  padding: 0;
+}
+
 .capitalize {
   text-transform: capitalize;
 }
 
-.float-right {
-  float: right;
-}
-
-.filter * {
-  padding: 0 0 0 10px;
-  margin: 8px 0;
-  /* border-style: solid; */
+.filter-row * {
+  /* padding: 0 0 0 10px; */
+  margin: 7px 6px;
+  /* border-style: solid;
+  border-width: 1px; */
 }
 
 .filter-table {
+  margin: 20px 0;
   border-collapse: collapse;
+  /* background-color: red; */
 }
 
 .filter-input {
@@ -48,13 +52,12 @@ input[type=number] {
 
 .title-bar {
   background-color: #590491;
-  /* margin-top: -20px; */
   padding: 1px;
   height: 60px;
 }
 
 .title {
-  margin: -15px auto;
+  margin: -12px auto;
   max-width: var(--max-width);
 }
 
@@ -65,7 +68,7 @@ input[type=number] {
 }
 
 .filter-bar {
-  margin: 30px 0;
+  margin: 20px 0;
   display: flex;
 }
 
@@ -97,7 +100,7 @@ input[type=number] {
 }
 
 .prop-header {
-  padding: 10px 20px 10px 10px;
+  padding: 10px 20px 15px 10px;
   cursor: pointer;
   text-align: left;
   border-bottom: 1px solid;
@@ -144,7 +147,7 @@ input[type=number] {
 }
 
 .prop-value {
-  padding: 10px;
+  padding: 13px 10px;
   border-top: 1px solid;
   border-color: var(--dark-accent-color);
 }
@@ -190,29 +193,29 @@ input {
   border-color: var(--dark-accent-color);
   outline-style: none;
   width: 100px;
-  height: 36px;
+  height: calc(var(--clickable-height) - 2px);
 }
 
 .page-input {
   border-width: 1px 0 1px 1px;
   border-radius: 5px 0 0 5px;
   width: 20px;
-  margin-left: 15px;
+  margin-left: 10px;
 }
 
 .drop {
   background-color: var(--dark-accent-color);
   text-transform: capitalize;
   color: inherit;
-  /* padding: 10px; */
   font-size: 11pt;
-  height: 38px;
-  width: 100%;
+  height: var(--clickable-height);
+  min-width: calc(100% - 12px);
   border-width: 1px;
   border-style: none;
   border-color: var(--dark-accent-color);
   outline-style: none;
   border-radius: 5px;
+  padding: 0 5px;
 }
 
 .btn {
@@ -220,10 +223,11 @@ input {
   color: var(--main-text-color);
   font-size: 11pt;
   min-width: 38px;
-  height: 38px;
+  height: var(--clickable-height);
   border: none;
   cursor: pointer;
   padding: 0 10px;
+  margin: 7px 5px;
   /* transition-duration: 0.1s; */
 }
 
@@ -239,10 +243,12 @@ input {
 
 .btn-left {
   border-radius: 5px 0 0 5px;
+  margin-right: 0;
 }
 
 .btn-right {
   border-radius: 0 5px 5px 0;
+  margin-left: 0;
 }
 
 .btn-main {
