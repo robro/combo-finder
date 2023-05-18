@@ -2,34 +2,17 @@ import './App.css'
 import evaluate from './evaluate'
 import { useState } from 'react'
 import ComboDisplay from './ComboDisplay'
+import ComboFilters from './ComboFilters'
 
-const combo_filters = require('./props.json')
-const combo_props = Object.keys(combo_filters)
-const combo_data = [...require('./combos.json')]
+const FILTER_INFO = require('./props.json')
+const COMBO_PROPS = Object.keys(FILTER_INFO)
+const COMBO_DATA = [...require('./combos.json')]
 
 export default function App() {
   const [filters, setFilters] = useState({})
 
-  // console.log('App()')
+  console.log('App()')
 
-  function submitFilters() {
-    let new_filters = {}
-    for (const prop of combo_props) {
-      let condition = document.getElementById(prop+'-condition')
-      condition = (condition) ? condition.value : 'Equal To'
-      let value = document.getElementById(prop+'-value').value
-      if (!value) continue
-      new_filters[prop] = {'condition': condition, 'value': value}
-    }
-    setFilters(new_filters)
-  }
-  function resetFilters() {
-    let condition_elems = [...document.getElementsByClassName('condition')]
-    let value_elems = [...document.getElementsByClassName('value')]
-    condition_elems.map(elem => elem.value = elem.options[0].value)
-    value_elems.map(elem => elem.value = '')
-    setFilters({})
-  }
   function filterCombo(combo) {
     let combo_value
     let filter_value
@@ -45,43 +28,28 @@ export default function App() {
       }}
     return true
   }
-  function createFilter(prop, label=true, on_change=null) { return (
-    <tr className='filter-row'>
-      {(label) ? <td><label className='capitalize'>{prop}</label></td> : null}
-      {(combo_filters[prop].compare.length > 1) ? <>
-      <td><select className='drop condition' id={prop+'-condition'}>
-        {combo_filters[prop].compare.map(option => (
-          <option value={option}>{option}</option>
-        ))}
-      </select></td><td>
-      <input className='filter-input value' id={prop+'-value'} maxLength={100}/></td></> :
-      <td colSpan={2}><select className='drop value' id={prop+'-value'} onChange={on_change}>
-        <option value=''>{combo_filters[prop].options[0]}</option>
-        {combo_filters[prop].options.slice(1).map(option => (
-          <option value={option}>{option}</option>
-        ))}
-      </select></td>}
-    </tr>
-  )}
 
-  const filtered_data = combo_data.filter(filterCombo)
+  function resetFilters() {
+    let condition_elems = [...document.getElementsByClassName('condition')]
+    let value_elems = [...document.getElementsByClassName('value')]
+    condition_elems.forEach(elem => elem.value = elem.options[0].value)
+    value_elems.forEach(elem => elem.value = '')
+    setFilters({})
+  }
 
   return (
     <div className='app'>
       <div className='title-bar'>
         <div className='title'><h1>🔎 Combo Finder</h1></div>
       </div>
-      <div className='body'>
-        <div className='filter-bar'>
-          {createFilter('character', false, submitFilters)}
-          <button className='btn btn-main' type='button' onClick={submitFilters}>All Filters</button>
-        </div>
-        <table className='filter-table'>
-          <tbody>{combo_props.slice(1).map(prop => createFilter(prop))}</tbody>
-        </table>
+      <div className='combo-finder'>
+        <ComboFilters 
+          filterInfo={FILTER_INFO}
+          comboProps={COMBO_PROPS}
+          onFiltersSubmit={setFilters} />
         <ComboDisplay
-          comboData={filtered_data}
-          comboProps={combo_props}
+          comboData={COMBO_DATA.filter(filterCombo)}
+          comboProps={COMBO_PROPS}
           filters={filters}
           onFiltersReset={resetFilters} />
       </div>
@@ -91,8 +59,4 @@ export default function App() {
 
 function ComboFinder() {
   // State: user_filters
-}
-
-function ComboFilters() {
-  // Props: user_filters
 }

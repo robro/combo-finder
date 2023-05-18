@@ -7,14 +7,14 @@ export default function ComboDisplayInfo({
   onFiltersReset
 }) {
   const resetFilters = (Object.keys(filters).length > 0) &&
-    <span className='reset' onClick={() => onFiltersReset()}>
+    <span className='reset' onClick={onFiltersReset}>
       Reset filters
     </span>
 
   function getInfoString() {
     let combo_nums = ''
     let filter_info = ''
-    let plural = totalCombos !== 1 && 's'
+    let plural = (totalCombos !== 1) ? 's' : ''
     
     if (pageSize < totalCombos) {
       combo_nums = `${startIndex + 1} - ${endIndex} of`
