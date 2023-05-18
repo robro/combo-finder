@@ -1,9 +1,7 @@
-// import { useState } from "react"
-
-export default function PageSelector({ 
+export default function PageSelector({
   currentPage,
-  totalPages, 
-  onCurrentPageChange, 
+  totalPages,
+  onCurrentPageChange,
   maxLength = 4
 }) {
   // console.log('PageSelector()')

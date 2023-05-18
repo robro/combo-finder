@@ -10,8 +10,6 @@ export default function ComboFinder({
 }) {
   const [filters, setFilters] = useState({})
 
-  console.log('ComboFinder()')
-
   function filterCombo(combo) {
     let combo_value
     let filter_value
@@ -38,7 +36,7 @@ export default function ComboFinder({
 
   return (
     <div className='combo-finder'>
-      <ComboFilters 
+      <ComboFilters
         filterInfo={filterInfo}
         comboProps={comboProps}
         onFiltersSubmit={setFilters} />

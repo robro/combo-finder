@@ -14,7 +14,7 @@ export default function ComboFilters({
         let value = document.getElementById(prop+'-value').value
         if (!value) continue
         new_filters[prop] = {'condition': condition, 'value': value}
-      } 
+      }
       catch { continue }
     }
     onFiltersSubmit(new_filters)
@@ -55,9 +55,9 @@ export default function ComboFilters({
   function getValueFilter(prop, on_change=null) {
     return (
   <   td colSpan={2}>
-        <select 
-          className='drop value' 
-          id={prop+'-value'} 
+        <select
+          className='drop value'
+          id={prop+'-value'}
           onChange={on_change}>
           <option value=''>
             {filterInfo[prop].options[0]}
@@ -91,8 +91,8 @@ export default function ComboFilters({
             {getComboFilter('character', false, submitFilters)}
             <td>
               <button
-                className='btn btn-main' 
-                type='button' 
+                className='btn btn-main'
+                type='button'
                 onClick={submitFilters}>
                 All Filters
               </button>

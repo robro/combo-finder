@@ -18,7 +18,7 @@ export default function ComboHeader({
 
   function getComboHeader() {
     return comboProps.map(prop => (
-      <th 
+      <th
         className={`prop-header ${prop} ${sortStatus(prop)} noselect`}
         onClick={e => setSorting(e.currentTarget.textContent)}>
         {prop}

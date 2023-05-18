@@ -15,7 +15,7 @@ export default function ComboDisplayInfo({
     let combo_nums = ''
     let filter_info = ''
     let plural = (totalCombos !== 1) ? 's' : ''
-    
+
     if (pageSize < totalCombos) {
       combo_nums = `${startIndex + 1} - ${endIndex} of`
     }

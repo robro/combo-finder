@@ -28,7 +28,7 @@ export default function ComboDisplay({
 
   return (
     <div className='combo-display'>
-      <ComboDisplayInfo 
+      <ComboDisplayInfo
         totalCombos={totalCombos}
         pageSize={pageSize}
         startIndex={startIndex}
@@ -43,7 +43,7 @@ export default function ComboDisplay({
             sortReversed={sortReversed}
             onSortPropChange={setSortProp}
             onSortReversedChange={setSortReversed} />
-          <ComboRows 
+          <ComboRows
             comboData={sortedData.slice(startIndex, endIndex)}
             comboProps={comboProps} />
         </table>
