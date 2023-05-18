@@ -2,7 +2,7 @@
   "character": {
     "compare": ["Equal To"],
     "options": [
-      "Any Character",
+      "All Characters",
       "Blanka",
       "Cammy",
       "Chun-Li",
@@ -53,6 +53,6 @@
   },
   "position": {
     "compare": ["Equal To"],
-    "options": ["Any", "Midscreen", "Fullscreen", "Corner"]
+    "options": ["All Positions", "Midscreen", "Corner", "Anywhere"]
   }
 }

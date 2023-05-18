@@ -6,7 +6,9 @@ export default function ComboDisplayInfo({
   filters,
   onFiltersReset
 }) {
-  const resetFilters = (Object.keys(filters).length > 0) &&
+  const filtered_props = Object.keys(filters).filter(f => filters[f].value)
+
+  const resetFilters = filtered_props.length > 0 &&
     <span className='reset' onClick={onFiltersReset}>
       Reset filters
     </span>
@@ -19,11 +21,10 @@ export default function ComboDisplayInfo({
     if (pageSize < totalCombos) {
       combo_nums = `${startIndex + 1} - ${endIndex} of`
     }
-    if (Object.keys(filters).length > 0) {
-      filter_info = ` where ${Object.keys(filters).map(f =>
-        `${f} ${(filters[f].condition !== 'Equal To') ? filters[f].condition.toLowerCase() : 'is'}
-        "${filters[f].value}"`).join(' and ')}`
-    }
+    filter_info = (filtered_props.length > 0) ? ` where ${filtered_props.map(f =>
+      `${f} ${(filters[f].condition !== 'Equal To') ? filters[f].condition.toLowerCase() : 'is'}
+      "${filters[f].value}"`).join(' and ')}` : ''
+
     return `Showing ${combo_nums} ${totalCombos} combo${plural}${filter_info}.`
   }
 
