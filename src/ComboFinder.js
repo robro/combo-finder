@@ -27,10 +27,6 @@ export default function ComboFinder({
   }
 
   function resetFilters() {
-    let condition_elems = [...document.getElementsByClassName('condition')]
-    let value_elems = [...document.getElementsByClassName('value')]
-    condition_elems.forEach(elem => elem.value = elem.options[0].value)
-    value_elems.forEach(elem => elem.value = '')
     setFilters({})
   }
 
@@ -39,6 +35,7 @@ export default function ComboFinder({
       <ComboFilters
         filterInfo={filterInfo}
         comboProps={comboProps}
+        filters={filters}
         onFiltersSubmit={setFilters} />
       <ComboDisplay
         comboData={comboData.filter(filterCombo)}
