@@ -2,6 +2,7 @@ export default function ComboRows({
   comboData,
   comboProps
 }) {
+  
   function getComboRows() {
     return comboData.map(combo => (
       <tr className='combo-row'>

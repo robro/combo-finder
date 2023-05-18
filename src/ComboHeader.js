@@ -5,6 +5,7 @@ export default function ComboHeader({
   onSortPropChange,
   onSortReversedChange
 }) {
+  
   function sortStatus(prop) {
     if (prop !== sortProp) return ''
     if (sortReversed) return 'descend'

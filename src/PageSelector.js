@@ -4,7 +4,7 @@ export default function PageSelector({
   onCurrentPageChange,
   maxLength = 4
 }) {
-  
+
   function pageUp() {
     if (currentPage >= totalPages) return
     onCurrentPageChange(currentPage + 1)
@@ -45,7 +45,10 @@ export default function PageSelector({
     return totalPages === 1 && 'disabled'
   }
 
-  document.getElementById('page-input').value = currentPage
+  try {
+    document.getElementById('page-input').value = currentPage
+  } 
+  catch {}
 
   return (
     <div className='page-select'>
