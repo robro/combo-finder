@@ -1,3 +1,4 @@
+import { useState } from "react"
 import Popup from "reactjs-popup"
 
 export default function ComboFilters({
@@ -92,8 +93,8 @@ export default function ComboFilters({
           <tr className='filter-row'>
             {getComboFilter('character', false, submitFilters)}
             <td>
-              <Popup trigger={<button
-                  className='btn-main alt-hover'>
+              <Popup trigger={
+                <button className='btn-main alt-hover'>
                   All Filters
                 </button>}
                 modal
@@ -105,7 +106,7 @@ export default function ComboFilters({
                         <span className='popup-title'>
                             Advanced Search
                         </span>
-                        <button 
+                        <button
                           className='btn-close popup-title float-right'
                           onClick={() => close()}>
                           ✕
@@ -130,7 +131,7 @@ export default function ComboFilters({
                             close()}}>
                           Search
                         </button>
-                        <button 
+                        <button
                           className='btn-main cancel float-right'
                           onClick={() => close()}>
                           Cancel
