@@ -53,13 +53,13 @@ export default function PageSelector({
   return (
     <div className='page-select'>
       <button
-        className={'btn-left'}
+        className={'btn-left page-btn'}
         onClick={pageDown}
         disabled={disableDown()}>
         ❮
       </button>
       <button
-        className={'btn-right shift'}
+        className={'btn-right shift page-btn'}
         onClick={pageUp}
         disabled={disableUp()}>
         ❯
@@ -76,7 +76,7 @@ export default function PageSelector({
         onKeyDown={handleKeyDown}
         disabled={disableInput()} />
       <button
-        className='btn-right'
+        className='btn-right page-btn'
         onClick={goToPage}
         disabled={disableInput()}>
         Go
