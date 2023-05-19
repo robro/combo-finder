@@ -1,6 +1,6 @@
 {
   "character": {
-    "compare": ["Equal To"],
+    "compare": [],
     "options": [
       "All Characters",
       "Blanka",
@@ -8,7 +8,7 @@
       "Chun-Li",
       "Dee Jay",
       "Dhalsim",
-      "E.Honda",
+      "E. Honda",
       "Guile",
       "Jamie",
       "JP",
@@ -52,7 +52,7 @@
     "options": []
   },
   "position": {
-    "compare": ["Equal To"],
+    "compare": [],
     "options": ["All Positions", "Midscreen", "Corner", "Anywhere"]
   }
 }

@@ -6,7 +6,8 @@ import ComboDisplay from './ComboDisplay'
 export default function ComboFinder({
   comboData,
   comboProps,
-  filterInfo
+  filterInfo,
+  children
 }) {
   const [filters, setFilters] = useState({})
 
@@ -42,6 +43,7 @@ export default function ComboFinder({
         comboProps={comboProps}
         filters={filters}
         onFiltersReset={resetFilters} />
+      {children}
     </div>
   )
 }

@@ -1,6 +1,7 @@
 import './App.css'
 import TitleBar from './TitleBar'
 import ComboFinder from './ComboFinder'
+import Footer from './Footer'
 
 const COMBO_DATA = [...require('./combos.json')]
 const FILTER_INFO = require('./props.json')
@@ -13,7 +14,9 @@ export default function App() {
       <ComboFinder
         comboData={COMBO_DATA}
         comboProps={COMBO_PROPS}
-        filterInfo={FILTER_INFO} />
+        filterInfo={FILTER_INFO}>
+        <Footer />
+      </ComboFinder>
     </div>
   )
 }

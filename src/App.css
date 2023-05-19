@@ -5,6 +5,7 @@
   --alt-accent-color: #6607a5;
   --dark-accent-color: #2b2b2b;
   --darker-accent-color: #1a1a1a;
+  --link-color: #8c37d1;
 
   --max-width: 1200px;
   --clickable-height: 36px;
@@ -101,7 +102,7 @@ input[type=number] {
 
 .reset {
   cursor: pointer;
-  color: var(--main-accent-color);
+  color: var(--link-color);
   margin-left: 10px;
 }
 
@@ -137,6 +138,10 @@ input[type=number] {
 
 .prop-header.notation {
   width: 25%;
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 .ascend {
@@ -215,7 +220,7 @@ input[type=number] {
 }
 
 .page-select {
-  padding: 30px 0 5px 0;
+  padding: 30px 0 10px 0;
 }
 
 .popup-title-bar {
@@ -333,6 +338,29 @@ button.alt-hover:hover {
 }
 
 .footer {
+  font-size: 10pt;
   color: gray;
-  margin: 20px 0;
+  margin: 25px 0;
+  width: 100%;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.align-top {
+  vertical-align: top;
+}
+
+.align-right {
+  text-align: right;
+}
+
+a {
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }

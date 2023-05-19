@@ -70,13 +70,14 @@ export default function ComboFilters({
     )
   }
 
-  function getValueFilter(prop, on_change=null) {
+  function getValueFilter(prop, on_change=null, pointer=false) {
     const current_filter = filters[prop]
     const value = (current_filter) ? current_filter['value'] : ''
+    const ptr_str = (pointer) ? 'pointer' : ''
     return (
       <td colSpan={2}>
         <select
-          className='drop value'
+          className={'drop value '+ptr_str}
           id={prop+'-value'}
           name={prop+'-value'}
           defaultValue={value}
@@ -94,13 +95,13 @@ export default function ComboFilters({
     )
   }
 
-  function getComboFilter(prop, label=true, on_change=null) {
+  function getComboFilter(prop, label=true, on_change=null, pointer=false) {
     return (
       <>
         {label && getLabel(prop)}
         {(filterInfo[prop].compare.length > 1) ?
           getConditionFilter(prop, on_change) :
-          getValueFilter(prop, on_change)}
+          getValueFilter(prop, on_change, pointer)}
       </>
     )
   }
@@ -111,7 +112,7 @@ export default function ComboFilters({
         <tbody>
           <tr className='filter-row'>
             {getComboFilter('character', false, (e) => 
-              submitFilters([e.target.id.split('-')[0]]))}
+              submitFilters([e.target.id.split('-')[0]]), true)}
             <td>
               <Popup trigger={
                 <button className='btn-main alt-hover'>
