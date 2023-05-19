@@ -1,11 +1,11 @@
 :root {
   --main-bg-color: black;
   --main-text-color: lightgray;
-  --main-accent-color: #840ad6;
-  --alt-accent-color: #6607a5;
+  --main-accent-color: #1a35ce;
+  --alt-accent-color: #0b26c0;
   --dark-accent-color: #2b2b2b;
   --darker-accent-color: #1a1a1a;
-  --link-color: #8c37d1;
+  --link-color: #3760d1;
 
   --max-width: 1200px;
   --clickable-height: 36px;
@@ -26,16 +26,12 @@ td {
 }
 
 .filter-row * {
-  /* padding: 0 0 0 10px; */
   margin: 7px 6px;
-  /* border-style: solid;
-  border-width: 1px; */
 }
 
 .filter-table {
   margin: 20px 0;
   border-collapse: collapse;
-  /* background-color: red; */
 }
 
 .filter-input {
@@ -54,7 +50,7 @@ input[type=number] {
 }
 
 .title-bar {
-  background-color: #590491;
+  background-color: var(--alt-accent-color);
   padding: 1px;
   height: 70px;
 }
@@ -275,12 +271,15 @@ input:focus {
   font-size: 11pt;
   height: var(--clickable-height);
   min-width: calc(100% - 12px);
-  border-width: 1px;
-  border-style: none;
-  border-color: var(--dark-accent-color);
+  border: 1px solid var(--dark-accent-color);
+  border-style: solid;
   outline-style: none;
   border-radius: 5px;
   padding: 0 5px;
+}
+
+.drop:focus {
+  border-color: var(--main-accent-color);
 }
 
 button {
