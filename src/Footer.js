@@ -9,9 +9,19 @@ export default function Footer() {
             Need help? Check the <NotationGuide>combo notation guide.</NotationGuide>
           </td>
           <td className='align-right'>
-            Have a suggestion? <a href='https://twitter.com/robrotic'>Contact me on Twitter.</a>
+            Have a suggestion? <a
+              href='https://twitter.com/robrotic'
+              target="_blank"
+              rel="noopener noreferrer">
+              Contact me on Twitter.
+            </a>
             <br></br>
-            Or check out the <a href='https://github.com/robro/combo-finder'>repository.</a>
+            Or check out the <a
+              href='https://github.com/robro/combo-finder'
+              target="_blank"
+              rel="noopener noreferrer">
+              repository.
+            </a>
           </td>
         </tr>
       </table>
