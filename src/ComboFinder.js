@@ -27,10 +27,6 @@ export default function ComboFinder({
     return true
   }
 
-  function resetFilters() {
-    setFilters({})
-  }
-
   return (
     <div className='combo-finder'>
       <ComboFilters
@@ -42,7 +38,7 @@ export default function ComboFinder({
         comboData={comboData.filter(filterCombo)}
         comboProps={comboProps}
         filters={filters}
-        onFiltersReset={resetFilters} />
+        onFiltersReset={setFilters} />
       {children}
     </div>
   )

@@ -9,7 +9,7 @@ export default function ComboDisplayInfo({
   const filtered_props = Object.keys(filters).filter(f => filters[f].value)
 
   const resetFilters = filtered_props.length > 0 &&
-    <span className='reset' onClick={onFiltersReset}>
+    <span className='reset' onClick={() => onFiltersReset({})}>
       Reset filters
     </span>
 
