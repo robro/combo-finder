@@ -24,7 +24,7 @@
     ]
   },
   "notation": {
-    "compare": ["Contains", "Doesn't Contain"],
+    "compare": ["Contains", "Doesn't Contain", "Starts With", "Ends With"],
     "options": []
   },
   "startup": {
