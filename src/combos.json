@@ -276,7 +276,7 @@
   },
   {
     "character": "Ryu",
-    "notation": "DR 6MP, 2MP > 214HK",
+    "notation": "DR > 6MP, 2MP > 214HK",
     "startup": 28,
     "drive": 1.0,
     "super": 0,
@@ -287,7 +287,7 @@
   },
   {
     "character": "Ryu",
-    "notation": "DR 2MK, 5LK > 214MK",
+    "notation": "DR > 2MK, 5LK > 214MK",
     "startup": 17,
     "drive": 1.0,
     "super": 0,
@@ -305,6 +305,116 @@
     "carry": 36,
     "damage": 2813,
     "advantage": 24,
+    "position": "Anywhere"
+  },
+  {
+    "character": "Jamie",
+    "notation": "2MK > 236MP~6P~6P",
+    "startup": 7,
+    "drive": 0.0,
+    "super": 0,
+    "carry": 18,
+    "damage": 1314,
+    "advantage": 27,
+    "position": "Anywhere"
+  },
+  {
+    "character": "Jamie",
+    "notation": "2MK > 236MP~6K~6K",
+    "startup": 7,
+    "drive": 0.0,
+    "super": 0,
+    "carry": 19,
+    "damage": 1197,
+    "advantage": -1,
+    "position": "Anywhere"
+  },
+  {
+    "character": "Jamie",
+    "notation": "5MP, 5LK > 236LP~6P~6P",
+    "startup": 8,
+    "drive": 0.0,
+    "super": 0,
+    "carry": 18,
+    "damage": 1579,
+    "advantage": 27,
+    "position": "Anywhere"
+  },
+  {
+    "character": "Jamie",
+    "notation": "5MP, 5LK > 236LP~6K~6K",
+    "startup": 8,
+    "drive": 0.0,
+    "super": 0,
+    "carry": 19,
+    "damage": 1462,
+    "advantage": -1,
+    "position": "Anywhere"
+  },
+  {
+    "character": "Jamie",
+    "notation": "PC 6HK, 2MK > 236236K",
+    "startup": 16,
+    "drive": 0.0,
+    "super": 1,
+    "carry": 24,
+    "damage": 2826,
+    "advantage": 7,
+    "position": "Anywhere"
+  },
+  {
+    "character": "Jamie",
+    "notation": "PC 5HK, 236236K",
+    "startup": 15,
+    "drive": 0.0,
+    "super": 1,
+    "carry": 23,
+    "damage": 2754,
+    "advantage": 11,
+    "position": "Anywhere"
+  },
+  {
+    "character": "Jamie",
+    "notation": "DR > 5HK, 5LK > 236LP~6P~6P",
+    "startup": 25,
+    "drive": 1.0,
+    "super": 0,
+    "carry": 20,
+    "damage": 1759,
+    "advantage": 27,
+    "position": "Anywhere"
+  },
+  {
+    "character": "Jamie",
+    "notation": "(DL1) 5MP, 5LP~LK~MP > DR > 5MP, 2KK > j.MP > 214KK, 623HK",
+    "startup": 8,
+    "drive": 5.0,
+    "super": 0,
+    "carry": 36,
+    "damage": 2329,
+    "advantage": 39,
+    "position": "Anywhere"
+  },
+  {
+    "character": "Jamie",
+    "notation": "2MK > DR > 5MP, 2KK, dl.2HK~HK~P",
+    "startup": 7,
+    "drive": 3.0,
+    "super": 0,
+    "carry": 25,
+    "damage": 1684,
+    "advantage": 4,
+    "position": "Anywhere"
+  },
+  {
+    "character": "Jamie",
+    "notation": "(DL1) 5MP, 5LP~LK~MP > DR > 2KK > 9j.HK, 2HK~HK~P",
+    "startup": 8,
+    "drive": 3.0,
+    "super": 0,
+    "carry": 39,
+    "damage": 2233,
+    "advantage": 3,
     "position": "Anywhere"
   }
 ]
