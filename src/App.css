@@ -58,7 +58,7 @@ input[type=number] {
 
 .title {
   margin: 0 auto;
-  padding: calc(var(--title-bar-height) - 55px) 20px;
+  padding: calc(var(--title-bar-height) - 54px) 20px;
   max-width: var(--max-width);
 }
 
