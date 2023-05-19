@@ -1,10 +1,7 @@
 # 🔎 Combo Finder
 
-### Easily find the perfect Street Fighter 6 combo for any situation! Search, sort, and filter every combo* from every character by useful categories including "damage", "corner carry", and "drive gauge."
+### Easily find the perfect Street Fighter 6 combo for any situation! Search, sort, and filter every combo* from every character via properties like damage, corner carry, and drive gauge. More combos to be added as the game develops.
 
-# https://robro.github.io/combo-finder/
+# [robro.github.io/combo-finder](https://robro.github.io/combo-finder/)
 
-
-More combos to be added as the game develops.
-
-**May not be not every combo. I'm only one person, and have you seen the combo variety in this game?*
+**May not be every combo. I'm only one person. Have you seen the combo variety in this game?*
