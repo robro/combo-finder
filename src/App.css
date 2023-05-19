@@ -364,3 +364,28 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+.notation-table {
+  margin: 20px 0;
+  border-collapse: collapse;
+}
+
+.notation-header {
+  border-color: var(--darker-accent-color);
+  padding: 0 10px 10px 10px;
+}
+
+.notation-row {
+  height: 45px;
+  border-top: 1px solid;
+  border-color: var(--dark-accent-color);
+}
+
+.notation-cell {
+  padding: 13px 10px;
+}
+
+.right-border {
+  border-right: 1px solid;
+  border-color: inherit;
+}
