@@ -1,12 +1,16 @@
-export default function TitleBar({ 
+import logo from './logo.png'
+
+export default function TitleBar({
   titleText = 'Combo Finder'
 }) {
   return (
     <div className='title-bar'>
       <div className='title'>
-        <h1>
-          🔎 {titleText}
-        </h1>
+        <img
+          src={logo}
+          height={55}
+          alt={titleText}
+          title={titleText} />
       </div>
     </div>
   )

@@ -9,6 +9,7 @@
 
   --max-width: 1200px;
   --clickable-height: 36px;
+  --title-bar-height: 70px
 }
 
 input::-webkit-outer-spin-button,
@@ -52,12 +53,12 @@ input[type=number] {
 .title-bar {
   background-color: var(--alt-accent-color);
   padding: 1px;
-  height: 70px;
+  height: var(--title-bar-height);
 }
 
 .title {
-  margin: -8px auto;
-  padding: 0 20px;
+  margin: 0 auto;
+  padding: calc(var(--title-bar-height) - 55px) 20px;
   max-width: var(--max-width);
 }
 
