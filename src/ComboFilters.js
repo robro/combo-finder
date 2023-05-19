@@ -8,14 +8,14 @@ export default function ComboFilters({
   maxInputLength = 100
 }) {
 
-    const dropdown = document.getElementById('character-value')
-    if (dropdown) {
-      try {
-        dropdown.value = filters.character.value
-      } catch {
-        dropdown.value = ''
-      }
+  const dropdown = document.getElementById('character-value')
+  if (dropdown) {
+    try {
+      dropdown.value = filters.character.value
+    } catch {
+      dropdown.value = ''
     }
+  }
 
   function submitFilters(props=comboProps) {
     let new_filters = {...filters}
