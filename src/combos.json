@@ -1,331 +1,79 @@
-[{
-  "character": "Ryu",
-  "notation": "2MK > 236HP",
-  "startup": 8,
-  "drive": 0.0,
-  "super": 0,
-  "carry": 10,
-  "damage": 1500,
-  "advantage": -1,
-  "position": "Any"
-},{
-  "character": "Luke",
-  "notation": "5LP~MP~HP > 236PP",
-  "startup": 7,
-  "drive": 2.0,
-  "super": 0,
-  "carry": 12,
-  "damage": 2000,
-  "advantage": 5,
-  "position": "Any"
-},{
-  "character": "Blanka",
-  "notation": "5LP~MP~HP > 236PP",
-  "startup": 4,
-  "drive": 5.0,
-  "super": 1,
-  "carry": 5,
-  "damage": 3400,
-  "advantage": 15,
-  "position": "Corner"
-},{
-  "character": "Luke",
-  "notation": "5LP~MP~HP > 236PP",
-  "startup": 7,
-  "drive": 2.0,
-  "super": 0,
-  "carry": 12,
-  "damage": 2000,
-  "advantage": 5,
-  "position": "Any"
-},{
-  "character": "Luke",
-  "notation": "5LP~MP~HP > 236PP",
-  "startup": 7,
-  "drive": 2.0,
-  "super": 0,
-  "carry": 12,
-  "damage": 2000,
-  "advantage": 5,
-  "position": "Any"
-},{
-  "character": "Luke",
-  "notation": "5LP~MP~HP > 236PP",
-  "startup": 7,
-  "drive": 2.0,
-  "super": 0,
-  "carry": 12,
-  "damage": 2000,
-  "advantage": 5,
-  "position": "Any"
-},{
-  "character": "Luke",
-  "notation": "5LP~MP~HP > 236PP",
-  "startup": 7,
-  "drive": 2.0,
-  "super": 0,
-  "carry": 12,
-  "damage": 2000,
-  "advantage": 5,
-  "position": "Any"
-},{
-  "character": "Luke",
-  "notation": "5LP~MP~HP > 236PP",
-  "startup": 7,
-  "drive": 2.0,
-  "super": 0,
-  "carry": 12,
-  "damage": 2000,
-  "advantage": 5,
-  "position": "Any"
-},{
-  "character": "Luke",
-  "notation": "5LP~MP~HP > 236PP",
-  "startup": 7,
-  "drive": 2.0,
-  "super": 0,
-  "carry": 12,
-  "damage": 2000,
-  "advantage": 5,
-  "position": "Any"
-},{
-  "character": "Luke",
-  "notation": "5LP~MP~HP > 236PP",
-  "startup": 7,
-  "drive": 2.0,
-  "super": 0,
-  "carry": 12,
-  "damage": 2000,
-  "advantage": 5,
-  "position": "Any"
-},{
-  "character": "Luke",
-  "notation": "5LP~MP~HP > 236PP",
-  "startup": 7,
-  "drive": 2.0,
-  "super": 0,
-  "carry": 12,
-  "damage": 2000,
-  "advantage": 5,
-  "position": "Any"
-},{
-  "character": "Ryu",
-  "notation": "2MK > 236HP",
-  "startup": 8,
-  "drive": 0.0,
-  "super": 0,
-  "carry": 10,
-  "damage": 1500,
-  "advantage": -1,
-  "position": "Any"
-},{
-  "character": "Ryu",
-  "notation": "2MK > 236HP",
-  "startup": 8,
-  "drive": 0.0,
-  "super": 0,
-  "carry": 10,
-  "damage": 1500,
-  "advantage": -1,
-  "position": "Any"
-},{
-  "character": "Ryu",
-  "notation": "2MK > 236HP",
-  "startup": 8,
-  "drive": 0.0,
-  "super": 0,
-  "carry": 10,
-  "damage": 1500,
-  "advantage": -1,
-  "position": "Any"
-},{
-  "character": "Ryu",
-  "notation": "2MK > 236HP",
-  "startup": 8,
-  "drive": 0.0,
-  "super": 0,
-  "carry": 10,
-  "damage": 1500,
-  "advantage": -1,
-  "position": "Any"
-},{
-  "character": "Ryu",
-  "notation": "2MK > 236HP",
-  "startup": 8,
-  "drive": 0.0,
-  "super": 0,
-  "carry": 10,
-  "damage": 1500,
-  "advantage": -1,
-  "position": "Any"
-},{
-  "character": "Ryu",
-  "notation": "2MK > 236HP",
-  "startup": 8,
-  "drive": 0.0,
-  "super": 0,
-  "carry": 10,
-  "damage": 1500,
-  "advantage": -1,
-  "position": "Any"
-},{
-  "character": "Ryu",
-  "notation": "2MK > 236HP",
-  "startup": 8,
-  "drive": 0.0,
-  "super": 0,
-  "carry": 10,
-  "damage": 1500,
-  "advantage": -1,
-  "position": "Any"
-},{
-  "character": "Blanka",
-  "notation": "5LP~MP~HP > 236PP",
-  "startup": 4,
-  "drive": 5.0,
-  "super": 1,
-  "carry": 5,
-  "damage": 3400,
-  "advantage": 15,
-  "position": "Corner"
-},{
-  "character": "Blanka",
-  "notation": "5LP~MP~HP > 236PP",
-  "startup": 4,
-  "drive": 5.0,
-  "super": 1,
-  "carry": 5,
-  "damage": 3400,
-  "advantage": 15,
-  "position": "Corner"
-},{
-  "character": "Blanka",
-  "notation": "5LP~MP~HP > 236PP",
-  "startup": 4,
-  "drive": 5.0,
-  "super": 1,
-  "carry": 5,
-  "damage": 3400,
-  "advantage": 15,
-  "position": "Corner"
-},{
-  "character": "Blanka",
-  "notation": "5LP~MP~HP > 236PP",
-  "startup": 4,
-  "drive": 5.0,
-  "super": 1,
-  "carry": 5,
-  "damage": 3400,
-  "advantage": 15,
-  "position": "Corner"
-},{
-  "character": "Blanka",
-  "notation": "5LP~MP~HP > 236PP",
-  "startup": 4,
-  "drive": 5.0,
-  "super": 1,
-  "carry": 5,
-  "damage": 3400,
-  "advantage": 15,
-  "position": "Corner"
-},{
-  "character": "Blanka",
-  "notation": "5LP~MP~HP > 236PP",
-  "startup": 4,
-  "drive": 5.0,
-  "super": 1,
-  "carry": 5,
-  "damage": 3400,
-  "advantage": 15,
-  "position": "Corner"
-},{
-  "character": "Guile",
-  "notation": "5LP~MP~HP > 236PP",
-  "startup": 4,
-  "drive": 5.0,
-  "super": 1,
-  "carry": 5,
-  "damage": 3400,
-  "advantage": 15,
-  "position": "Corner"
-},{
-  "character": "Luke",
-  "notation": "5LP~MP~HP > 236PP",
-  "startup": 7,
-  "drive": 2.0,
-  "super": 0,
-  "carry": 12,
-  "damage": 2000,
-  "advantage": 5,
-  "position": "Any"
-},{
-  "character": "Luke",
-  "notation": "5LP~MP~HP > 236PP",
-  "startup": 7,
-  "drive": 2.0,
-  "super": 0,
-  "carry": 12,
-  "damage": 2000,
-  "advantage": 5,
-  "position": "Any"
-},{
-  "character": "Luke",
-  "notation": "5LP~MP~HP > 236PP",
-  "startup": 7,
-  "drive": 2.0,
-  "super": 0,
-  "carry": 12,
-  "damage": 2000,
-  "advantage": 5,
-  "position": "Any"
-},{
-  "character": "Luke",
-  "notation": "5LP~MP~HP > 236PP",
-  "startup": 7,
-  "drive": 2.0,
-  "super": 0,
-  "carry": 12,
-  "damage": 2000,
-  "advantage": 5,
-  "position": "Any"
-},{
-  "character": "Luke",
-  "notation": "5LP~MP~HP > 236PP",
-  "startup": 7,
-  "drive": 2.0,
-  "super": 0,
-  "carry": 12,
-  "damage": 2000,
-  "advantage": 5,
-  "position": "Any"
-},{
-  "character": "Luke",
-  "notation": "5LP~MP~HP > 236PP",
-  "startup": 7,
-  "drive": 2.0,
-  "super": 0,
-  "carry": 12,
-  "damage": 2000,
-  "advantage": 5,
-  "position": "Any"
-},{
-  "character": "Luke",
-  "notation": "5LP~MP~HP > 236PP",
-  "startup": 7,
-  "drive": 2.0,
-  "super": 0,
-  "carry": 12,
-  "damage": 2000,
-  "advantage": 5,
-  "position": "Any"
-},{
-  "character": "Luke",
-  "notation": "5LP~MP~HP > 236PP",
-  "startup": 7,
-  "drive": 2.0,
-  "super": 0,
-  "carry": 12,
-  "damage": 2000,
-  "advantage": 5,
-  "position": "Any"
-}]
+[
+  {
+    "character": "Ryu",
+    "notation": "2MK > 236LP",
+    "startup": 8,
+    "drive": 0.0,
+    "super": 0,
+    "carry": 5,
+    "damage": 980,
+    "advantage": -1,
+    "position": "Anywhere"
+  },
+  {
+    "character": "Ryu",
+    "notation": "2LP~2LP~5LP > 623HP",
+    "startup": 4,
+    "drive": 0.0,
+    "super": 0,
+    "carry": 8,
+    "damage": 1790,
+    "advantage": 29,
+    "position": "Anywhere"
+  },
+  {
+    "character": "Ryu",
+    "notation": "5MP, 4HP > 236HK, 623LP",
+    "startup": 6,
+    "drive": 0.0,
+    "super": 0,
+    "carry": 20,
+    "damage": 2980,
+    "advantage": 37,
+    "position": "Corner"
+  },
+  {
+    "character": "Ryu",
+    "notation": "5HK, 2MK > 214HK",
+    "startup": 12,
+    "drive": 0.0,
+    "super": 0,
+    "carry": 14,
+    "damage": 2200,
+    "advantage": 20,
+    "position": "Anywhere"
+  },
+  {
+    "character": "Ryu",
+    "notation": "6HP, 2MP > 214MK",
+    "startup": 20,
+    "drive": 0.0,
+    "super": 0,
+    "carry": 18,
+    "damage": 2220,
+    "advantage": 23,
+    "position": "Anywhere"
+  },
+  {
+    "character": "Ryu",
+    "notation": "5HP > DR > 2HP > 214HP, DR > 2HP > 623HP",
+    "startup": 10,
+    "drive": 4.0,
+    "super": 0,
+    "carry": 27,
+    "damage": 3354,
+    "advantage": 31,
+    "position": "Anywhere"
+  },
+  {
+    "character": "Ryu",
+    "notation": "5LK > DR > 5LP, 5MP > 236PP",
+    "startup": 5,
+    "drive": 5.0,
+    "super": 0,
+    "carry": 15,
+    "damage": 1408,
+    "advantage": 54,
+    "position": "Anywhere"
+  }
+]
