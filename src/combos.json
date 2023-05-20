@@ -526,5 +526,82 @@
     "damage": 1260,
     "advantage": 4,
     "position": "Anywhere"
+  },
+  {
+    "character": "Jamie",
+    "notation": "PC 5MP, 2HK~HK~P",
+    "startup": 8,
+    "drive": 0.0,
+    "super": 0,
+    "carry": 21,
+    "damage": 1728,
+    "advantage": 3,
+    "position": "Anywhere"
+  },
+  {
+    "character": "Jamie",
+    "notation": "PC 5MP, 2MK > 236MP~6P~6P",
+    "startup": 8,
+    "drive": 0.0,
+    "super": 0,
+    "carry": 20,
+    "damage": 1962,
+    "advantage": 27,
+    "position": "Anywhere"
+  },
+  {
+    "character": "Jamie",
+    "notation": "PC 5MP, 2HP > 236HP~6P~6P",
+    "startup": 8,
+    "drive": 0.0,
+    "super": 0,
+    "carry": 23,
+    "damage": 2416,
+    "advantage": 27,
+    "position": "Anywhere"
+  },
+  {
+    "character": "Jamie",
+    "notation": "PC 5MP, 2MK > 236MP~6K~6K",
+    "startup": 8,
+    "drive": 0.0,
+    "super": 0,
+    "carry": 22,
+    "damage": 1845,
+    "advantage": -1,
+    "position": "Anywhere"
+  },
+  {
+    "character": "Jamie",
+    "notation": "PC 5MP, 2HP > 236HP~6K~6K",
+    "startup": 8,
+    "drive": 0.0,
+    "super": 0,
+    "carry": 23,
+    "damage": 2268,
+    "advantage": -1,
+    "position": "Anywhere"
+  },
+  {
+    "character": "Jamie",
+    "notation": "PC 5HK, 66, 2HP > 214PP, 623HK",
+    "startup": 15,
+    "drive": 2.0,
+    "super": 0,
+    "carry": 35,
+    "damage": 3348,
+    "advantage": 37,
+    "position": "Corner"
+  },
+  {
+    "character": "Jamie",
+    "notation": "PC 6HK > 214214P, 2HP > 236HK",
+    "startup": 16,
+    "drive": 0.0,
+    "super": 2,
+    "carry": 23,
+    "damage": 3321,
+    "advantage": 43,
+    "position": "Anywhere"
   }
 ]
