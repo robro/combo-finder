@@ -9,7 +9,10 @@
 
   --max-width: 1200px;
   --clickable-height: 36px;
-  --title-bar-height: 70px
+  --title-bar-height: 70px;
+
+  --number-of-props: 8;
+  --notation-width: 28%
 }
 
 input::-webkit-outer-spin-button,
@@ -130,11 +133,11 @@ input[type=number] {
   text-align: left;
   border-bottom: 1px solid;
   border-color: var(--dark-accent-color);
-  width: 8.5%;
+  width: calc((100% - var(--notation-width)) / var(--number-of-props));
 }
 
 .prop-header.notation {
-  width: 28%;
+  width: var(--notation-width);
 }
 
 .pointer {
