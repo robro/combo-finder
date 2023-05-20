@@ -133,7 +133,7 @@
   },
   {
     "character": "Ryu",
-    "notation": "AA 9j.MP > 214K, 623HP",
+    "notation": "AA 9j.MP > j.214K, 623HP",
     "startup": 8,
     "drive": 0.0,
     "super": 0,
@@ -232,7 +232,7 @@
   },
   {
     "character": "Ryu",
-    "notation": "OB DI, dash 2HP > Denjin 214P, 9j.MP > 214KK, 236236K",
+    "notation": "OB DI, 66, 2HP > Denjin 214P, 9j.MP > j.214KK, 236236K",
     "startup": 26,
     "drive": 3.0,
     "super": 3,
@@ -386,7 +386,7 @@
   },
   {
     "character": "Jamie",
-    "notation": "(DL1) 5MP, 5LP~LK~MP > DR > 5MP, 2KK > j.MP > 214KK, 623HK",
+    "notation": "(DL1) 5MP, 5LP~LK~MP > DR > 5MP, 2KK > j.MP > j.214KK, 623HK",
     "startup": 8,
     "drive": 5.0,
     "super": 0,
@@ -415,6 +415,116 @@
     "carry": 39,
     "damage": 2233,
     "advantage": 3,
+    "position": "Anywhere"
+  },
+  {
+    "character": "Jamie",
+    "notation": "PC 5HK, DR > 2KK > 9j.HK, dl.5HP > 214PP, 2HK~HK~P",
+    "startup": 15,
+    "drive": 3.0,
+    "super": 0,
+    "carry": 50,
+    "damage": 2870,
+    "advantage": 4,
+    "position": "Corner"
+  },
+  {
+    "character": "Jamie",
+    "notation": "5MK > DR > 2KK > 9j.HK, 2HK~HK~P",
+    "startup": 10,
+    "drive": 3.0,
+    "super": 0,
+    "carry": 32,
+    "damage": 1981,
+    "advantage": 3,
+    "position": "Anywhere"
+  },
+  {
+    "character": "Jamie",
+    "notation": "(DL1) AA 2KK > 9j.MP > j.214KK, 2HK~HK~P",
+    "startup": 9,
+    "drive": 2.0,
+    "super": 0,
+    "carry": 30,
+    "damage": 2226,
+    "advantage": 4,
+    "position": "Anywhere"
+  },
+  {
+    "character": "Jamie",
+    "notation": "5MK > DR > 5MP, 2HP > 236HP~6P~6P",
+    "startup": 10,
+    "drive": 3.0,
+    "super": 0,
+    "carry": 28,
+    "damage": 2232,
+    "advantage": 27,
+    "position": "Anywhere"
+  },
+  {
+    "character": "Jamie",
+    "notation": "5MK > DR > 5MP, 2HP > 236HP~6K~6K",
+    "startup": 10,
+    "drive": 3.0,
+    "super": 0,
+    "carry": 28,
+    "damage": 2127,
+    "advantage": -1,
+    "position": "Anywhere"
+  },
+  {
+    "character": "Jamie",
+    "notation": "PC 5HK, 66, 2HK~HK~P",
+    "startup": 15,
+    "drive": 0.0,
+    "super": 0,
+    "carry": 23,
+    "damage": 1944,
+    "advantage": 4,
+    "position": "Anywhere"
+  },
+  {
+    "character": "Jamie",
+    "notation": "PC 5HK, 66, 2KK, 2HK~HK~P",
+    "startup": 15,
+    "drive": 0.0,
+    "super": 0,
+    "carry": 27,
+    "damage": 2295,
+    "advantage": 4,
+    "position": "Anywhere"
+  },
+  {
+    "character": "Jamie",
+    "notation": "PC 5HK, 236236K",
+    "startup": 15,
+    "drive": 0.0,
+    "super": 1,
+    "carry": 25,
+    "damage": 2754,
+    "advantage": 11,
+    "position": "Anywhere"
+  },
+  {
+    "character": "Jamie",
+    "notation": "PC 5HK, 66, 2HP > 214PP, 236236K",
+    "startup": 15,
+    "drive": 2.0,
+    "super": 1,
+    "carry": 40,
+    "damage": 3783,
+    "advantage": 11,
+    "position": "Corner"
+  },
+  {
+    "character": "Jamie",
+    "notation": "AA 2KK, 2HK~HK~P",
+    "startup": 9,
+    "drive": 0.0,
+    "super": 0,
+    "carry": 19,
+    "damage": 1260,
+    "advantage": 4,
     "position": "Anywhere"
   }
 ]
