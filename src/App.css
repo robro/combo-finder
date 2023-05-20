@@ -130,11 +130,11 @@ input[type=number] {
   text-align: left;
   border-bottom: 1px solid;
   border-color: var(--dark-accent-color);
-  width: 10%;
+  width: 8.5%;
 }
 
 .prop-header.notation {
-  width: 25%;
+  width: 28%;
 }
 
 .pointer {

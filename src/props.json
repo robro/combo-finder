@@ -23,6 +23,10 @@
       "Zangeif"
     ]
   },
+  "position": {
+    "compare": [],
+    "options": ["All Positions", "Midscreen", "Corner", "Anywhere"]
+  },
   "notation": {
     "compare": ["Contains", "Doesn't Contain", "Starts With", "Ends With"],
     "options": []
@@ -50,9 +54,5 @@
   "advantage": {
     "compare": ["Equal To", "Greater Than", "Less Than"],
     "options": []
-  },
-  "position": {
-    "compare": [],
-    "options": ["All Positions", "Midscreen", "Corner", "Anywhere"]
   }
 }
