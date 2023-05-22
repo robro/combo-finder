@@ -166,7 +166,7 @@
   },
   {
     "character": "Ryu",
-    "notation": "5MP, 2MP > 214KK, DR > 2MP > 214MP, 623HP",
+    "notation": "5MP, 2MP > 214KK, DR > 5MP > 214MP, 623HP",
     "startup": 6,
     "drive": 3.0,
     "super": 0,
@@ -199,7 +199,7 @@
   },
   {
     "character": "Ryu",
-    "notation": "2MK > 236KK > 214214[P] lvl2",
+    "notation": "2MK > 236KK > 214214[P] Level 2",
     "startup": 8,
     "drive": 2.0,
     "super": 2,
@@ -254,7 +254,7 @@
   },
   {
     "character": "Ryu",
-    "notation": "6HP, 2MP > 236KK, DR > 2MP > 236LP, 236236P",
+    "notation": "6HP, 2MP > 236KK, DR > 5MP > 236LP, 236236P",
     "startup": 20,
     "drive": 3.0,
     "super": 1,

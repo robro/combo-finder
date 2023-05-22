@@ -5,6 +5,7 @@ export default function ComboFilters({
   comboProps,
   filters,
   onFiltersSubmit,
+  onControlTypeChange,
   maxInputLength = 100
 }) {
 
@@ -31,7 +32,7 @@ export default function ComboFilters({
 
   function getLabel(text) {
     return (
-      <td className='filter-lable'>
+      <td className='filter-label'>
         <label className='capitalize'>
           {text}
         </label>
@@ -47,7 +48,7 @@ export default function ComboFilters({
       <>
         <td>
           <select
-            className='drop condition'
+            className='drop filter-drop'
             id={prop+'-condition'}
             name={prop+'-condition'}
             defaultValue={condition}
@@ -59,7 +60,7 @@ export default function ComboFilters({
         </td>
         <td>
           <input
-            className='filter-input value'
+            className='filter-input'
             id={prop+'-value'}
             name={prop+'-value'}
             defaultValue={value}
@@ -77,7 +78,7 @@ export default function ComboFilters({
     return (
       <td colSpan={2}>
         <select
-          className={'drop value '+ptr_str}
+          className={'drop filter-drop '+ptr_str}
           id={prop+'-value'}
           name={prop+'-value'}
           defaultValue={value}
@@ -111,8 +112,23 @@ export default function ComboFilters({
       <table className='filter-bar'>
         <tbody>
           <tr className='filter-row'>
-            {getComboFilter('character', false, (e) => 
-              submitFilters([e.target.id.split('-')[0]]), true)}
+            <td className="fixed-size">
+              <select
+                className={'drop value pointer'}
+                id={'character-value'}
+                name={'character-value'}
+                defaultValue={''}
+                onChange={(e) => submitFilters([e.target.id.split('-')[0]])}>
+                <option value=''>
+                  {filterInfo['character'].options[0]}
+                </option>
+                {filterInfo['character'].options.slice(1).map(option => 
+                  <option value={option}>
+                    {option}
+                  </option>
+                )}
+              </select>
+            </td>
             <td>
               <Popup trigger={
                 <button className='btn-main alt-hover'>
@@ -162,6 +178,19 @@ export default function ComboFilters({
                   )
                 }
               </Popup>
+            </td>
+            <td className="align-right">
+              <label>
+                Control Type:
+              </label>
+            </td>
+            <td className="fixed-size">
+              <select
+                className="drop wide"
+                onChange={(e) => onControlTypeChange(e.target.value)}>
+                <option value='classic'>Classic</option>
+                <option value='modern'>Modern</option>
+              </select>
             </td>
           </tr>
         </tbody>

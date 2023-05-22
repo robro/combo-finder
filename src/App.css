@@ -74,14 +74,14 @@ input[type=number] {
 .filter-bar {
   margin-left: -7px;
   padding: 20px 0;
-  display: flex;
+  width: calc(100% + 14px);
 }
 
 .popup-overlay {
   background: rgba(0, 0, 0, 0.5);
 }
 
-.filter-lable {
+.filter-label {
   width: 100px;
 }
 
@@ -278,12 +278,15 @@ input:focus {
   color: inherit;
   font-size: 11pt;
   height: var(--clickable-height);
-  min-width: calc(100% - 12px);
   border: 1px solid var(--dark-accent-color);
   border-style: solid;
   outline-style: none;
   border-radius: 5px;
   padding: 0 5px;
+}
+
+.filter-drop {
+  min-width: calc(100% - 12px);
 }
 
 .drop:focus {
@@ -395,4 +398,12 @@ a:hover {
 .right-border {
   border-right: 1px solid;
   border-color: inherit;
+}
+
+.fixed-size {
+  width: 100px;
+}
+
+.wide {
+  width: 125px;
 }
