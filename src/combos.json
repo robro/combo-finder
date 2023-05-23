@@ -397,18 +397,6 @@
   },
   {
     "character": "Jamie",
-    "notation": "PC 5HK, 236236K",
-    "startup": 15,
-    "drive": 0.0,
-    "super": 1,
-    "carry": 23,
-    "damage": 2754,
-    "advantage": 11,
-    "position": "Anywhere",
-    "state": "none"
-  },
-  {
-    "character": "Jamie",
     "notation": "DR > 5HK, 5LK > 236LP~6P~6P",
     "startup": 25,
     "drive": 1.0,
@@ -529,7 +517,7 @@
   },
   {
     "character": "Jamie",
-    "notation": "PC 5HK, 66, 2KK, 2HK~HK~P",
+    "notation": "PC 5HK, 66, 2KK, dl.2HK~HK~P",
     "startup": 15,
     "drive": 0.0,
     "super": 0,
