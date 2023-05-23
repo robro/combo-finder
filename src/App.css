@@ -29,6 +29,10 @@ td {
   padding: 0;
 }
 
+body:has(.popup-content) {
+  overflow: hidden;
+}
+
 .capitalize {
   text-transform: capitalize;
 }
@@ -83,6 +87,15 @@ input[type=number] {
 
 .popup-overlay {
   background: rgba(0, 0, 0, 0.5);
+  /* max-height: 100vh; */
+  overflow-y: auto;
+}
+
+.popup-content {
+  background-color: var(--darker-accent-color);
+  outline: var(--darker-accent-color) solid 1px;
+  border-radius: 8px;
+  padding: 12px;
 }
 
 .filter-label {
@@ -91,13 +104,6 @@ input[type=number] {
 
 .float-right {
   float: right;
-}
-
-.popup {
-  background-color: var(--darker-accent-color);
-  outline: var(--darker-accent-color) solid 1px;
-  border-radius: 8px;
-  padding: 12px;
 }
 
 .search-bar {

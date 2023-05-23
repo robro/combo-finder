@@ -1,5 +1,5 @@
 {
-  "global": [
+  "universal": [
     {
       "notation": "**1** ... **9**",
       "meaning": "**Direction** of joystick input. Corresponds to the keys on a numpad.\n(6 = forward, 214 = quarter-circle back, etc.)."

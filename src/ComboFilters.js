@@ -128,7 +128,7 @@ export default function ComboFilters({
               nested>
               {
                 close => (
-                  <div className='popup'>
+                  <div>
                     <div className='popup-title-bar'>
                       <span className='popup-title'>
                           Advanced Search
