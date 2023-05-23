@@ -1,6 +1,23 @@
 import Popup from "reactjs-popup"
+import Showdown from "showdown"
 
 export default function NotationGuide({ children }) {
+  const converter = new Showdown.Converter({'simpleLineBreaks': true})
+  const guideText = [...require('./NotationGuideText.json')]
+
+  function getRow(row) {
+    return (
+      <tr className='notation-row'>
+        <td
+          className='notation-cell right-border'
+          dangerouslySetInnerHTML={{__html: converter.makeHtml(row.notation)}} />
+        <td
+          className='notation-cell'
+          dangerouslySetInnerHTML={{__html: converter.makeHtml(row.meaning)}} />
+      </tr>
+    )
+  }
+
   return (
     <Popup trigger={
       <a className='pointer'>{children}</a>}
@@ -27,48 +44,7 @@ export default function NotationGuide({ children }) {
               </tr>
             </thead>
             <tbody>
-              <tr className='notation-row'>
-                <td className='notation-cell right-border'><b>1 </b>...<b> 9</b></td>
-                <td className='notation-cell'><b>Direction</b> of joystick input. Corresponds to the keys on a numpad.<br></br>
-                  (6 = forward, 3 = down-back, etc.).</td>
-              </tr>
-              <tr className='notation-row'>
-                <td className='notation-cell right-border'><b>&gt;</b></td>
-                <td className='notation-cell'><b>Cancel</b> the previous move to the following move.</td>
-              </tr>
-              <tr className='notation-row'>
-                <td className='notation-cell right-border'><b>~</b></td>
-                <td className='notation-cell'><b>Chain/Target combo</b> the previous move into a followup.</td>
-              </tr>
-              <tr className='notation-row'>
-                <td className='notation-cell right-border'><b>,</b></td>
-                <td className='notation-cell'><b>Link</b> the previous move to the following move (requires precise timing)</td>
-              </tr>
-              <tr className='notation-row'>
-                <td className='notation-cell right-border'><b>j.X</b></td>
-                <td className='notation-cell'>Move performed while <b>jumping</b>.</td>
-              </tr>
-              <tr className='notation-row'>
-                <td className='notation-cell right-border'><b>P</b> or <b>K</b></td>
-                <td className='notation-cell'>Any <b>punch</b> or <b>kick</b> (when button strength does not matter)</td>
-              </tr>
-              <tr className='notation-row'>
-                <td className='notation-cell right-border'><b>[X]</b></td>
-                <td className='notation-cell'><b>Hold</b> the button input.</td>
-              </tr>
-              <tr className='notation-row'>
-                <td className='notation-cell right-border'><b>dl.X</b></td>
-                <td className='notation-cell'>Briefly <b>delay</b> the action.</td>
-              </tr>
-              <tr className='notation-row'>
-                <td className='notation-cell right-border'><b>AA</b></td>
-                <td className='notation-cell'><b>Anti-air</b>; hit the opponent while they're mid-air.</td>
-              </tr>
-              <tr className='notation-row'>
-                <td className='notation-cell right-border'><b>Y xN<br></br>&#123;Y&#125; xN</b></td>
-                <td className='notation-cell'><b>Repeat</b> 'Y' input 'N' number of times.<br></br>
-                  A sequence of multiple inputs will be bundled into "&#123;&#125;".</td>
-              </tr>
+              {guideText.map(row => getRow(row))}
             </tbody>
           </table>
         </div>
