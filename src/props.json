@@ -54,5 +54,9 @@
   "position": {
     "compare": [],
     "options": ["All Positions", "Midscreen", "Corner", "Anywhere"]
+  },
+  "state": {
+    "compare": ["Contains", "Doesn't Contain", "Starts With", "Ends With"],
+    "options": []
   }
 }

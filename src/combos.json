@@ -8,7 +8,8 @@
     "carry": 5,
     "damage": 980,
     "advantage": -1,
-    "position": "Anywhere"
+    "position": "Anywhere",
+    "state": "none"
   },
   {
     "character": "Ryu",
@@ -19,7 +20,8 @@
     "carry": 8,
     "damage": 1790,
     "advantage": 29,
-    "position": "Anywhere"
+    "position": "Anywhere",
+    "state": "none"
   },
   {
     "character": "Ryu",
@@ -30,7 +32,8 @@
     "carry": 20,
     "damage": 2980,
     "advantage": 37,
-    "position": "Corner"
+    "position": "Corner",
+    "state": "none"
   },
   {
     "character": "Ryu",
@@ -41,7 +44,8 @@
     "carry": 14,
     "damage": 2200,
     "advantage": 20,
-    "position": "Anywhere"
+    "position": "Anywhere",
+    "state": "none"
   },
   {
     "character": "Ryu",
@@ -52,7 +56,8 @@
     "carry": 18,
     "damage": 2220,
     "advantage": 23,
-    "position": "Anywhere"
+    "position": "Anywhere",
+    "state": "none"
   },
   {
     "character": "Ryu",
@@ -63,7 +68,8 @@
     "carry": 27,
     "damage": 3354,
     "advantage": 31,
-    "position": "Anywhere"
+    "position": "Anywhere",
+    "state": "none"
   },
   {
     "character": "Ryu",
@@ -74,7 +80,8 @@
     "carry": 15,
     "damage": 1408,
     "advantage": 54,
-    "position": "Anywhere"
+    "position": "Anywhere",
+    "state": "none"
   },
   {
     "character": "Ryu",
@@ -85,18 +92,20 @@
     "carry": 10,
     "damage": 2920,
     "advantage": 29,
-    "position": "Corner"
+    "position": "Corner",
+    "state": "none"
   },
   {
     "character": "Ryu",
-    "notation": "OB DI, 2HP > 214MP, 623HP",
+    "notation": "Block DI, 2HP > 214MP, 623HP",
     "startup": 26,
     "drive": 1.0,
     "super": 0,
     "carry": 10,
     "damage": 2256,
     "advantage": 29,
-    "position": "Corner"
+    "position": "Corner",
+    "state": "none"
   },
   {
     "character": "Ryu",
@@ -107,7 +116,8 @@
     "carry": 16,
     "damage": 2120,
     "advantage": 32,
-    "position": "Midscreen"
+    "position": "Midscreen",
+    "state": "none"
   },
   {
     "character": "Ryu",
@@ -118,29 +128,32 @@
     "carry": 17,
     "damage": 1770,
     "advantage": 26,
-    "position": "Midscreen"
+    "position": "Midscreen",
+    "state": "none"
   },
   {
     "character": "Ryu",
-    "notation": "5HP > DR > 5HK, 5HP > Denjin 214P, 214MK",
+    "notation": "5HP > DR > 5HK, 5HP/2HP > 214P, 214MK",
     "startup": 10,
     "drive": 3.0,
     "super": 0,
     "carry": 30,
     "damage": 3040,
     "advantage": 25,
-    "position": "Anywhere"
+    "position": "Anywhere",
+    "state": "denjin charge"
   },
   {
     "character": "Ryu",
-    "notation": "AA 9j.MP > j.214K, 623HP",
+    "notation": "AA j.MP > j.214K, 623HP",
     "startup": 8,
     "drive": 0.0,
     "super": 0,
     "carry": 15,
     "damage": 2720,
     "advantage": 33,
-    "position": "Corner"
+    "position": "Corner",
+    "state": "none"
   },
   {
     "character": "Ryu",
@@ -151,29 +164,32 @@
     "carry": 13,
     "damage": 3410,
     "advantage": 37,
-    "position": "Corner"
+    "position": "Corner",
+    "state": "none"
   },
   {
     "character": "Ryu",
-    "notation": "2MK > DR > 5MP, 5HP > Denjin 214P, 214MK",
+    "notation": "2MK > DR > 5MP, 5HP/2HP > 214P, 214MK",
     "startup": 8,
     "drive": 3.0,
     "super": 0,
     "carry": 28,
     "damage": 2166,
     "advantage": 26,
-    "position": "Anywhere"
+    "position": "Anywhere",
+    "state": "denjin charge"
   },
   {
     "character": "Ryu",
-    "notation": "5MP, 2MP > 214KK, DR > 5MP > 214MP, 623HP",
+    "notation": "5MP, 5MP/2MP > 214KK, DR > 5MP/2MP > 214MP, 623HP",
     "startup": 6,
     "drive": 3.0,
     "super": 0,
     "carry": 13,
     "damage": 3509,
     "advantage": 29,
-    "position": "Corner"
+    "position": "Corner",
+    "state": "none"
   },
   {
     "character": "Ryu",
@@ -184,7 +200,8 @@
     "carry": 27,
     "damage": 3289,
     "advantage": 30,
-    "position": "Anywhere"
+    "position": "Anywhere",
+    "state": "none"
   },
   {
     "character": "Ryu",
@@ -195,18 +212,20 @@
     "carry": 5,
     "damage": 3210,
     "advantage": 29,
-    "position": "Corner"
+    "position": "Corner",
+    "state": "none"
   },
   {
     "character": "Ryu",
-    "notation": "2MK > 236KK > 214214[P] Level 2",
+    "notation": "2MK > 236KK > 214214[P] Lv.2",
     "startup": 8,
     "drive": 2.0,
     "super": 2,
     "carry": 28,
     "damage": 3240,
     "advantage": 82,
-    "position": "Midscreen"
+    "position": "Midscreen",
+    "state": "none"
   },
   {
     "character": "Ryu",
@@ -217,40 +236,44 @@
     "carry": 14,
     "damage": 2200,
     "advantage": 20,
-    "position": "Anywhere"
+    "position": "Anywhere",
+    "state": "none"
   },
   {
     "character": "Ryu",
-    "notation": "5MP, 5MP > DR > 5HK, 5HP > DR > 2HP > 214HP, 236236P",
+    "notation": "5MP, 5MP > DR > 5HK, 5HP/2HP > DR > 2HP > 214HP, 236236P",
     "startup": 6,
     "drive": 6.0,
     "super": 1,
     "carry": 36,
     "damage": 3759,
     "advantage": 27,
-    "position": "Anywhere"
+    "position": "Anywhere",
+    "state": "none"
   },
   {
     "character": "Ryu",
-    "notation": "OB DI, 66, 2HP > Denjin 214P, 9j.MP > j.214KK, 236236K",
+    "notation": "Block DI, 66, 2HP > 214P, j.MP > j.214KK, 236236K",
     "startup": 26,
     "drive": 3.0,
     "super": 3,
     "carry": 10,
     "damage": 4648,
     "advantage": 8,
-    "position": "Corner"
+    "position": "Corner",
+    "state": "denjin charge"
   },
   {
     "character": "Ryu",
-    "notation": "j.HP, 2HP > Denjin 214PP, 2HP > 236MK",
+    "notation": "j.HP, 2HP > 214PP, 2HP > 236MK",
     "startup": 8,
     "drive": 2.0,
     "super": 0,
     "carry": 23,
     "damage": 3470,
     "advantage": 40,
-    "position": "Anywhere"
+    "position": "Anywhere",
+    "state": "none"
   },
   {
     "character": "Ryu",
@@ -261,7 +284,8 @@
     "carry": 30,
     "damage": 3699,
     "advantage": 30,
-    "position": "Midscreen"
+    "position": "Midscreen",
+    "state": "none"
   },
   {
     "character": "Ryu",
@@ -272,7 +296,8 @@
     "carry": 0,
     "damage": 2120,
     "advantage": 29,
-    "position": "Corner"
+    "position": "Corner",
+    "state": "none"
   },
   {
     "character": "Ryu",
@@ -283,7 +308,8 @@
     "carry": 12,
     "damage": 2100,
     "advantage": 20,
-    "position": "Anywhere"
+    "position": "Anywhere",
+    "state": "none"
   },
   {
     "character": "Ryu",
@@ -294,7 +320,8 @@
     "carry": 19,
     "damage": 1370,
     "advantage": 23,
-    "position": "Anywhere"
+    "position": "Anywhere",
+    "state": "none"
   },
   {
     "character": "Ryu",
@@ -305,7 +332,8 @@
     "carry": 36,
     "damage": 2813,
     "advantage": 24,
-    "position": "Anywhere"
+    "position": "Anywhere",
+    "state": "none"
   },
   {
     "character": "Jamie",
@@ -316,7 +344,8 @@
     "carry": 18,
     "damage": 1314,
     "advantage": 27,
-    "position": "Anywhere"
+    "position": "Anywhere",
+    "state": "none"
   },
   {
     "character": "Jamie",
@@ -327,7 +356,8 @@
     "carry": 19,
     "damage": 1197,
     "advantage": -1,
-    "position": "Anywhere"
+    "position": "Anywhere",
+    "state": "none"
   },
   {
     "character": "Jamie",
@@ -338,7 +368,8 @@
     "carry": 18,
     "damage": 1579,
     "advantage": 27,
-    "position": "Anywhere"
+    "position": "Anywhere",
+    "state": "none"
   },
   {
     "character": "Jamie",
@@ -349,7 +380,8 @@
     "carry": 19,
     "damage": 1462,
     "advantage": -1,
-    "position": "Anywhere"
+    "position": "Anywhere",
+    "state": "none"
   },
   {
     "character": "Jamie",
@@ -360,7 +392,8 @@
     "carry": 24,
     "damage": 2826,
     "advantage": 7,
-    "position": "Anywhere"
+    "position": "Anywhere",
+    "state": "none"
   },
   {
     "character": "Jamie",
@@ -371,7 +404,8 @@
     "carry": 23,
     "damage": 2754,
     "advantage": 11,
-    "position": "Anywhere"
+    "position": "Anywhere",
+    "state": "none"
   },
   {
     "character": "Jamie",
@@ -382,18 +416,20 @@
     "carry": 20,
     "damage": 1759,
     "advantage": 27,
-    "position": "Anywhere"
+    "position": "Anywhere",
+    "state": "none"
   },
   {
     "character": "Jamie",
-    "notation": "(DL1) 5MP, 5LP~LK~MP > DR > 5MP, 2KK > j.MP > j.214KK, 623HK",
+    "notation": "5MP, 5LP~LK~MP > DR > 5MP, 2KK > jc.MP > j.214KK, 623HK",
     "startup": 8,
     "drive": 5.0,
     "super": 0,
     "carry": 36,
     "damage": 2329,
     "advantage": 39,
-    "position": "Anywhere"
+    "position": "Anywhere",
+    "state": "drink lv.1"
   },
   {
     "character": "Jamie",
@@ -404,51 +440,56 @@
     "carry": 25,
     "damage": 1684,
     "advantage": 4,
-    "position": "Anywhere"
+    "position": "Anywhere",
+    "state": "none"
   },
   {
     "character": "Jamie",
-    "notation": "(DL1) 5MP, 5LP~LK~MP > DR > 2KK > 9j.HK, 2HK~HK~P",
+    "notation": "5MP, 5LP~LK~MP > DR > 2KK > jc.HK, 2HK~HK~P",
     "startup": 8,
     "drive": 3.0,
     "super": 0,
     "carry": 39,
     "damage": 2233,
     "advantage": 3,
-    "position": "Anywhere"
+    "position": "Anywhere",
+    "state": "drink lv.1"
   },
   {
     "character": "Jamie",
-    "notation": "PC 5HK, DR > 2KK > 9j.HK, dl.5HP > 214PP, 2HK~HK~P",
+    "notation": "PC 5HK, DR > 2KK > jc.HK, dl.5HP > 214PP, 2HK~HK~P",
     "startup": 15,
     "drive": 3.0,
     "super": 0,
     "carry": 50,
     "damage": 2870,
     "advantage": 4,
-    "position": "Corner"
+    "position": "Corner",
+    "state": "none"
   },
   {
     "character": "Jamie",
-    "notation": "5MK > DR > 2KK > 9j.HK, 2HK~HK~P",
+    "notation": "5MK > DR > 2KK > jc.HK, 2HK~HK~P",
     "startup": 10,
     "drive": 3.0,
     "super": 0,
     "carry": 32,
     "damage": 1981,
     "advantage": 3,
-    "position": "Anywhere"
+    "position": "Anywhere",
+    "state": "none"
   },
   {
     "character": "Jamie",
-    "notation": "(DL1) AA 2KK > 9j.MP > j.214KK, 2HK~HK~P",
+    "notation": "AA 2KK > jc.MP > j.214KK, 2HK~HK~P",
     "startup": 9,
     "drive": 2.0,
     "super": 0,
     "carry": 30,
     "damage": 2226,
     "advantage": 4,
-    "position": "Anywhere"
+    "position": "Anywhere",
+    "state": "drink lv.1"
   },
   {
     "character": "Jamie",
@@ -459,7 +500,8 @@
     "carry": 28,
     "damage": 2232,
     "advantage": 27,
-    "position": "Anywhere"
+    "position": "Anywhere",
+    "state": "none"
   },
   {
     "character": "Jamie",
@@ -470,7 +512,8 @@
     "carry": 28,
     "damage": 2127,
     "advantage": -1,
-    "position": "Anywhere"
+    "position": "Anywhere",
+    "state": "none"
   },
   {
     "character": "Jamie",
@@ -481,7 +524,8 @@
     "carry": 23,
     "damage": 1944,
     "advantage": 4,
-    "position": "Anywhere"
+    "position": "Anywhere",
+    "state": "none"
   },
   {
     "character": "Jamie",
@@ -492,7 +536,8 @@
     "carry": 27,
     "damage": 2295,
     "advantage": 4,
-    "position": "Anywhere"
+    "position": "Anywhere",
+    "state": "none"
   },
   {
     "character": "Jamie",
@@ -503,7 +548,8 @@
     "carry": 25,
     "damage": 2754,
     "advantage": 11,
-    "position": "Anywhere"
+    "position": "Anywhere",
+    "state": "none"
   },
   {
     "character": "Jamie",
@@ -514,7 +560,8 @@
     "carry": 40,
     "damage": 3783,
     "advantage": 11,
-    "position": "Corner"
+    "position": "Corner",
+    "state": "none"
   },
   {
     "character": "Jamie",
@@ -525,7 +572,8 @@
     "carry": 19,
     "damage": 1260,
     "advantage": 4,
-    "position": "Anywhere"
+    "position": "Anywhere",
+    "state": "none"
   },
   {
     "character": "Jamie",
@@ -536,7 +584,8 @@
     "carry": 21,
     "damage": 1728,
     "advantage": 3,
-    "position": "Anywhere"
+    "position": "Anywhere",
+    "state": "none"
   },
   {
     "character": "Jamie",
@@ -547,7 +596,8 @@
     "carry": 20,
     "damage": 1962,
     "advantage": 27,
-    "position": "Anywhere"
+    "position": "Anywhere",
+    "state": "none"
   },
   {
     "character": "Jamie",
@@ -558,7 +608,8 @@
     "carry": 23,
     "damage": 2416,
     "advantage": 27,
-    "position": "Anywhere"
+    "position": "Anywhere",
+    "state": "none"
   },
   {
     "character": "Jamie",
@@ -569,7 +620,8 @@
     "carry": 22,
     "damage": 1845,
     "advantage": -1,
-    "position": "Anywhere"
+    "position": "Anywhere",
+    "state": "none"
   },
   {
     "character": "Jamie",
@@ -580,7 +632,8 @@
     "carry": 23,
     "damage": 2268,
     "advantage": -1,
-    "position": "Anywhere"
+    "position": "Anywhere",
+    "state": "none"
   },
   {
     "character": "Jamie",
@@ -591,7 +644,8 @@
     "carry": 35,
     "damage": 3348,
     "advantage": 37,
-    "position": "Corner"
+    "position": "Corner",
+    "state": "none"
   },
   {
     "character": "Jamie",
@@ -602,6 +656,7 @@
     "carry": 23,
     "damage": 3321,
     "advantage": 43,
-    "position": "Anywhere"
+    "position": "Anywhere",
+    "state": "none"
   }
 ]

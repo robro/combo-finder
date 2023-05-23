@@ -23,9 +23,6 @@
     {"classic": "2HP", "modern": "2H"},
     {"classic": "2HK", "modern": "3H"},
     {"classic": "6HP", "modern": "Auto(H)"},
-    {"classic": "j.LK", "modern": "j.L"},
-    {"classic": "j.MK", "modern": "j.M"},
-    {"classic": "j.HP", "modern": "j.H"},
     {"classic": "236LP", "modern": "236L"},
     {"classic": "236MP", "modern": "236M"},
     {"classic": "236HP", "modern": "5S"},
@@ -41,12 +38,16 @@
     {"classic": "214LP", "modern": "214L"},
     {"classic": "214MP", "modern": "214M"},
     {"classic": "214HP", "modern": "214H"},
-    {"classic": "214PP", "modern": "214LM"},
+    {"classic": "214PP", "modern": "214NN"},
+    {"classic": "214P", "modern": "214N"},
     {"classic": "j.214KK", "modern": "j.Auto(S)"},
     {"classic": "j.214K", "modern": "j.S"},
     {"classic": "236236P", "modern": "5HS"},
     {"classic": "214214P", "modern": "4HS"},
     {"classic": "214214[P]", "modern": "4[HS]"},
-    {"classic": "236236K", "modern": "2HS"}
+    {"classic": "236236K", "modern": "2HS"},
+    {"classic": "LK", "modern": "L"},
+    {"classic": "MK", "modern": "M"},
+    {"classic": "HP", "modern": "H"}
   ]
 }
