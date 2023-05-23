@@ -40,7 +40,7 @@ export default function ComboFilters({
     )
   }
 
-  function getConditionFilter(prop, on_change=null) {
+  function getConditionFilter(prop) {
     const current_filter = filters[prop]
     const condition = (current_filter) ? current_filter['condition'] : false
     const value = (current_filter) ? current_filter['value'] : ''
@@ -51,8 +51,7 @@ export default function ComboFilters({
             className='drop filter-drop'
             id={prop+'-condition'}
             name={prop+'-condition'}
-            defaultValue={condition}
-            onChange={on_change}>
+            defaultValue={condition}>
             {filterInfo[prop].compare.map(option =>
               <option value={option}>{option}</option>
             )}
@@ -64,25 +63,22 @@ export default function ComboFilters({
             id={prop+'-value'}
             name={prop+'-value'}
             defaultValue={value}
-            onChange={on_change}
             maxLength={maxInputLength}/>
         </td>
       </>
     )
   }
 
-  function getValueFilter(prop, on_change=null, pointer=false) {
+  function getValueFilter(prop) {
     const current_filter = filters[prop]
     const value = (current_filter) ? current_filter['value'] : ''
-    const ptr_str = (pointer) ? 'pointer' : ''
     return (
       <td colSpan={2}>
         <select
-          className={'drop filter-drop '+ptr_str}
+          className={'drop filter-drop'}
           id={prop+'-value'}
           name={prop+'-value'}
-          defaultValue={value}
-          onChange={on_change}>
+          defaultValue={value}>
           <option value=''>
             {filterInfo[prop].options[0]}
           </option>
@@ -96,13 +92,13 @@ export default function ComboFilters({
     )
   }
 
-  function getComboFilter(prop, label=true, on_change=null, pointer=false) {
+  function getComboFilter(prop) {
     return (
       <>
-        {label && getLabel(prop)}
+        {getLabel(prop)}
         {(filterInfo[prop].compare.length > 1) ?
-          getConditionFilter(prop, on_change) :
-          getValueFilter(prop, on_change, pointer)}
+          getConditionFilter(prop) :
+          getValueFilter(prop)}
       </>
     )
   }
