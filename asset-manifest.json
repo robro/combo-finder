@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/combo-finder/static/css/main.a139019d.css",
-    "main.js": "/combo-finder/static/js/main.af385056.js",
+    "main.css": "/combo-finder/static/css/main.eb98abc7.css",
+    "main.js": "/combo-finder/static/js/main.cf5183c1.js",
     "static/js/787.4d7ec2bd.chunk.js": "/combo-finder/static/js/787.4d7ec2bd.chunk.js",
     "static/media/logo.png": "/combo-finder/static/media/logo.343834a12f906f03b1cf.png",
     "index.html": "/combo-finder/index.html",
-    "main.a139019d.css.map": "/combo-finder/static/css/main.a139019d.css.map",
-    "main.af385056.js.map": "/combo-finder/static/js/main.af385056.js.map",
+    "main.eb98abc7.css.map": "/combo-finder/static/css/main.eb98abc7.css.map",
+    "main.cf5183c1.js.map": "/combo-finder/static/js/main.cf5183c1.js.map",
     "787.4d7ec2bd.chunk.js.map": "/combo-finder/static/js/787.4d7ec2bd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a139019d.css",
-    "static/js/main.af385056.js"
+    "static/css/main.eb98abc7.css",
+    "static/js/main.cf5183c1.js"
   ]
 }
