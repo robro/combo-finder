@@ -396,6 +396,7 @@ a:hover {
 }
 
 .notation-cell {
+  min-width: 60px;
   padding: 13px 10px;
 }
 
@@ -410,4 +411,12 @@ a:hover {
 
 .wide {
   width: 125px;
+}
+
+.center {
+  text-align: center;
+}
+
+.margin-bottom {
+  margin-bottom: -20px;
 }

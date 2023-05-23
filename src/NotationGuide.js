@@ -3,7 +3,22 @@ import Showdown from "showdown"
 
 export default function NotationGuide({ children }) {
   const converter = new Showdown.Converter({'simpleLineBreaks': true})
-  const guideText = [...require('./NotationGuideText.json')]
+  const guideData = require('./NotationGuideData.json')
+
+  function getGuideRows(title) {
+    return (
+      <>
+      <thead>
+        <th className="notation-title center capitalize" colSpan={2}>
+          <h2>{title}</h2>
+        </th>
+      </thead>
+      <tbody>
+        {guideData[title].map(row => getRow(row))}
+      </tbody>
+      </>
+    )
+  }
 
   function getRow(row) {
     return (
@@ -35,17 +50,9 @@ export default function NotationGuide({ children }) {
               ✕
             </button>
           </div>
-          <hr className='popup-bar'/>
+          <hr className='popup-bar margin-bottom'/>
           <table className='notation-table'>
-            <thead>
-              <tr>
-                <th className="notation-header">Notation</th>
-                <th className="notation-header">Meaning</th>
-              </tr>
-            </thead>
-            <tbody>
-              {guideText.map(row => getRow(row))}
-            </tbody>
+            {Object.keys(guideData).map(key => getGuideRows(key))}
           </table>
         </div>
       )}

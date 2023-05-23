@@ -1,0 +1,60 @@
+{
+  "global": [
+    {
+      "notation": "**1** ... **9**",
+      "meaning": "**Direction** of joystick input. Corresponds to the keys on a numpad.\n(6 = forward, 214 = quarter-circle back, etc.)."
+    },
+    {
+      "notation": "**>**",
+      "meaning": "**Cancel** the previous move to the following move."
+    },
+    {
+      "notation": "**~**",
+      "meaning": "**Chain/Target combo** the previous move into a followup."
+    },
+    {
+      "notation": "**,**",
+      "meaning": "**Link** the previous move to the following move (requires precise timing)"
+    },
+    {
+      "notation": "**j.X**",
+      "meaning": "Move performed while **jumping**."
+    },
+    {
+      "notation": "**X/Y**",
+      "meaning": "Do either X move **or** Y move."
+    },
+    {
+      "notation": "**[X]**",
+      "meaning": "**Hold** the button input."
+    },
+    {
+      "notation": "**dl.X**",
+      "meaning": "Briefly **delay** the action."
+    },
+    {
+      "notation": "**AA**",
+      "meaning": "**Anti-air**; hit the opponent while they're mid-air."
+    },
+    {
+      "notation": "**Y xN**\n**{Y} xN**",
+      "meaning": "**Repeat** 'Y' input 'N' number of times.\nA sequence of multiple inputs will be bundled into \"{}\"."
+    }
+  ],
+  "classic": [
+    {
+      "notation": "**P** or **K**",
+      "meaning": "Any **punch** or **kick** (when button strength does not matter)"
+    }
+  ],
+  "modern": [
+    {
+      "notation": "**[A]X**",
+      "meaning": "Hold **Auto** button while inputing move X."
+    },
+    {
+      "notation": "**N**",
+      "meaning": "Any **normal** button (when button strength does not matter)"
+    }
+  ]
+}
