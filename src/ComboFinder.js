@@ -18,7 +18,7 @@ export default function ComboFinder({
     let combo_value
     let filter_value
     let condition
-    
+
     for (const prop in filters) {
       if (filters[prop].value) {
         combo_value = combo[prop]

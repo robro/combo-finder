@@ -6,7 +6,7 @@ export default function ComboDisplayInfo({
   filters,
   onFiltersReset
 }) {
-  const filtered_props = Object.keys(filters).filter(f => filters[f].value)
+  const filtered_props = Object.keys(filters).filter(prop => filters[prop].value)
 
   const resetFilters = filtered_props.length > 0 &&
     <span className='reset' onClick={() => onFiltersReset({})}>
@@ -14,16 +14,11 @@ export default function ComboDisplayInfo({
     </span>
 
   function getInfoString() {
-    let combo_nums = ''
-    let filter_info = ''
-    let plural = (totalCombos !== 1) ? 's' : ''
-
-    if (pageSize < totalCombos) {
-      combo_nums = `${startIndex + 1} - ${endIndex} of`
-    }
-    filter_info = (filtered_props.length > 0) ? ` where ${filtered_props.map(f =>
-      `${f} ${(filters[f].condition !== 'Equal To') ? filters[f].condition.toLowerCase() : 'is'}
-      "${filters[f].value}"`).join(' and ')}` : ''
+    const plural = (totalCombos !== 1) ? 's' : ''
+    const combo_nums = (pageSize < totalCombos) ? `${startIndex + 1} - ${endIndex} of` : ''
+    const filter_info = (filtered_props.length > 0) ? ` where ${filtered_props.map(prop =>
+      `${prop} ${(filters[prop].condition !== 'Equal To') ? filters[prop].condition.toLowerCase() : 'is'}
+      "${filters[prop].value}"`).join(' and ')}` : ''
 
     return `Showing ${combo_nums} ${totalCombos} combo${plural}${filter_info}.`
   }

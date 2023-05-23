@@ -19,7 +19,8 @@ def main():
       'carry': int(input('Carry: ')),
       'damage': int(input('Damage: ')),
       'advantage': int(input('Advantage: ')),
-      'position': input('Position: ')
+      'position': input('Position: '),
+      'state': input('State: '),
     })
 
     with open(file_name, 'w') as combos_file:
