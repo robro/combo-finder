@@ -61,7 +61,7 @@
   },
   {
     "character": "Ryu",
-    "notation": "5HP > DR > 2HP > 214HP, DR > 2HP > 623HP",
+    "notation": "5HP > DR~2HP > 214HP, DR~2HP > 623HP",
     "startup": 10,
     "drive": 4.0,
     "super": 0,
@@ -73,7 +73,7 @@
   },
   {
     "character": "Ryu",
-    "notation": "5LK > DR > 5LP, 5MP > 236PP",
+    "notation": "5LK > DR~5LP, 5MP > 236PP",
     "startup": 5,
     "drive": 5.0,
     "super": 0,
@@ -133,7 +133,7 @@
   },
   {
     "character": "Ryu",
-    "notation": "5HP > DR > 5HK, 5HP/2HP > 214P, 214MK",
+    "notation": "5HP > DR~5HK, 5HP/2HP > 214P, 214MK",
     "startup": 10,
     "drive": 3.0,
     "super": 0,
@@ -169,7 +169,7 @@
   },
   {
     "character": "Ryu",
-    "notation": "2MK > DR > 5MP, 5HP/2HP > 214P, 214MK",
+    "notation": "2MK > DR~5MP, 5HP/2HP > 214P, 214MK",
     "startup": 8,
     "drive": 3.0,
     "super": 0,
@@ -181,7 +181,7 @@
   },
   {
     "character": "Ryu",
-    "notation": "5MP, 5MP/2MP > 214KK, DR > 5MP/2MP > 214MP, 623HP",
+    "notation": "5MP, 5MP/2MP > 214KK, DR~5MP/2MP > 214MP, 623HP",
     "startup": 6,
     "drive": 3.0,
     "super": 0,
@@ -193,7 +193,7 @@
   },
   {
     "character": "Ryu",
-    "notation": "5HP > DR > 2HP > 214HP, 236236P",
+    "notation": "5HP > DR~2HP > 214HP, 236236P",
     "startup": 10,
     "drive": 3.0,
     "super": 1,
@@ -241,7 +241,7 @@
   },
   {
     "character": "Ryu",
-    "notation": "5MP, 5MP > DR > 5HK, 5HP/2HP > DR > 2HP > 214HP, 236236P",
+    "notation": "5MP, 5MP > DR~5HK, 5HP/2HP > DR~2HP > 214HP, 236236P",
     "startup": 6,
     "drive": 6.0,
     "super": 1,
@@ -277,7 +277,7 @@
   },
   {
     "character": "Ryu",
-    "notation": "6HP, 2MP > 236KK, DR > 5MP > 236LP, 236236P",
+    "notation": "6HP, 2MP > 236KK, DR~5MP > 236LP, 236236P",
     "startup": 20,
     "drive": 3.0,
     "super": 1,
@@ -301,7 +301,7 @@
   },
   {
     "character": "Ryu",
-    "notation": "DR > 6MP, 2MP > 214HK",
+    "notation": "DR~6MP, 2MP > 214HK",
     "startup": 28,
     "drive": 1.0,
     "super": 0,
@@ -313,7 +313,7 @@
   },
   {
     "character": "Ryu",
-    "notation": "DR > 2MK, 5LK > 214MK",
+    "notation": "DR~2MK, 5LK > 214MK",
     "startup": 17,
     "drive": 1.0,
     "super": 0,
@@ -325,7 +325,7 @@
   },
   {
     "character": "Ryu",
-    "notation": "2MK > DR > 2HP > 214HP, DR > 2MK > 214LP, 236236P",
+    "notation": "2MK > DR~2HP > 214HP, DR~2MK > 214LP, 236236P",
     "startup": 8,
     "drive": 4.0,
     "super": 1,
@@ -397,7 +397,7 @@
   },
   {
     "character": "Jamie",
-    "notation": "DR > 5HK, 5LK > 236LP~6P~6P",
+    "notation": "DR~5HK, 5LK > 236LP~6P~6P",
     "startup": 25,
     "drive": 1.0,
     "super": 0,
@@ -409,7 +409,7 @@
   },
   {
     "character": "Jamie",
-    "notation": "5MP, 5LP~LK~MP > DR > 5MP, 2KK > jc.MP > j.214KK, 623HK",
+    "notation": "5MP, 5LP~LK~MP > DR~5MP, 2KK > jc.MP > j.214KK, 623HK",
     "startup": 8,
     "drive": 5.0,
     "super": 0,
@@ -421,7 +421,7 @@
   },
   {
     "character": "Jamie",
-    "notation": "2MK > DR > 5MP, 2KK, dl.2HK~HK~P",
+    "notation": "2MK > DR~5MP, 2KK, dl.2HK~HK~P",
     "startup": 7,
     "drive": 3.0,
     "super": 0,
@@ -433,7 +433,7 @@
   },
   {
     "character": "Jamie",
-    "notation": "5MP, 5LP~LK~MP > DR > 2KK > jc.HK, 2HK~HK~P",
+    "notation": "5MP, 5LP~LK~MP > DR~2KK > jc.HK, 2HK~HK~P",
     "startup": 8,
     "drive": 3.0,
     "super": 0,
@@ -445,7 +445,7 @@
   },
   {
     "character": "Jamie",
-    "notation": "PC 5HK, DR > 2KK > jc.HK, dl.5HP > 214PP, 2HK~HK~P",
+    "notation": "PC 5HK, DR~2KK > jc.HK, dl.5HP > 214PP, 2HK~HK~P",
     "startup": 15,
     "drive": 3.0,
     "super": 0,
@@ -457,7 +457,7 @@
   },
   {
     "character": "Jamie",
-    "notation": "5MK > DR > 2KK > jc.HK, 2HK~HK~P",
+    "notation": "5MK > DR~2KK > jc.HK, 2HK~HK~P",
     "startup": 10,
     "drive": 3.0,
     "super": 0,
@@ -481,7 +481,7 @@
   },
   {
     "character": "Jamie",
-    "notation": "5MK > DR > 5MP, 2HP > 236HP~6P~6P",
+    "notation": "5MK > DR~5MP, 2HP > 236HP~6P~6P",
     "startup": 10,
     "drive": 3.0,
     "super": 0,
@@ -493,7 +493,7 @@
   },
   {
     "character": "Jamie",
-    "notation": "5MK > DR > 5MP, 2HP > 236HP~6K~6K",
+    "notation": "5MK > DR~5MP, 2HP > 236HP~6K~6K",
     "startup": 10,
     "drive": 3.0,
     "super": 0,

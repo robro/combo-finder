@@ -20,8 +20,9 @@ export default function ComboHeader({
     return comboProps.map(prop => (
       <th
         className={`prop-header ${prop} ${sortStatus(prop)} noselect`}
-        onClick={e => setSorting(e.currentTarget.textContent)}>
-        {prop}
+        id={prop}
+        onClick={e => setSorting(e.currentTarget.id)}>
+        {(prop === 'advantage') ? 'adv.' : prop}
         <span className='sorting'>
           <div className={`sorting up-arrow ${sortStatus(prop)}`}/>
           <div className={`sorting down-arrow ${sortStatus(prop)}`}/>
