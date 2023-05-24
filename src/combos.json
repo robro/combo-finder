@@ -133,7 +133,7 @@
   },
   {
     "character": "Ryu",
-    "notation": "5HP > DR~5HK, 5HP/2HP > 214P, 214MK",
+    "notation": "5HP > DR~5HK, 5HP > 214P, 214MK",
     "startup": 10,
     "drive": 3.0,
     "super": 0,
@@ -169,7 +169,7 @@
   },
   {
     "character": "Ryu",
-    "notation": "2MK > DR~5MP, 5HP/2HP > 214P, 214MK",
+    "notation": "2MK > DR~5MP, 5HP > 214P, 214MK",
     "startup": 8,
     "drive": 3.0,
     "super": 0,
@@ -181,7 +181,7 @@
   },
   {
     "character": "Ryu",
-    "notation": "5MP, 5MP/2MP > 214KK, DR~5MP/2MP > 214MP, 623HP",
+    "notation": "5MP, 2MP > 214KK, DR~5MP > 214MP, 623HP",
     "startup": 6,
     "drive": 3.0,
     "super": 0,
@@ -241,7 +241,7 @@
   },
   {
     "character": "Ryu",
-    "notation": "5MP, 5MP > DR~5HK, 5HP/2HP > DR~2HP > 214HP, 236236P",
+    "notation": "5MP, 5MP > DR~5HK, 5HP > DR~2HP > 214HP, 236236P",
     "startup": 6,
     "drive": 6.0,
     "super": 1,
