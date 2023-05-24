@@ -34,6 +34,7 @@
     {"classic": "236MK", "modern": "2S"},
     {"classic": "236KK", "modern": "[A]2S"},
     {"classic": "214MK", "modern": "4S"},
+    {"classic": "j.214KK", "modern": "j.[A]S"},
     {"classic": "214KK", "modern": "[A]4S"},
     {"classic": "214LP", "modern": "214L"},
     {"classic": "214MP", "modern": "214M"},
