@@ -646,5 +646,77 @@
     "advantage": 43,
     "position": "Anywhere",
     "state": "none"
+  },
+  {
+    "character": "Ryu",
+    "notation": "Cross-Up j.MK, 5MP, 4HP > 236HK",
+    "startup": 7,
+    "drive": 0.0,
+    "super": 0,
+    "carry": 17,
+    "damage": 2650,
+    "advantage": 45,
+    "position": "Midscreen",
+    "state": "None"
+  },
+  {
+    "character": "Ryu",
+    "notation": "Cross-Up j.MK, 5MP, 4HP > 214HK",
+    "startup": 7,
+    "drive": 0.0,
+    "super": 0,
+    "carry": 12,
+    "damage": 2440,
+    "advantage": 20,
+    "position": "Midscreen",
+    "state": "None"
+  },
+  {
+    "character": "Ryu",
+    "notation": "Cross-Up j.MK, 5MP, 4HP > 236KK, 4HK > 623HP",
+    "startup": 7,
+    "drive": 2.0,
+    "super": 0,
+    "carry": 17,
+    "damage": 3240,
+    "advantage": 29,
+    "position": "Midscreen",
+    "state": "None"
+  },
+  {
+    "character": "Ryu",
+    "notation": "Cross-Up j.MK, 5MP, 4HP > 236KK, DR~5MP > 236LP, 236236P",
+    "startup": 7,
+    "drive": 3.0,
+    "super": 1,
+    "carry": 29,
+    "damage": 3538,
+    "advantage": 33,
+    "position": "Midscreen",
+    "state": "None"
+  },
+  {
+    "character": "Ryu",
+    "notation": "Cross-Up j.MK, 5MP, 4HP > 236KK > 214214[P] Lv.2",
+    "startup": 7,
+    "drive": 2.0,
+    "super": 2,
+    "carry": 30,
+    "damage": 4100,
+    "advantage": 85,
+    "position": "Midscreen",
+    "state": "None"
+  },
+  {
+    "character": "Ryu",
+    "notation": "Cross-Up j.MK, 5MP, 4HP > 236KK, DR~5HP > 236MK > 236236K",
+    "startup": 7,
+    "drive": 3.0,
+    "super": 3,
+    "carry": 37,
+    "damage": 5170,
+    "advantage": 8,
+    "position": "Midscreen",
+    "state": "None"
   }
 ]
