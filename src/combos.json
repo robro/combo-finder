@@ -910,5 +910,65 @@
     "advantage": 37,
     "position": "Corner",
     "state": "None"
+  },
+  {
+    "character": "Ryu",
+    "notation": "AA j.MP > lc.214K, 623HP",
+    "startup": 8,
+    "drive": 0.0,
+    "super": 0,
+    "carry": 15,
+    "damage": 2720,
+    "advantage": 33,
+    "position": "Corner",
+    "state": "None"
+  },
+  {
+    "character": "Ryu",
+    "notation": "AA j.MP > dl.214K, 236236P",
+    "startup": 8,
+    "drive": 0.0,
+    "super": 1,
+    "carry": 28,
+    "damage": 3200,
+    "advantage": 26,
+    "position": "Anywhere",
+    "state": "None"
+  },
+  {
+    "character": "Ryu",
+    "notation": "AA j.MP > dl.214K, 623HP > 236236K",
+    "startup": 8,
+    "drive": 0.0,
+    "super": 3,
+    "carry": 15,
+    "damage": 5120,
+    "advantage": 8,
+    "position": "Corner",
+    "state": "None"
+  },
+  {
+    "character": "Jamie",
+    "notation": "PC 5HK, DR~2KK > jc.HK, dl.5H, 2HK~HK~P",
+    "startup": 15,
+    "drive": 1.0,
+    "super": 0,
+    "carry": 45,
+    "damage": 2842,
+    "advantage": 4,
+    "position": "Anywhere",
+    "state": "None"
+  },
+  {
+    "character": "Jamie",
+    "notation": "PC 5HK, Dash, 2HP > 236HK > 236236P, 214PP~6P",
+    "startup": 15,
+    "drive": 2.0,
+    "super": 3,
+    "carry": 59,
+    "damage": 6160,
+    "advantage": 20,
+    "position": "Anywhere",
+    "state": "Drink Lv.4"
   }
 ]
