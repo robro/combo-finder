@@ -181,7 +181,7 @@
   },
   {
     "character": "Ryu",
-    "notation": "5MP, 2MP > 214KK, DR~5MP > 214MP, 623HP",
+    "notation": "5MP, 2MP > 214KK, DR~2MP > 214MP, 623HP",
     "startup": 6,
     "drive": 3.0,
     "super": 0,
@@ -253,7 +253,7 @@
   },
   {
     "character": "Ryu",
-    "notation": "Block DI, 66, 2HP > 214P, j.MP > j.214KK, 236236K",
+    "notation": "Block DI, Dash, 2HP > 214P, j.MP > j.214KK, 236236K",
     "startup": 26,
     "drive": 3.0,
     "super": 3,
@@ -505,7 +505,7 @@
   },
   {
     "character": "Jamie",
-    "notation": "PC 5HK, 66, 2HK~HK~P",
+    "notation": "PC 5HK, Dash, 2HK~HK~P",
     "startup": 15,
     "drive": 0.0,
     "super": 0,
@@ -517,7 +517,7 @@
   },
   {
     "character": "Jamie",
-    "notation": "PC 5HK, 66, 2KK, dl.2HK~HK~P",
+    "notation": "PC 5HK, Dash, 2KK, dl.2HK~HK~P",
     "startup": 15,
     "drive": 0.0,
     "super": 0,
@@ -541,7 +541,7 @@
   },
   {
     "character": "Jamie",
-    "notation": "PC 5HK, 66, 2HP > 214PP, 236236K",
+    "notation": "PC 5HK, Dash, 2HP > 214PP, 236236K",
     "startup": 15,
     "drive": 2.0,
     "super": 1,
@@ -625,7 +625,7 @@
   },
   {
     "character": "Jamie",
-    "notation": "PC 5HK, 66, 2HP > 214PP, 623HK",
+    "notation": "PC 5HK, Dash, 2HP > 214PP, 623HK",
     "startup": 15,
     "drive": 2.0,
     "super": 0,
