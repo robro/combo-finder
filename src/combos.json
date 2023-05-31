@@ -949,7 +949,7 @@
   },
   {
     "character": "Ken",
-    "notation": "5MP~HP > KK~623P",
+    "notation": "5MP~HP > 5KK~623P",
     "startup": 5,
     "drive": 0.0,
     "super": 0,
@@ -961,7 +961,7 @@
   },
   {
     "character": "Ken",
-    "notation": "5MP~HP > KK~214K",
+    "notation": "5MP~HP > 5KK~214K",
     "startup": 5,
     "drive": 0.0,
     "super": 0,
@@ -973,7 +973,7 @@
   },
   {
     "character": "Ken",
-    "notation": "5MP~HP > KK~623K, 623HP",
+    "notation": "5MP~HP > 5KK~623K, 623HP",
     "startup": 5,
     "drive": 0.0,
     "super": 0,
@@ -985,7 +985,7 @@
   },
   {
     "character": "Ken",
-    "notation": "5MP~HP > KK~K",
+    "notation": "5MP~HP > 5KK~HK",
     "startup": 5,
     "drive": 0.0,
     "super": 0,
@@ -997,7 +997,7 @@
   },
   {
     "character": "Ryu",
-    "notation": "5MP~HP > KK~K > 236236K",
+    "notation": "5MP~HP > 5KK~HK > 236236K",
     "startup": 5,
     "drive": 0.0,
     "super": 2,
@@ -1009,7 +1009,7 @@
   },
   {
     "character": "Ken",
-    "notation": "5MP~HP > KK~K > 236236P",
+    "notation": "5MP~HP > 5KK~HK > 236236P",
     "startup": 5,
     "drive": 0.0,
     "super": 3,
@@ -1021,7 +1021,7 @@
   },
   {
     "character": "Ken",
-    "notation": "5MP~HP > KK~623K, 214214K",
+    "notation": "5MP~HP > 5KK~623K, 214214K",
     "startup": 5,
     "drive": 0.0,
     "super": 1,
@@ -1033,7 +1033,7 @@
   },
   {
     "character": "Ken",
-    "notation": "5MP~HP > KK~623K, 236236K",
+    "notation": "5MP~HP > 5KK~623K, 236236K",
     "startup": 5,
     "drive": 0.0,
     "super": 2,
@@ -1045,7 +1045,7 @@
   },
   {
     "character": "Ken",
-    "notation": "5MP~HP > KK~623K, 236236P",
+    "notation": "5MP~HP > 5KK~623K, 236236P",
     "startup": 5,
     "drive": 0.0,
     "super": 3,
