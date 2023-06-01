@@ -1594,5 +1594,65 @@
     "advantage": 28,
     "position": "Corner",
     "state": "None"
+  },
+  {
+    "character": "Jamie",
+    "notation": "PC 5HK, DR~5MP, 2KK, 2HK~HK~P",
+    "startup": 15,
+    "drive": 1.0,
+    "super": 0,
+    "carry": 30,
+    "damage": 2335,
+    "advantage": 4,
+    "position": "Anywhere",
+    "state": "None"
+  },
+  {
+    "character": "Jamie",
+    "notation": "2LK~2LP > 236LP~6K~6K",
+    "startup": 5,
+    "drive": 0.0,
+    "super": 0,
+    "carry": 19,
+    "damage": 1070,
+    "advantage": -1,
+    "position": "Anywhere",
+    "state": "None"
+  },
+  {
+    "character": "Jamie",
+    "notation": "2LK~2LP > 236LP~6P~6P",
+    "startup": 5,
+    "drive": 0.0,
+    "super": 0,
+    "carry": 17,
+    "damage": 1187,
+    "advantage": 27,
+    "position": "Anywhere",
+    "state": "None"
+  },
+  {
+    "character": "Jamie",
+    "notation": "2LK~2LP, 5LP~LK~MP > 236MP~6P~6P",
+    "startup": 5,
+    "drive": 0.0,
+    "super": 0,
+    "carry": 25,
+    "damage": 1593,
+    "advantage": 27,
+    "position": "Anywhere",
+    "state": "Drink Lv.1"
+  },
+  {
+    "character": "Jamie",
+    "notation": "2LK~2LP, 5LP~LK~MP > 236MP~6K~6K",
+    "startup": 5,
+    "drive": 0.0,
+    "super": 0,
+    "carry": 27,
+    "damage": 1527,
+    "advantage": -1,
+    "position": "Anywhere",
+    "state": "Drink Lv.1"
   }
 ]
