@@ -366,7 +366,7 @@
     "drive": 0.0,
     "super": 1,
     "carry": 24,
-    "damage": 2826,
+    "damage": 2934,
     "advantage": 7,
     "position": "Anywhere",
     "state": "none"
@@ -493,7 +493,7 @@
   },
   {
     "character": "Jamie",
-    "notation": "PC 5HK, Dash, 2KK, dl.2HK~HK~P",
+    "notation": "PC 5HK, Dash, 2KK, 2HK~HK~P",
     "startup": 15,
     "drive": 0.0,
     "super": 0,
@@ -618,8 +618,8 @@
     "drive": 0.0,
     "super": 2,
     "carry": 23,
-    "damage": 3321,
-    "advantage": 43,
+    "damage": 3429,
+    "advantage": 34,
     "position": "Anywhere",
     "state": "none"
   },
