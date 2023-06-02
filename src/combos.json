@@ -1654,5 +1654,89 @@
     "advantage": -1,
     "position": "Anywhere",
     "state": "Drink Lv.1"
+  },
+  {
+    "character": "Jamie",
+    "notation": "2HK~HK~P",
+    "startup": 9,
+    "drive": 0.0,
+    "super": 0,
+    "carry": 14,
+    "damage": 1170,
+    "advantage": 4,
+    "position": "Anywhere",
+    "state": "None"
+  },
+  {
+    "character": "Jamie",
+    "notation": "5MP, 5LP~LK~MP > 214214P, 2HP > 214HP~6P",
+    "startup": 8,
+    "drive": 0.0,
+    "super": 2,
+    "carry": 35,
+    "damage": 2906,
+    "advantage": 19,
+    "position": "Anywhere",
+    "state": "Drink Lv.1"
+  },
+  {
+    "character": "Jamie",
+    "notation": "PC 214PP, DR~5HK > 214MP",
+    "startup": 20,
+    "drive": 3.0,
+    "super": 0,
+    "carry": 35,
+    "damage": 2206,
+    "advantage": 37,
+    "position": "Midscreen",
+    "state": "None"
+  },
+  {
+    "character": "Jamie",
+    "notation": "PC 214PP, DR~dl.2KK, 2HK~HK~P",
+    "startup": 20,
+    "drive": 3.0,
+    "super": 0,
+    "carry": 36,
+    "damage": 2203,
+    "advantage": 4,
+    "position": "Midscreen",
+    "state": "None"
+  },
+  {
+    "character": "Jamie",
+    "notation": "PC 214PP, DR~2HK~HK~P",
+    "startup": 20,
+    "drive": 3.0,
+    "super": 0,
+    "carry": 32,
+    "damage": 1941,
+    "advantage": 4,
+    "position": "Midscreen",
+    "state": "None"
+  },
+  {
+    "character": "Jamie",
+    "notation": "PC 214PP, DR~6HK > 214214P, 214MP~6P",
+    "startup": 20,
+    "drive": 3.0,
+    "super": 2,
+    "carry": 48,
+    "damage": 2834,
+    "advantage": 19,
+    "position": "Midscreen",
+    "state": "None"
+  },
+  {
+    "character": "Jamie",
+    "notation": "PC 214PP, DR~5HK > 214MP > 236236P, DR~2KK, 2HK~HK~P",
+    "startup": 20,
+    "drive": 4.0,
+    "super": 3,
+    "carry": 58,
+    "damage": 3740,
+    "advantage": 4,
+    "position": "Midscreen",
+    "state": "None"
   }
 ]
