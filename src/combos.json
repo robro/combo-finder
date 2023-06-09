@@ -2557,7 +2557,7 @@
   },
   {
     "character": "E. Honda",
-    "notation": "CH 2MP, 5MP~MP > [4]6HP",
+    "notation": "CH 2MP, 5LP~MP > [4]6HP",
     "startup": 8,
     "drive": 0.0,
     "super": 0,
@@ -2565,6 +2565,54 @@
     "damage": 2410,
     "advantage": 39,
     "position": "Anywhere",
+    "state": "None"
+  },
+  {
+    "character": "Jamie",
+    "notation": "PC DI, j.HK, Dash, 5HP > 214LP",
+    "startup": 26,
+    "drive": 0.0,
+    "super": 0,
+    "carry": -10,
+    "damage": 1701,
+    "advantage": 37,
+    "position": "Midscreen",
+    "state": "None"
+  },
+  {
+    "character": "Jamie",
+    "notation": "PC DI, j.HK, Dash, 5HP > 623HK",
+    "startup": 26,
+    "drive": 0.0,
+    "super": 0,
+    "carry": -15,
+    "damage": 1971,
+    "advantage": 38,
+    "position": "Midscreen",
+    "state": "None"
+  },
+  {
+    "character": "Jamie",
+    "notation": "PC DI, j.HK, Dash, 5HP > 236LK",
+    "startup": 26,
+    "drive": 0.0,
+    "super": 0,
+    "carry": -10,
+    "damage": 2190,
+    "advantage": 40,
+    "position": "Midscreen",
+    "state": "Drink Lv.2"
+  },
+  {
+    "character": "Jamie",
+    "notation": "PC DI, j.HK, Dash, 5HP > 214LP > 236236P, DR~2KK > jc.HK, 2HK~HK~P",
+    "startup": 26,
+    "drive": 1.0,
+    "super": 3,
+    "carry": -46,
+    "damage": 3210,
+    "advantage": 4,
+    "position": "Midscreen",
     "state": "None"
   }
 ]
